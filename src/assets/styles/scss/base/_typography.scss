@@ -1,0 +1,60 @@
+//Typography Rules Go Here
+@font-face {
+  font-family: 'jazeera_black';
+  src: url('assets/fonts/j9_black-webfont.woff2') format('woff2'),
+  url('assets/fonts/j9_black-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'jazeera_bold';
+  src: url('assets/fonts/j9_bold-webfont.woff2') format('woff2'),
+  url('assets/fonts/j9_bold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'jazeera_light';
+  src: url('assets/fonts/j9_light_-webfont.woff2') format('woff2'),
+  url('assets/fonts/j9_light_-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'jazeera_medium';
+  src: url('assets/fonts/j9_medium-webfont.woff2') format('woff2'),
+  url('assets/fonts/j9_medium-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'jazeera_regular';
+  src: url('assets/fonts/j9_regular-webfont.woff2') format('woff2'),
+  url('assets/fonts/j9_regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+//Fonts-Families
+$alternate-font: Helvetica, Arial, sans-serif;
+
+$jazeera_black: 'jazeera_black', $alternate-font;
+$jazeera_bold: 'jazeera_bold', $alternate-font;
+$jazeera_light: 'jazeera_light', $alternate-font;
+$jazeera_medium: 'jazeera_medium', $alternate-font;
+$jazeera_regular: 'jazeera_regular', $alternate-font;
+
+//Font-Weight
+$Thin: 100;
+$Etralight: 200;
+$Light: 300;
+$Regular: 400;
+$Medium: 500;
+$Semibold: 600;
+$Bold: 700;
+$ExtraBold: 800;
+$Black: 900;

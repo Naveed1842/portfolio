@@ -1,0 +1,109 @@
+//Carousel styles go here
+.hero-title {
+  h1 {
+    color: $primary;
+    font-size: 40px;
+    line-height: 46px;
+
+    strong {
+
+    }
+  }
+}
+
+.carousel-wrap {
+  opacity: 0.8;
+  position: relative;
+  @media(max-width: 768px) {
+    opacity: 1;
+  }
+
+  &.loaded {
+    opacity: 1;
+  }
+
+  .carousel {
+    margin: 0px -15px;
+    @media(max-width: 768px) {
+      margin: 0px;
+      display: flex;
+      overflow-x: auto;
+    }
+
+    .slick-item {
+      padding: 0px 15px;
+      @media(max-width: 991px) {
+        padding: 0px 8px;
+      }
+      @media(max-width: 768px) {
+        padding: 0px;
+        width: 210px;
+        min-width: 210px;
+        & + .slick-item {
+          margin-left: 15px;
+        }
+      }
+    }
+
+    .card {
+      margin: 30px 0px;
+      @media(max-width: 768px) {
+        margin: 15px 0px;
+      }
+    }
+  }
+
+  .carousel-controls {
+    /*
+        position: absolute;
+        justify-content: space-between;
+        display: flex;
+        top: 50%;
+        left: 0px;
+        right: 0px;
+        margin-top: -25px;
+        */
+    @media(max-width: 768px) {
+      display: none;
+    }
+
+    .carousel-prev {
+      //position: absolute;
+      //margin-left: -25px;
+      left: -25px;
+      @include rotate(90);
+    }
+
+    .carousel-next {
+      //position: absolute;
+      //margin-right: -25px;
+      right: -25px;
+      @include rotate(90);
+    }
+
+    .carousel-prev, .carousel-next {
+      position: absolute;
+      justify-content: space-between;
+      display: flex;
+      top: 50%;
+      margin-top: -25px;
+
+      i, i:before {
+        height: 28px;
+        width: 28px;
+        display: block;
+        line-height: 26px;
+      }
+
+      &.slick-disabled {
+        display: none;
+        visibility: hidden;
+      }
+    }
+  }
+
+  .slick-slide {
+    outline: 0;
+    position: relative;
+  }
+}

@@ -1,0 +1,26 @@
+.mCS-minimal.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
+.mCS-minimal-dark.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
+.mCS-minimal-dark.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar {
+  background: $scrollbar !important;
+  background-color: $scrollbar;
+}
+
+.flight-seat-selection-mockup-wrap {
+  .mCS-autoHide > .mCustomScrollBox > .mCSB_scrollTools, .mCS-autoHide > .mCustomScrollBox ~ .mCSB_scrollTools {
+    opacity: 1;
+  }
+
+  .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+    width: 8px;
+  }
+
+  .mCSB_scrollTools .mCSB_draggerContainer {
+    right: 15px;
+  }
+}
+
+.meal-selection-grid-wrap {
+  .mCSB_outside + .mCS-minimal.mCSB_scrollTools_vertical, .mCSB_outside + .mCS-minimal-dark.mCSB_scrollTools_vertical {
+    right: -20px;
+  }
+}

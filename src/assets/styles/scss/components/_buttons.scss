@@ -1,0 +1,364 @@
+// Buttons styles go here
+.btn {
+  border-radius: 0px;
+  font-size: 14px;
+  height: 44px;
+  padding: 8px 30px;
+  box-shadow: none;
+  line-height: 28px;
+  outline: 0;
+  display: inline-flex;
+  justify-content: center;
+  font-family: $jazeera_medium;
+
+  &:hover, &:focus, &:active, &:not(:disabled):not(.disabled):active {
+    outline: 0;
+    box-shadow: none !important;
+  }
+
+  &.btn-primary {
+    min-width: 170px;
+    background: $primary_yellow;
+    border-color: $primary_yellow;
+    text-align: center;
+    color: $secondary_dark;
+
+    &:not(:disabled):hover {
+      background: $primary_hover;
+      border-color: $primary_hover;
+    }
+
+    &:focus, &:active, &:not(:disabled):not(.disabled):active {
+      background: $primary_focus;
+      border-color: $primary_focus;
+      color: $secondary_dark;
+    }
+  }
+
+  &.btn-secondary {
+    min-width: 170px;
+    background: $white;
+    border-color: $primary;
+    text-align: center;
+    color: #004999; //$secondary_dark;
+    &:hover {
+      background: $primary;
+      border-color: $primary;
+      color: $white;
+    }
+
+    &:focus, &:active, &:not(:disabled):not(.disabled):active {
+      background: $primary;
+      border-color: $primary;
+      color: $white;
+    }
+
+    &.btn-invert {
+      background: $primary;
+      border-color: $white;
+      color: $white;
+
+      &:hover {
+        background: $white;
+        border-color: $white;
+        color: $primary;
+      }
+
+      &:focus, &:active, &:not(:disabled):not(.disabled):active {
+        background: $white;
+        border-color: $white;
+        color: $primary;
+      }
+    }
+
+    &.btn-outline {
+      border-color: rgba($white, 0.3);
+      font-family: $jazeera_regular;
+      background: $primary;
+      color: $white;
+      font-size: 16px;
+
+      &:hover {
+        border-color: rgba($white, 0.4);
+      }
+    }
+
+    &.disabled {
+      background: $tint5;
+      color: $secondary_grey;
+    }
+  }
+
+  &.btn-md {
+    height: 50px;
+    font-size: 16px;
+    line-height: 34px;
+    @media(max-width: 768px) {
+      font-size: 14px;
+      line-height: 28px;
+      height: 44px;
+    }
+  }
+
+  &.btn-lg {
+    height: 64px;
+    min-width: 270px;
+    font-size: 20px;
+    padding: 20px 50px;
+    line-height: 24px;
+
+    &.btn-wide {
+      min-width: 580px;
+      @media(max-width: 768px) {
+        min-width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+    }
+
+    @media(max-width: 768px) {
+      height: 56px;
+      padding: 16px 50px;
+      line-height: 25px;
+      font-size: 16px;
+    }
+
+    &.btn-icon-right, &.btn-icon-left {
+      .icon {
+        font-size: 26px;
+        bottom: 1px;
+        position: relative;
+        @media(max-width: 768px) {
+          font-size: 22px;
+        }
+      }
+    }
+
+    &.btn-icon-right {
+      .icon {
+        margin-left: 30px;
+        @media(max-width: 768px) {
+          margin-left: 15px;
+        }
+      }
+    }
+
+    &.btn-icon-left {
+      .icon {
+        margin-right: 30px;
+        @media(max-width: 768px) {
+          margin-right: 15px;
+        }
+      }
+    }
+  }
+
+  &.btn-sml {
+    height: 40px;
+    font-size: 14px;
+    line-height: 24px;
+    min-width: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  &.btn-icon-right {
+    .icon {
+      margin-left: 15px;
+    }
+  }
+
+  &.btn-icon-left {
+    .icon {
+      margin-right: 15px;
+    }
+  }
+
+  &.btn-arrow {
+    &:after {
+      content: "\e900";
+      font-family: 'icomoon';
+      @include rotate(-90);
+      margin-left: 15px;
+      @media(max-width: 768px) {
+        font-size: 12px;
+      }
+    }
+  }
+
+  &.btn-rounded {
+    height: 50px;
+    width: 50px;
+    padding: 10px;
+    display: block;
+    font-size: 18px;
+    line-height: 32px;
+    @include border-radius(50%);
+
+    background: $white;
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.16);
+    border: 1px solid rgba($secondary_grey, 0.1);
+
+  }
+
+  &.btn-dropdown {
+    height: 40px;
+    line-height: 18px;
+    border-radius: 40px;
+    padding: 11px 12px;
+    border: 1px solid $grey;
+    color: $secondary_grey;
+    font-size: 14px;
+    min-width: 133px;
+
+    .options {
+      position: relative;
+
+      &:after {
+        height: 12px;
+        width: 1px;
+        border-left: 1px solid $secondary_grey;
+        display: inline-block;
+        content: "";
+        position: relative;
+        top: 1px;
+        right: 0px;
+        margin: 0px 6px;
+      }
+
+      &:nth-child(2) {
+        &:after {
+          display: none;
+        }
+      }
+
+      &.active {
+        color: $primary;
+      }
+    }
+
+    .btn-icon {
+      font-size: 18px;
+      line-height: 42px;
+      border-right: 1px solid $grey;
+      display: inline-block;
+      position: relative;
+      top: -11px;
+      left: -11px;
+      bottom: 0px;
+      height: 38px;
+      width: 42px;
+    }
+
+    .icon-arrow-down {
+      margin-left: 15px;
+      font-size: 16px;
+      color: $primary;
+    }
+
+    &:hover, &:focus, &.active {
+      border-color: $primary;
+      color: $primary;
+    }
+
+    &.active {
+      .icon-arrow-down {
+        @include rotate(-180);
+      }
+    }
+  }
+
+  &.btn-link {
+    height: auto;
+    line-height: 16px;
+    padding: 0px;
+    color: $primary;
+    font-size: 14px;
+    font-family: $jazeera_regular;
+    text-decoration: underline;
+
+    .icon-arrow-down {
+      text-decoration: none;
+      margin-left: 10px;
+    }
+  }
+
+  &.btn-block {
+    display: flex;
+  }
+
+  &.btn-default {
+    border-color: #C7C7C7;
+    background: $white;
+
+    &:hover {
+      border-color: $primary;
+    }
+  }
+}
+
+section.btn-wrap {
+  margin-bottom: 60px;
+  @media(max-width: 768px) {
+    margin-bottom: 30px;
+  }
+
+  .msg-note {
+    position: relative;
+    top: -12px;
+
+    p {
+      margin-bottom: 10px;
+    }
+  }
+
+  .disclaimer-wrap {
+    display: flex;
+    margin: -20px 0px 30px 0px;
+
+    .disclaimer-label {
+      font-size: 16px;
+      color: $secondary_dark;
+      font-family: $jazeera_medium;
+      margin-right: 10px;
+    }
+
+    .disclaimer-info {
+      text-align: left;
+      padding-top: 2px;
+
+      p {
+        font-size: 12px;
+        color: $secondary_dark;
+        font-family: $jazeera_regular;
+      }
+    }
+
+    @media(max-width: 763px) {
+      flex-wrap: wrap;
+      margin-top: -5px;
+      margin-bottom: 10px;
+      .disclaimer-label, .disclaimer-info {
+        width: 100%;
+        text-align: left;
+      }
+      .disclaimer-label {
+        margin-right: 0px;
+        margin-bottom: 5px;
+        font-size: 14px;
+      }
+      .disclaimer-info {
+        p {
+          font-size: 12px;
+          line-height: 20px;
+        }
+      }
+    }
+  }
+}
+
+.btn-wrap {
+  &.center {
+    text-align: center;
+  }
+}

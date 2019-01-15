@@ -1,0 +1,60 @@
+#printArea {
+  &.active {
+    a.btn {
+      display: none;
+    }
+
+    section.banner-panel {
+      margin-top: 20px;
+
+      .banner-panel-wrap {
+        .welcome {
+          max-width: 648px;
+        }
+      }
+    }
+  }
+}
+
+@media print {
+  .title {
+    text-align: left !important;
+    align-items: left !important;
+  }
+  a.btn {
+    display: none !important;
+  }
+  section.confirm-booking-flight-info .flight-summary-wrap .add-ons-status-info-panel {
+    border: 1px solid $border;
+    background: $white;
+    color: $primary;
+
+    .journey-info-wrap .journey-info-item .place, .dropdown-wrap-parent .drop-label, .dropdown-wrap-parent .summary-dropdown-wrap a, .dropdown-wrap-parent .summary-dropdown-wrap:after {
+      color: $primary;
+    }
+  }
+  section.banner-panel .banner-panel-wrap {
+    border: 1px solid $border;
+    background: $white;
+    color: $primary;
+
+    .welcome .title h2, .welcome p, .reservation h5 {
+      color: $primary;
+    }
+
+    .welcome {
+      max-width: 648px;
+    }
+  }
+  .add-ons-status-info-panel .expand-summary-info-wrap {
+    display: block !important;
+  }
+  section.banner-panel {
+    margin-top: 40px;
+  }
+
+
+  //Print
+  @import '../plugins/fullcalendar.print.scss';
+
+}

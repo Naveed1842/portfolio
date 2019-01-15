@@ -1,0 +1,431 @@
+.card-body {
+  padding: 20px;
+}
+
+.cards-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-top: 8px;
+  @media(max-width: 991px) {
+    justify-content: space-around;
+  }
+
+  &.cards-grid-4 {
+
+  }
+}
+
+.card {
+  background: $white;
+  margin: 15px 0px;
+  border-radius: 0px;
+  border-color: $border1;
+  transition: all 0.3s ease-in-out;
+
+  .card-img-top {
+    border-radius: 0px;
+  }
+
+  .card-body {
+    &.center {
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  &.book-card {
+    transition: all 0.3s ease-in-out;
+    @media(max-width: 1199px) {
+      width: 220px;
+    }
+    @media(max-width: 768px) {
+      //width: 48%;
+    }
+
+    .card-img-wrap {
+      .card-img-top {
+        border-radius: 0px;
+      }
+    }
+
+    .card-body {
+      padding: 20px 15px;
+
+      h5.card-title {
+        font-size: 16px;
+        color: $secondary_grey;
+        font-family: $jazeera_medium;
+      }
+
+      h3 {
+        color: $primary;
+        font-family: $jazeera_medium;
+        font-size: 24px;
+
+        small {
+          display: block;
+          font-family: $jazeera_regular;
+          color: $secondary_grey;
+          font-size: 14px;
+          line-height: 20px;
+        }
+      }
+
+      .btn-secondary {
+        width: 100%;
+        min-width: 100%;
+        margin-top: 10px;
+
+        &:hover, &:focus {
+          background-color: $primary_yellow;
+          border-color: $primary_yellow;
+          color: $secondary_dark;
+        }
+
+        @media(max-width: 768px) {
+          background-color: $primary;
+          border-color: $primary;
+          color: $white;
+        }
+      }
+    }
+
+    &:hover {
+      border: 1px solid #EAE9E8;
+      box-shadow: -14px 14px 20px 0 rgba(0, 0, 0, 0.12);
+    }
+  }
+
+  &.affliate-card {
+    transition: all 0.3s ease-in-out;
+
+    .card-body {
+      min-height: 115px;
+    }
+
+    &:hover {
+      border: 1px solid #EAE9E8;
+      box-shadow: -14px 14px 20px 0 rgba(0, 0, 0, 0.12);
+    }
+
+    @media(max-width: 1199px) {
+      max-width: 220px;
+    }
+    @media(max-width: 991px) {
+      margin: 0px 8px;
+      max-width: 156px;
+    }
+    @media(max-width: 768px) {
+      max-width: 210px;
+      min-width: 210px;
+      margin: 0px;
+      & + .affliate-card {
+        margin-left: 15px;
+      }
+      .card-body {
+        img {
+          max-height: 40px;
+        }
+      }
+    }
+  }
+
+  &.horizontal-card {
+    margin: 0px 0px 30px 0px;
+    transition: all 0.3s ease-in-out;
+    border: 0px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center;
+
+    & > a {
+      display: flex;
+      text-decoration: none;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      align-items: center;
+    }
+
+    &:last-child {
+      margin-bottom: 0px;
+    }
+
+    .card-img-wrap {
+      max-width: 170px;
+      width: 100%;
+      @media(max-width: 1199px) {
+        max-width: 135px;
+      }
+
+      .card-img-top {
+        border-radius: 0px;
+      }
+    }
+
+    .card-body {
+      padding: 0px 25px;
+      width: calc(100% - 170px);
+
+      h5.card-title {
+        font-size: 14px;
+        color: $secondary_grey;
+        font-family: $jazeera_medium;
+      }
+
+      h3 {
+        color: $primary;
+        font-family: $jazeera_regular;
+        line-height: 26px;
+        margin-bottom: 0px;
+        font-size: 18px;
+
+        strong {
+          font-family: $jazeera_medium;
+        }
+
+        small {
+          display: block;
+          font-family: $jazeera_regular;
+          color: $secondary_grey;
+          font-size: 14px;
+          line-height: 20px;
+        }
+      }
+    }
+
+    &:hover {
+      // border: 1px solid #EAE9E8;
+      // box-shadow: -14px 14px 20px 0 rgba(0,0,0,0.12);
+    }
+  }
+
+  &.feature-card {
+    margin: 30px;
+
+    a {
+      text-decoration: none;
+    }
+
+    .card-body {
+      @media(max-width: 768px) {
+        min-height: 263px;
+      }
+
+      p {
+        font-size: 16px;
+        color: $secondary_dark;
+        @media(max-width: 991px) {
+          font-size: 14px;
+        }
+      }
+    }
+
+    &:hover {
+      border: 1px solid #EAE9E8;
+      box-shadow: -7px 7px 15px 0 rgba(0, 0, 0, 0.12);
+    }
+  }
+
+  &.hotels-card {
+    width: 100%;
+    max-width: 378px;
+    margin: 40px 0px;
+    border-color: $border;
+    @media(max-width: 1199px) {
+      max-width: 298px;
+    }
+    @media(max-width: 991px) {
+      max-width: 218px;
+    }
+    @media(max-width: 768px) {
+      margin: 20px 0px;
+      max-width: none;
+      min-width: 255px;
+      & + .hotels-card {
+        margin-left: 15px;
+      }
+    }
+    @media(max-width: 736px) {
+      margin: 15px 0px;
+    }
+
+    .card-title {
+      margin-bottom: 0px;
+      @media(max-width: 1199px) {
+        line-height: 30px;
+      }
+      @media(max-width: 991px) {
+        font-size: 18px;
+        line-height: 26px;
+      }
+      @media(max-width: 736px) {
+        font-size: 16px;
+        line-height: 22px;
+      }
+    }
+
+    .rating-wrap {
+      margin-top: 5px;
+
+      .star-rating {
+        .star {
+          color: $primary_yellow;
+        }
+      }
+
+      .rating-info {
+        display: flex;
+        align-items: center;
+        margin-top: 2px;
+
+        .rating-count {
+          height: 28px;
+          width: 28px;
+          background: $primary;
+          color: $white;
+          @include border-radius(28px);
+          font-size: 12px;
+          line-height: 28px;
+          text-align: center;
+          font-family: $jazeera_medium;
+          margin-right: 10px;
+        }
+
+        .rating-msg {
+          font-size: 12px;
+          color: $secondary_grey;
+        }
+      }
+    }
+
+    .card-btm {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 20px;
+      @media(max-width: 991px) {
+        display: block;
+        .price + a.btn {
+          margin-top: 10px;
+        }
+      }
+      @media(max-width: 768px) {
+        display: flex;
+        .price + a.btn {
+          margin-top: 0px;
+        }
+      }
+      @media(max-width: 736px) {
+        a.btn {
+          font-size: 12px;
+        }
+      }
+    }
+
+    &:hover {
+      border: 1px solid #EAE9E8;
+      box-shadow: -7px 7px 15px 0 rgba(0, 0, 0, 0.12);
+    }
+  }
+
+  &.cars-card {
+    width: 100%;
+    max-width: 378px;
+    margin: 40px 0px;
+    border-color: $border;
+    @media(max-width: 1199px) {
+      max-width: 298px;
+    }
+    @media(max-width: 991px) {
+      max-width: 218px;
+    }
+    @media(max-width: 768px) {
+      margin: 20px 0px;
+      max-width: none;
+      min-width: 255px;
+      & + .cars-card {
+        margin-left: 15px;
+      }
+    }
+    @media(max-width: 736px) {
+      margin: 15px 0px;
+    }
+
+    .card-img-wrap {
+      height: 220px;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .card-img-top {
+        max-height: 80%;
+        width: auto;
+        @media(max-width: 1199px) {
+          width: 220px;
+        }
+        @media(max-width: 991px) {
+          width: 180px;
+        }
+      }
+    }
+
+    .card-title {
+      margin-bottom: 0px;
+      @media(max-width: 736px) {
+        font-size: 16px;
+        line-height: 22px;
+      }
+    }
+
+    .card-body {
+      background: $tint6;
+      border-top: 1px solid $border1;
+      @media(max-width: 736px) {
+        padding: 15px;
+      }
+    }
+
+    .card-btm {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 10px;
+      @media(max-width: 991px) {
+        display: block;
+      }
+      @media(max-width: 736px) {
+        a.btn {
+          font-size: 12px;
+        }
+      }
+
+      .price {
+        @media(max-width: 991px) {
+          font-size: 13px;
+          & + .btn {
+            margin-top: 10px;
+          }
+        }
+
+        small {
+          color: $secondary_grey;
+          font-size: 12px;
+        }
+      }
+    }
+
+    &:hover {
+      border: 1px solid #EAE9E8;
+      box-shadow: -7px 7px 15px 0 rgba(0, 0, 0, 0.12);
+    }
+  }
+}

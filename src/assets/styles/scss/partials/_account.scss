@@ -1,0 +1,105 @@
+.account-header {
+  //margin: 30px 0px 0px;
+  .title {
+    margin-top: 30px;
+
+    & + .login-info {
+      margin-top: 30px;
+    }
+  }
+
+  .search-criteria-wrap {
+    margin: 30px 0px 0px;
+
+    & + .login-info {
+      margin-top: 30px;
+    }
+
+    @media(max-width: 768px) {
+      margin-top: 0px;
+    }
+  }
+
+  .account-info {
+    display: flex;
+    background: $primary_dark;
+    color: $white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 30px;
+    @media(max-width: 768px) {
+      display: block;
+      text-align: center;
+      padding: 15px;
+    }
+
+    h5 {
+      color: $white;
+      font-size: 14px;
+      margin: 0px;
+      margin-top: 2px;
+    }
+
+    .user-info, .points {
+      padding: 15px;
+      @media(max-width: 768px) {
+        text-align: center;
+        justify-content: center;
+        padding: 5px 0px;
+      }
+    }
+
+    .user-info {
+      align-items: center;
+      display: flex;
+
+      .icon-wrap {
+        margin-right: 15px;
+      }
+    }
+
+    .points {
+
+    }
+  }
+
+  .login-info {
+    display: flex;
+    background: $inactive;
+    color: $primary;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 60px;
+    @media(max-width: 991px) {
+      display: none;
+    }
+
+    h5 {
+      font-family: $jazeera_regular;
+      color: $primary;
+      font-size: 14px;
+      margin: 0px;
+      margin-top: 2px;
+    }
+
+    .login-msg, .login-btn {
+      //padding: 15px;
+    }
+
+    .login-msg {
+      align-items: center;
+      padding: 15px;
+      display: flex;
+
+      .icon-wrap {
+        margin-right: 15px;
+      }
+    }
+
+    .login-btn {
+      padding: 5px;
+    }
+  }
+}

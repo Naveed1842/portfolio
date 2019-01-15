@@ -1,0 +1,148 @@
+section.flight-summary-final-wrap {
+  padding-top: 30px;
+  @media(max-width: 1199px) {
+    .flight-summary-wrap {
+      flex-wrap: wrap;
+
+      .flight-cost-summary-wrap {
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+section.tab-holder {
+  & + .account-header {
+    //margin-top: 60px;
+  }
+}
+
+section.flight-info-ads-wrap {
+  margin-top: 30px;
+
+  & > .container {
+    display: flex;
+    @media(max-width: 1199px) {
+      flex-wrap: wrap;
+    }
+
+    .ads-wrap {
+      @media(max-width: 1199px) {
+        width: 100%;
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+.experience-horizontal-wrap {
+  display: flex;
+  justify-content: space-between;
+  @media(max-width: 1199px) {
+    width: 100%;
+    margin-bottom: 25px;
+  }
+  @media(max-width: 736px) {
+    display: none;
+  }
+
+  .experience-item {
+    @media(max-width: 1199px) {
+      width: 100%;
+      max-width: 32%;
+    }
+
+    & + .experience-item {
+      margin-left: 8px;
+    }
+  }
+}
+
+section.passenger-details-wrap {
+  padding: 60px 0px;
+  margin-top: 60px;
+  @media(max-width: 768px) {
+    padding: 30px;
+    margin-top: 30px;
+  }
+  @media(max-width: 736px) {
+    // padding: 15px 0px;
+    // margin-top: 15px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .title {
+    p {
+      margin-top: 5px;
+      font-size: 16px;
+      font-family: $jazeera_regular;
+      color: $secondary_dark;
+    }
+  }
+
+  .accordion-wrapper {
+    margin-top: 30px;
+  }
+
+  .details-form-wrap {
+    .title.center h2 {
+      margin-bottom: 0px;
+    }
+
+    & + .details-form-wrap {
+      margin-top: 50px;
+    }
+  }
+}
+
+.contact-details {
+  .panel-form-wrap .panel-label .title h3 {
+    display: inline;
+    @media(max-width: 736px) {
+      font-size: 16px;
+    }
+  }
+
+  @media(max-width: 768px) {
+    .panel-end {
+      .btn-link {
+        font-size: 14px;
+        //text-decoration: underline;
+        margin-top: -8px;
+        margin-bottom: 10px;
+        color: $primary;
+        @media(max-width: 736px) {
+          font-size: 12px;
+        }
+      }
+    }
+    .accordion-wrapper .accordion-item .collapse.open-always .card-body {
+      padding-top: 25px
+    }
+  }
+}
+
+
+.passenger-details {
+  @media(max-width: 1199px) {
+    .accordion-wrapper .accordion-item .card-body .title {
+      h3 {
+        display: none;
+      }
+    }
+  }
+  @media(max-width: 768px) {
+    .accordion-wrapper .accordion-item .card-header {
+      .accordion-title h5 {
+        color: $primary;
+      }
+
+      &.collapsed {
+        .accordion-title h5 {
+          color: $secondary_dark;
+        }
+      }
+    }
+  }
+}

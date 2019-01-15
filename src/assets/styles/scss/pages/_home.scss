@@ -1,0 +1,220 @@
+section.banner {
+  & + section.search-flights-wrapper {
+    margin-top: -90px;
+    @media(max-width: 991px) {
+      margin-top: -50px;
+    }
+  }
+}
+
+section.flight-deals {
+  padding: 50px 0px;
+
+  .btn-mobile {
+    display: none;
+  }
+
+  @media(max-width: 991px) {
+    /*
+        .container{
+            max-width: 100%;
+            width: 100%;
+            padding: 0px;
+        }
+        */
+    .cards-wrapper {
+      flex-wrap: nowrap;
+      justify-content: left;
+      overflow-x: auto;
+
+      .card {
+        min-width: 210px;
+
+        & + .card {
+          margin-left: 15px;
+        }
+      }
+    }
+  }
+  @media(max-width: 768px) {
+    .title {
+      text-align: center;
+
+      .btn-secondary {
+        display: none;
+      }
+    }
+    .btn-mobile {
+      display: flex;
+      max-width: 360px;
+      margin: 20px auto 0px auto;
+    }
+  }
+}
+
+section.get-little-extra {
+  min-height: 300px;
+  @media(max-width: 736px) {
+    padding-bottom: 10px;
+  }
+}
+
+section.features {
+  padding: 30px 0px;
+  @media(max-width: 768px) {
+    // padding: 15px 0px;
+  }
+}
+
+section.affliate {
+  padding: 60px 0px;
+
+  .affliate-card {
+    margin-top: 25px;
+    margin-bottom: 0px;
+    @media(max-width: 768px) {
+      margin: 15px 0px;
+    }
+  }
+
+  @media(max-width: 768px) {
+    padding: 30px 0px 40px;
+    .cards-wrapper {
+      display: flex;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      justify-content: left;
+      @media(max-width: 768px) {
+        padding-top: 15px;
+      }
+    }
+  }
+}
+
+section.about-jazeera {
+  background-size: cover;
+  @media(max-width: 768px) {
+    background: none !important;
+  }
+
+  .mobile-wall {
+    display: none;
+    overflow: hidden;
+    min-height: 340px;
+
+    img {
+      width: auto;
+      height: auto;
+      min-height: 340px;
+      min-width: 100%;
+    }
+
+    @media(max-width: 768px) {
+      display: block;
+    }
+  }
+
+  .overlay {
+    padding: 50px 30px;
+    background: rgba($white, 0.9);
+    margin-left: auto;
+    max-width: 50%;
+    width: 100%;
+    @media(max-width: 768px) {
+      max-width: 100%;
+      margin-top: -130px;
+      background: none;
+      padding: 15px;
+    }
+
+    .overlay-inner {
+      max-width: 420px;
+      @media(max-width: 768px) {
+        position: relative;
+        max-width: 100%;
+        z-index: 1;
+      }
+
+      .title {
+        h2 {
+          margin-top: 10px;
+          margin-bottom: 10px;
+          @media(max-width: 768px) {
+            color: $white;
+            font-size: 20px;
+            line-height: 30px;
+            strong.spl {
+              font-size: 18px;
+              color: $white;
+            }
+          }
+        }
+      }
+    }
+
+    .list-with-icon {
+      @media(max-width: 768px) {
+        background: #FFFFFF;
+        border: 1px solid #EAE9E8;
+        box-shadow: -6px 6px 10px 0 rgba(0, 0, 0, 0.06);
+        padding: 15px;
+        .btn {
+          width: 100%;
+          max-width: 360px;
+          margin: 20px auto 0px auto;
+        }
+      }
+
+      .title {
+        h4 {
+          margin-top: 10px;
+          margin-bottom: 0px;
+          @media(max-width: 768px) {
+            text-align: center;
+          }
+        }
+      }
+
+      ul {
+        padding: 0px;
+        margin: 20px 0px 25px;
+
+        li {
+          display: flex;
+          color: $secondary_dark;
+          align-items: center;
+          margin-bottom: 15px;
+        }
+      }
+
+      .icon-wrap {
+        background: #00B5E9;
+        height: 48px;
+        width: 48px;
+        min-height: 48px;
+        min-width: 48px;
+        display: block;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 15px;
+
+        i {
+          color: $white;
+          font-size: 20px;
+          line-height: 20px;
+        }
+      }
+
+      p {
+        margin: 0px;
+        color: $secondary_dark;
+        font-size: 14px;
+      }
+    }
+
+  }
+}

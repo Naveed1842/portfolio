@@ -1,0 +1,136 @@
+.panel-form-wrap {
+  display: flex;
+
+  .panel-label, .panel-form, .panel-end {
+    width: 100%;
+  }
+
+  .panel-label, .panel-end {
+    max-width: 266px;
+  }
+
+  .panel-label {
+    //width: 260px;
+    //margin-right: auto;
+    padding-right: 15px;
+
+    .title {
+      .cloned {
+        display: none;
+      }
+
+      p {
+        margin: 0px;
+      }
+    }
+  }
+
+  .panel-form {
+    max-width: 596px;
+    width: 100%;
+    // margin: auto;
+    margin-bottom: 20px;
+
+    .form-row {
+      &.row {
+        margin-left: -4px;
+        margin-right: -4px;
+        @media(max-width: 736px) {
+          margin-left: 0px;
+          margin-right: 0px;
+        }
+
+        & > div {
+          padding: 0px 4px;
+          @media(max-width: 736px) {
+            padding-left: 0px;
+            padding-right: 0px;
+          }
+        }
+      }
+
+      .form-control {
+        min-width: 100%;
+      }
+    }
+
+    .select2-container.select2-container--open .select2-selection__arrow {
+      top: 28px;
+    }
+
+    .select2-container--default .select2-selection--single .select2-selection__arrow {
+      height: 14px;
+      width: 14px;
+
+      &:before {
+        color: $light_grey;
+        font-size: 14px;
+      }
+    }
+
+    .form-field.has-error:after {
+      font-size: 12px;
+    }
+
+
+  }
+
+  .panel-end {
+    //margin-left: auto;
+    padding-left: 15px;
+    @media(max-width: 1199px) {
+      padding-left: 0px;
+    }
+
+    .grey-btn {
+      text-decoration: none;
+      color: $secondary_grey;
+      float: right;
+      @media(max-width: 1199px) {
+        float: left;
+      }
+    }
+  }
+
+  @media(max-width: 1199px) {
+    flex-wrap: wrap;
+    .panel-label, .panel-form, .panel-end {
+      width: 100%;
+      max-width: 100%;
+      padding-right: 0px;
+      padding-left: 0px;
+    }
+    .panel-label {
+      order: 1;
+    }
+    .panel-form {
+      order: 3;
+      margin-top: 30px;
+      @media(max-width: 768px) {
+        margin-top: 15px;
+        margin-bottom: 15px;
+      }
+    }
+    .panel-end {
+      order: 2;
+    }
+  }
+  @media(max-width: 736px) {
+    .panel-label {
+      .title {
+        h3 {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.form-accordion-wrapper {
+  .accordion-item + .accordion-item {
+    margin-top: 20px;
+    @media(max-width: 736px) {
+      margin-top: 15px;
+    }
+  }
+}

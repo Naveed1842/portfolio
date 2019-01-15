@@ -1,0 +1,141 @@
+.section-panel {
+  padding: 60px 0px;
+  @media(max-width: 991px) {
+    padding: 30px 0px;
+  }
+
+  .section-panel-wrap {
+    position: relative;
+    margin-top: 45px;
+    @media(max-width: 991px) {
+      //margin-top: 25px;
+      & + .title {
+
+      }
+    }
+
+    .accordion-wrapper .accordion-item .card-header {
+      .date-holder {
+        color: $secondary_grey;
+        font-size: 14px;
+        font-family: $jazeera_regular;
+        margin-right: 15px;
+        @media(max-width: 736px) {
+          display: none;
+        }
+      }
+
+      .grp-label, .date-holder {
+        visibility: hidden;
+      }
+
+      &.collapsed {
+        .grp-label, .date-holder {
+          visibility: visible;
+        }
+      }
+    }
+  }
+
+  .title h2 strong {
+    display: flex;
+    justify-content: center;
+
+    .icon {
+      font-size: 38px;
+      line-height: 28px;
+      margin: -5px 20px 0px 0px;
+      @media(max-width: 991px) {
+        font-size: 32px;
+        line-height: 22px;
+      }
+      @media(max-width: 736px) {
+        display: none;
+      }
+    }
+  }
+
+  .title {
+    position: relative;
+
+    .btn-skipstep {
+      position: absolute;
+      top: 8px;
+      right: 0px;
+      @media(max-width: 1199px) {
+        top: auto;
+      }
+
+      @media(max-width: 768px) {
+        margin-top: 0px;
+        font-size: 12px;
+      }
+    }
+
+    p {
+      max-width: 91%;
+      margin: 30px auto 0px auto;
+      font-size: 12px;
+      color: $secondary_dark;
+      line-height: 22px;
+      @media(max-width: 1199px) {
+        margin-top: 55px;
+      }
+      @media(max-width: 991px) {
+        margin-left: 0px;
+        margin-right: 0px;
+        text-align: left;
+      }
+    }
+
+    @media(max-width: 1199px) {
+      //padding-bottom: 30px;
+      min-height: 50px;
+      .btn-skipstep {
+        top: 60px;
+        //bottom: -20px;
+      }
+    }
+
+  }
+
+  .simple-card {
+    .panel-table-wrap {
+      font-size: 14px;
+
+      .panel-table thead td:first-child:after {
+        top: -110px;
+      }
+
+      .panel-table tbody td, .panel-table thead td {
+        padding: 0px;
+
+        .panel-table-data {
+          padding: 18px 20px;
+        }
+
+        &:first-child {
+          //padding-left: 0px;
+          .panel-table-data {
+            padding-left: 0px;
+          }
+        }
+      }
+
+      .panel-table-data {
+        //padding: 0px;
+        .panel-table-info {
+          small {
+            margin-top: 5px;
+            display: block;
+            font-size: 12px;
+          }
+        }
+      }
+
+      .panel-table tfoot .total {
+        padding-top: 60px;
+      }
+    }
+  }
+}

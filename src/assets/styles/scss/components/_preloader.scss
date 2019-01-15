@@ -1,0 +1,124 @@
+.preloader {
+  position: fixed;
+  z-index: 9999999;
+  background: rgba($white, 0.9);
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  text-align: center;
+
+  &.disable {
+    display: none;
+  }
+
+  .loader-inner {
+    height: 230px;
+    width: 350px;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    margin-left: -175px;
+    margin-top: -115px;
+    @media(max-width: 991px) {
+      @include scale(0.9);
+    }
+    @media(max-width: 768px) {
+      @include scale(0.7);
+      width: 100%;
+      left: auto;
+      margin-left: auto;
+    }
+
+    .loader-icon-wrap {
+      width: 100%;
+      height: 120px;
+      margin-bottom: 40px;
+
+      .icon {
+        height: 120px;
+        width: 120px;
+        margin: auto;
+        line-height: 120px;
+        font-size: 60px;
+        color: $primary;
+        border-radius: 999px;
+        background: url('assets/images/flight-color.svg') no-repeat center center;
+        position: relative;
+
+        &:before, &:after {
+          border: 2px solid $primary_yellow;
+          border-top: 2px solid transparent;
+          border-radius: 999px;
+          content: "";
+          display: block;
+          position: absolute;
+          left: 0px;
+          top: 0px;
+        }
+
+        &:before {
+          height: 120px;
+          width: 120px;
+          animation: spin-1 1s infinite linear;
+        }
+
+        &:after {
+          left: 15px;
+          top: 15px;
+          height: 90px;
+          width: 90px;
+          border-width: 1px;
+          animation: spin-2 1s infinite linear;
+        }
+      }
+    }
+
+    .title {
+      width: 100%;
+
+      h2 {
+        width: 100%;
+        font-size: 28px;
+        font-family: $jazeera_bold;
+      }
+    }
+
+    p {
+      font-size: 18px;
+      font-family: $jazeera_regular;
+      color: $primary;
+      margin: 16px 0px;
+    }
+  }
+}
+
+@keyframes spin-1 {
+  0% {
+    transform: rotate(360deg);
+    opacity: 1;
+  }
+  50% {
+    transform: rotate(180deg);
+    opacity: 0.5;
+  }
+  100% {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes spin-2 {
+  0% {
+    transform: rotate(0deg);
+    opacity: 0.5;
+  }
+  50% {
+    transform: rotate(180deg);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(360deg);
+    opacity: 0.5;
+  }
+}

@@ -1,0 +1,301 @@
+section.meal-selection {
+  margin-bottom: 60px;
+
+  .accordion-wrapper .accordion-item {
+    .card-header h5.grp-label {
+      span.divider {
+        border-right: 1px solid $border1;
+        height: 15px;
+        width: 1px;
+        display: inline-block;
+        margin: 0px 5px -2px 5px;
+      }
+    }
+  }
+
+  .panel-meal-selection {
+
+    .panel-caption {
+      position: relative;
+
+      .panel-footer {
+        left: 0px;
+        right: 0px;
+        position: absolute;
+        bottom: 0px;
+        padding: 20px 22px;
+
+        .total {
+          //margin-bottom: 10px;
+          font-family: $jazeera_regular;
+          padding-top: 100px;
+          text-align: right;
+          font-size: 20px;
+
+          strong {
+            font-family: $jazeera_medium;
+          }
+
+          small {
+            font-size: 16px;
+            margin-right: 20px;
+          }
+        }
+
+        @media(max-width: 736px) {
+          position: relative;
+          padding: 25px 15px;
+          margin-left: -15px;
+          margin-right: -15px;
+          border-top: 1px solid $border;
+          margin-top: 30px;
+          .total {
+            padding: 0px;
+            font-size: 18px;
+
+            small {
+              position: absolute;
+              left: 15px;
+            }
+          }
+        }
+      }
+    }
+
+    .panel-body {
+      @media(max-width: 991px) {
+        &.show-popup {
+          padding: 0px;
+
+          .form-file-label {
+            text-align: left;
+            justify-content: flex-start;
+          }
+
+          .scroll-panel {
+            max-height: none;
+            //height: auto !important;
+            //overflow: auto !important;
+            overflow-x: hidden !important;
+            margin-top: 60px;
+            padding: 15px;
+
+            .title {
+              min-height: auto;
+
+              h5 {
+                font-family: $jazeera_medium;
+                font-size: 16px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .selected-meal-info-wrap, .meal-selection-grid-wrap {
+      width: 100%;
+    }
+
+    .selected-meal-info-wrap {
+      padding-top: 50px;
+      font-size: 14px;
+      position: relative;
+      z-index: 1;
+      @media(max-width: 736px) {
+        padding-top: 30px;
+      }
+
+      .label {
+
+      }
+
+      .selected-passengers {
+        position: relative;
+        margin-top: 18px;
+
+        .modify-meal, .meals-for-passenger {
+          color: $primary;
+        }
+
+        .modify-meal {
+          z-index: 0;
+          position: absolute;
+          right: 0px;
+          top: 0px;
+        }
+
+        .meals-for-passenger {
+
+        }
+
+        .selected-meals {
+          color: $secondary_grey;
+          margin-top: 5px;
+
+          span.divider {
+            border-right: 1px solid $border1;
+            height: 15px;
+            width: 1px;
+            display: inline-block;
+            margin: 0px 5px -2px 5px;
+          }
+        }
+      }
+
+      .total-meal-cost {
+        display: flex;
+        justify-content: space-between;
+        color: $primary;
+        margin-top: 18px;
+        border-bottom: 2px solid $primary;
+        height: 28px;
+
+        .meals-for-passenger {
+          font-family: $jazeera_medium;
+        }
+      }
+
+      .select-meal-msg {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 18px;
+
+        .title {
+          margin: 0px;
+        }
+
+        .btn {
+          //margin: 2px 0px;
+          line-height: 24px;
+          opacity: 0.5;
+        }
+      }
+    }
+
+    .meal-selection-grid-wrap {
+      padding-top: 22px;
+      padding-bottom: 22px;
+      //margin-top: -150px;
+      border-left: 1px solid $border1;
+
+      .scroll-panel {
+        max-height: 640px;
+        //overflow-y: auto;
+        @media(max-width: 534px) {
+          padding: 0px 15px;
+        }
+      }
+
+      .title {
+        min-height: 40px;
+
+        h5 {
+          font-size: 16px;
+          font-family: $jazeera_regular;
+          color: $secondary_dark;
+        }
+      }
+
+      .meal-selection-grid {
+        flex-flow: row wrap;
+        justify-content: space-between;
+
+        &:after {
+          content: "";
+          flex: auto;
+          max-width: 234px;
+          @media(max-width: 768px) {
+            display: none;
+          }
+        }
+
+        .mean-selection-item {
+          margin: 10px 0px;
+          border: 0px;
+          @media(max-width: 534px) {
+            position: relative;
+            //border-top: 1px solid $inactive;
+            //padding-bottom: 15px;
+            max-width: calc(50% - 10px);
+            width: 100%;
+            //&:nth-child();
+            //& + .mean-selection-item{}
+          }
+
+          .card-img-wrap {
+
+          }
+
+          .card-body {
+            padding: 15px 0px 0px;
+
+            .card-body-top {
+              position: relative;
+              @media(max-width: 534px) {
+                position: static;
+              }
+
+              .checkbox-wrap {
+                position: absolute;
+                top: 0px;
+                right: 0px;
+                @media(max-width: 534px) {
+                  //top: -117px;
+                  background: $white;
+                }
+
+                label {
+                  height: 24px;
+                  width: 24px;
+
+                  &:before {
+                    width: 100%;
+                    margin-right: -4px;
+                  }
+                }
+              }
+
+              .title {
+                margin: 0px;
+                min-height: 22px;
+
+                h5 {
+                  color: $secondary_grey;
+                  font-size: 14px;
+                  font-family: $jazeera_regular;
+                }
+              }
+
+              .price {
+                color: $primary;
+                font-size: 14px;
+                font-family: $jazeera_medium;
+              }
+            }
+
+            .tags-list {
+              margin-top: 8px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .section-panel-wrap {
+    .accordion-wrapper .accordion-item + .accordion-item {
+      margin-top: 22px;
+      @media(max-width: 768px) {
+        margin-top: 15px;
+      }
+    }
+  }
+
+  @media(max-width: 991px) {
+    .accordion-wrapper .accordion-item .card-header h5.grp-label {
+      display: none;
+    }
+  }
+
+}

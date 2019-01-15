@@ -1,0 +1,311 @@
+.collapse.show {
+  // display: block;
+  transition: opacity 0.35s ease-in-out;
+  //height: auto;
+  opacity: 1;
+}
+
+.collapsing {
+
+  //-webkit-transition: none;
+  //transition: none;
+
+  display: block;
+  opacity: 1;
+  position: relative;
+  height: auto !important;
+
+  /*
+    &:after{
+        content: "Loading";
+        display: block;
+        position: absolute;
+        right: 15px;
+        top: -15px;
+        z-index: 5;
+    }
+    */
+
+
+}
+
+.collapse-section {
+  padding: 60px 0px;
+  @media(max-width: 768px) {
+    padding: 30px 0px;
+  }
+  @media(max-width: 736px) {
+    .accordion-wrapper .accordion-item .card-body .title {
+      display: none;
+    }
+  }
+}
+
+.card-header-wrap {
+  display: flex;
+  position: relative;
+
+  .card-header, .radio-wrap {
+    width: 100%;
+  }
+
+  .radio-wrap {
+    padding: 25px 20px;
+    height: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: right;
+    position: absolute;
+    width: auto;
+    right: 0px;
+    top: 0px;
+    @media(max-width: 736px) {
+      right: auto;
+      left: 80px;
+      &.reverse label {
+        flex-direction: row;
+
+        &:before {
+          margin-left: 0px;
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+}
+
+.accordion-wrapper {
+  .accordion-item {
+    margin: 0px;
+    background: $white;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
+
+    & > .radio-wrap {
+      cursor: default;
+      position: absolute;
+      pointer-events: none;
+      z-index: 999;
+      right: 15px;
+      top: 15px;
+      background: red;
+    }
+
+    .card-header {
+      display: flex;
+      background: $white;
+      align-items: center;
+      border: 0px;
+      justify-content: space-between;
+      cursor: pointer;
+      height: 78px;
+      @media(max-width: 736px) {
+        padding: 15px;
+        height: 70px;
+      }
+
+      h2, h3, h4, h5 {
+        margin: 0px;
+      }
+
+      h5 {
+        color: $secondary_dark;
+      }
+
+      .icon-arrow-down {
+        @include rotate(180);
+        color: $tint7;
+
+        & + h5 {
+          margin-left: 15px;
+          @media(max-width: 736px) {
+            margin-left: 0px;
+          }
+        }
+      }
+
+      .accordion-title {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        min-width: 220px;
+        @media(max-width: 736px) {
+          .icon {
+            font-size: 14px;
+            position: absolute;
+            right: 15px;
+            top: 28px;
+          }
+        }
+
+        h5 {
+          visibility: hidden;
+          @media(max-width: 1199px) {
+            font-size: 14px;
+            visibility: visible;
+          }
+          @media(max-width: 736px) {
+            font-size: 13px;
+          }
+        }
+      }
+
+      h5.grp-label {
+        font-family: $jazeera_regular;
+        font-size: 14px;
+        color: $secondary_dark;
+        right: 0;
+        left: 0;
+        /* width: 100%; */
+        position: absolute;
+        text-align: center;
+        @media(max-width: 768px) {
+          display: none;
+        }
+
+        &.inactive {
+          color: $tint2;
+        }
+      }
+
+      &.collapsed {
+        display: flex;
+
+        .icon-arrow-down {
+          color: $secondary_dark;
+          @include rotate(0);
+        }
+
+        .accordion-title {
+          h5 {
+            visibility: visible;
+          }
+        }
+
+        h5.grp-label {
+          color: $primary;
+
+          &.inactive {
+            color: $tint2;
+          }
+        }
+      }
+
+      & + .collapse {
+        //margin-top: -1px;
+        .card-body {
+          padding-top: 0px;
+        }
+      }
+    }
+
+    & + .accordion-item {
+      margin-top: 30px;
+      @media(max-width: 768px) {
+        margin-top: 15px;
+      }
+    }
+
+    .card-header + .card-body {
+
+    }
+
+    .collapse {
+      &.open-always {
+        .card-body {
+          padding-top: 40px;
+        }
+      }
+    }
+
+    .card-body {
+      padding-top: 0px;
+      //padding-top: 40px;
+      font-size: 14px;
+      line-height: 26px;
+      @media(max-width: 736px) {
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-bottom: 15px;
+      }
+
+      .title {
+        margin-bottom: 10px;
+        @media(max-width: 736px) {
+          text-align: left;
+          p {
+            text-align: left;
+            line-height: 16px;
+          }
+          .cloned {
+            display: inline-block;
+            font-size: 12px;
+            font-family: $jazeera_medium;
+            color: $secondary_dark;
+            margin-right: 5px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.tint-fill {
+  .accordion-wrapper .accordion-item {
+    border: 0px;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
+  }
+
+  .simple-card {
+    border: 0px;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
+  }
+}
+
+@media(max-width: 736px) {
+  section.collapse-section {
+    .accordion-wrapper {
+      .accordion-item {
+        box-shadow: none;
+
+        .card-header {
+          height: 44px;
+
+          h5 {
+            font-size: 13px;
+          }
+
+          .icon-arrow-down {
+            position: absolute;
+            right: 20px;
+
+            & + h5 {
+              margin-left: 0px;
+            }
+          }
+
+          .accordion-title {
+            .icon {
+              top: 15px;
+            }
+          }
+        }
+
+        .card-body {
+          font-size: 12px;
+          text-align: left;
+          line-height: 20px;
+
+          .title {
+            h3 {
+              text-align: left;
+            }
+
+            .cloned {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}

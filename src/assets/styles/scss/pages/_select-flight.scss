@@ -1,0 +1,2364 @@
+.journey-flights {
+  display: none;
+
+  .place {
+    font-family: $jazeera_medium;
+
+    .label {
+      display: block;
+      font-family: $jazeera_regular;
+    }
+  }
+
+  .icon {
+    font-size: 30px;
+    height: 30px;
+    width: 30px;
+    margin: 0px 15px;
+    line-height: 30px;
+    text-align: center;
+  }
+
+  @media (max-width: 991px) {
+    display: flex;
+  }
+}
+
+.account-header {
+  & > .container {
+    @media (max-width: 736px) {
+      margin: 0px auto;
+      padding: 0px;
+    }
+  }
+}
+
+.search-criteria-wrap {
+  display: flex;
+  justify-content: space-between;
+  @media (max-width: 768px) {
+    //margin-left: -15px !important;
+    //margin-right: -15px !important;
+    padding: 15px 0px;
+    border-bottom: 1px solid $border;
+  }
+  @media (max-width: 736px) {
+    padding: 15px;
+  }
+
+  .search-criteria {
+    display: flex;
+    @media (max-width: 991px) {
+      display: none;
+    }
+
+    .item-grp-wrap {
+      display: flex;
+      border-right: 1px solid $inactive;
+      margin-right: 20px;
+      //padding-right: 40px;
+      max-height: 40px;
+      @media(max-width: 1200px) {
+        margin-right: 15px;
+      }
+
+      &:last-child {
+        border-right: 0px;
+      }
+
+      .item-wrap {
+        margin-right: 25px;
+        @media(max-width: 1200px) {
+          margin-right: 15px;
+        }
+
+        .input-label {
+          font-size: 12px;
+          color: $secondary_grey;
+          margin-bottom: 2px;
+          @media(max-width: 1200px) {
+            font-size: 10px;
+          }
+        }
+
+        .input-txt {
+          display: flex;
+          color: $primary;
+
+          .multi-input {
+            display: flex;
+            margin-right: 20px;
+
+            .icon-wrap {
+              margin-right: 4px;
+            }
+          }
+        }
+
+        h5 {
+          margin: 0px;
+          font-size: 14px;
+          @media(max-width: 1200px) {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+
+  .journey-flights {
+    .place {
+      font-size: 12px;
+      color: $primary;
+
+      .label {
+        font-size: 10px;
+        color: $secondary_grey;
+        margin-bottom: 2px;
+      }
+    }
+  }
+}
+
+section.flight-info-wrap {
+  padding: 60px 0px 0px;
+  @media (max-width: 768px) {
+    padding-top: 30px;
+  }
+}
+
+section.currency-converter {
+  margin-top: 30px;
+  @media (max-width: 991px) {
+    display: none;
+  }
+}
+
+.switch-flight-info-wrap {
+  display: flex;
+  margin-top: 40px;
+
+  .select-date-range {
+    font-size: 10px;
+    min-width: 100px;
+    font-family: $jazeera_regular;
+    position: relative;
+    line-height: 16px;
+    padding: 15px;
+    cursor: pointer;
+
+    .hidden-date {
+      display: none;
+    }
+
+    strong {
+      font-family: $jazeera_medium;
+      color: $primary;
+      display: block;
+    }
+
+    &:before {
+      display: block;
+      color: $primary;
+      position: absolute;
+      top: 30px;
+      font-size: 20px;
+    }
+
+    &.prev-date-range {
+      text-align: right;
+
+      &:before {
+        content: "\e924";
+        font-family: "icomoon";
+        left: 0px;
+      }
+    }
+
+    &.next-date-range {
+      text-align: left;
+
+      &:before {
+        content: "\e927";
+        font-family: "icomoon";
+        right: 0px;
+      }
+    }
+  }
+
+  .date-range-list {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+
+    .date-tab-wrap {
+      width: 100%;
+      text-align: center;
+      padding: 14px 10px 0px;
+      align-items: center;
+      position: relative;
+      background: $white;
+      margin-left: -1px;
+      border: 1px solid $tint5;
+      //@include transition(all, 0.1s, ease-out);
+      max-width: 136px;
+      height: 90px;
+
+      .msg {
+        font-size: 12px;
+        color: $secondary_dark;
+        line-height: 20px;
+      }
+
+      .date {
+        font-size: 12px;
+        min-height: 28px;
+        @media (max-width: 1199px) {
+          font-size: 10px;
+          min-height: 20px;
+        }
+      }
+
+      .date,
+      .cost {
+        color: $secondary_grey;
+      }
+
+      .cost-info {
+        font-size: 12px;
+        @media (max-width: 1199px) {
+          font-size: 10px;
+        }
+
+        .cost-label {
+          font-size: 12px;
+          color: $tint2;
+          @media (max-width: 1199px) {
+            font-size: 10px;
+          }
+        }
+
+        .cost {
+          font-size: 14px;
+          @media (max-width: 1199px) {
+            font-size: 12px;
+          }
+        }
+      }
+
+      .hightlight {
+        position: absolute;
+        top: 0px;
+        left: 50%;
+        margin-left: -50px;
+        top: -18px;
+        @media (max-width: 736px) {
+          margin-left: -35px;
+        }
+      }
+
+      &.inactive {
+        background: $white;
+
+        .date, .msg {
+          opacity: 0.5;
+        }
+      }
+
+      &.selected {
+        border-bottom: 0px;
+        background: $tint6;
+        margin-top: -10px;
+        min-width: 164px;
+        height: 100px;
+
+        .msg {
+          color: $primary;
+          opacity: 0.5;
+        }
+
+        @media (max-width: 1199px) {
+          font-size: 16px;
+          padding-top: 25px;
+        }
+
+        .date,
+        .cost {
+          color: $primary;
+        }
+
+        .date {
+          font-size: 14px;
+          @media (max-width: 1199px) {
+            font-size: 12px;
+          }
+        }
+
+        .cost {
+          font-size: 18px;
+          @media (max-width: 1199px) {
+            font-size: 15px;
+          }
+        }
+      }
+
+      &:hover {
+        /*
+				border-bottom: 0px;
+				background: $tint6;
+				margin-top: -10px;
+				min-width: 164px;
+				height: 100px;
+				.date, .cost{
+					color: $primary;
+				}
+				.date{
+					font-size: 14px;
+				}
+				.cost{
+					font-size: 18px;
+				}
+				*/
+      }
+    }
+  }
+
+  &.mobile {
+    display: none;
+    @media (max-width: 736px) {
+      .select-date-range {
+        padding: 0px;
+        min-width: 28px;
+      }
+    }
+  }
+
+  @media (max-width: 991px) {
+    display: none;
+    &.mobile {
+      display: flex;
+    }
+    @media (max-width: 736px) {
+      .date-range-list {
+        .date-tab-wrap {
+          max-width: 90px;
+          min-width: 90px;
+
+          .date {
+            font-size: 10px;
+          }
+
+          .cost-info {
+            font-size: 11px;
+
+            .cost {
+              font-size: 11px;
+            }
+          }
+
+          &.selected {
+            max-width: 90px;
+            min-width: 90px;
+
+            .date {
+              font-size: 10px;
+            }
+
+            .cost-info {
+              font-size: 11px;
+
+              .cost-label {
+                visibility: hidden;
+              }
+
+              .cost {
+                font-size: 11px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.hightlight {
+  font-size: 12px;
+  color: $white;
+  min-width: 100px;
+  height: 18px;
+  font-family: $jazeera_medium;
+  display: inline-block;
+  padding: 0px 6px;
+  line-height: 20px;
+  @media (max-width: 736px) {
+    font-size: 9px;
+    padding: 0px 2px;
+    min-width: 70px;
+  }
+
+  &.bg-success {
+    background: $success !important;
+  }
+
+  &.bg-error {
+    background: $danger !important;
+  }
+
+  &.bg-info {
+    background: $primary_blue !important;
+  }
+}
+
+.flight-info-panel-wrap {
+  min-height: 252;
+  margin-top: -12px;
+  padding-bottom: 60px;
+  @media (max-width: 991px) {
+    margin-top: 0px;
+  }
+  @media (max-width: 768px) {
+    padding-bottom: 30px;
+  }
+
+  .no-flight-available-wrap {
+    text-align: center;
+    margin: 80px 0px 0px;
+    display: inline-block;
+    width: 100%;
+    @media(max-width: 991px) {
+      margin-top: 40px;
+    }
+    @media(max-width: 736px) {
+      margin-top: 20px;
+    }
+
+    .icon-wrap {
+      font-size: 55px;
+      height: 64px;
+      width: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: $primary;
+      margin: auto;
+      @media(max-width: 736px) {
+        font-size: 40px;
+        height: 40px;
+        width: 40px;
+      }
+    }
+
+    p {
+      font-size: 14px;
+      color: $secondary_dark;
+      margin: 25px 0px 0px;
+      @media(max-width: 736px) {
+        margin-top: 15px;
+        font-size: 12px;
+        line-height: 20px;
+        br {
+          display: none;
+        }
+      }
+    }
+  }
+
+}
+
+.filght-info-header {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 50px 0px 40px;
+  width: 100%;
+  @media (max-width: 991px) {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 30px 0px;
+    .flight-note {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+
+  .flight-note {
+    display: flex;
+    color: $primary;
+
+    .icon-wrap {
+      font-size: 18px;
+      margin-right: 6px;
+      font-weight: normal;
+    }
+
+    h5 {
+      font-family: $jazeera_regular;
+      font-size: 12px;
+      margin: 0px;
+    }
+  }
+
+  .flight-filter-wrap {
+    display: flex;
+    font-size: 12px;
+    align-items: baseline;
+    @media (max-width: 991px) {
+      width: 100%;
+      margin-top: 15px;
+      justify-content: space-between;
+    }
+
+    .filter-label {
+      color: $primary;
+      font-family: $jazeera_medium;
+    }
+
+    .filter-option-wrap {
+      .btn-link {
+        font-size: 12px;
+        font-family: $jazeera_regular;
+        text-decoration: none;
+        border-bottom: 2px solid transparent;
+        color: $black;
+        padding: 4px 0px;
+        height: auto;
+        margin-left: 15px;
+
+        &.active {
+          border-bottom-color: $primary_light;
+          font-family: $jazeera_medium;
+          color: $secondary_dark;
+        }
+      }
+
+      &.mobile {
+        display: none;
+      }
+
+      @media (max-width: 991px) {
+        display: none;
+        &.mobile {
+          width: calc(100% - 60px);
+          display: block;
+
+          .select2-container--default .select2-selection--single {
+            background: none;
+
+            .select2-selection__arrow {
+              top: 12px;
+
+              &:before {
+                font-size: 14px;
+                display: block;
+                text-align: center;
+                height: 22px;
+                width: 22px;
+              }
+            }
+          }
+
+          .select2-container
+          .select2-selection--single
+          .select2-selection__rendered {
+            padding-top: 10px;
+          }
+
+          .select2-container--default
+          .select2-selection--single
+          .select2-selection__rendered {
+            height: 44px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.flight-search-result-wrap {
+  .flight-search-result-item {
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
+    padding: 20px;
+    background: $white;
+    position: relative;
+    @media (max-width: 991px) {
+      padding: 0px;
+      &.show-popup {
+        padding: 0px;
+        margin-top: 61px;
+        background: $tint4;
+      }
+    }
+
+    & + .flight-search-result-item {
+      margin-top: 30px;
+      @media (max-width: 991px) {
+        margin-top: 15px;
+        &.show-popup {
+          margin-top: 60px;
+        }
+      }
+    }
+
+    .hightlight {
+      position: absolute;
+      top: -18px;
+      left: 0px;
+    }
+
+    .flight-journey-info {
+      display: flex;
+
+      .form-file-label {
+        width: 100%;
+        display: none;
+        margin: 0px;
+        position: fixed;
+        left: 0px;
+        top: 0px;
+        right: 0px;
+        z-index: 2;
+        background: white;
+      }
+
+      @media (max-width: 991px) {
+        max-height: 100%;
+        overflow-y: auto;
+        flex-wrap: wrap;
+        .flight-class-item {
+          cursor: pointer;
+          overflow: hidden;
+        }
+      }
+
+      .flight-info-container,
+      .flight-class-info-wrap {
+        width: 100%;
+      }
+
+      .flight-info-container {
+        @media (max-width: 991px) {
+          padding: 15px;
+        }
+        @media(max-width: 736px) {
+          padding-top: 50px;
+        }
+
+        .collapsed {
+          display: none;
+
+          &.active {
+            display: block;
+          }
+
+          .flight-info-inner {
+            display: flex;
+            margin-right: 20px;
+            position: relative;
+            @media (max-width: 991px) {
+              margin-right: 0px;
+            }
+            @media (max-width: 736px) {
+              // @include scale(0.8);
+            }
+
+            .flight-base-info {
+              //display: flex;
+              width: 100%;
+
+              .time {
+                font-size: 28px;
+                font-family: $jazeera_regular;
+                color: $primary;
+                height: 65px;
+                @media (max-width: 736px) {
+                  font-size: 18px;
+                  color: $secondary_dark;
+                }
+              }
+
+              .btm-prt {
+                .place {
+                  color: $light_grey;
+                  font-size: 12px;
+                  font-family: $jazeera_medium;
+                  margin: 3px 0px;
+                  @media (max-width: 736px) {
+                    font-size: 10px;
+                  }
+                }
+
+                .date-time {
+                  color: $tint2;
+                  font-size: 12px;
+                  font-family: $jazeera_regular;
+                  @media (max-width: 736px) {
+                    font-size: 10px;
+                  }
+                }
+              }
+
+              &.from-info {
+                margin-right: auto;
+              }
+
+              &.to-info {
+                text-align: right;
+                margin-left: auto;
+              }
+            }
+
+            .flight-route-info-wrap {
+              position: absolute;
+              width: 400px;
+              top: 50%;
+              left: 50%;
+              margin-left: -200px;
+              margin-top: -25px;
+              @media (max-width: 736px) {
+                width: 220px;
+                margin-left: -110px;
+              }
+
+              .journey-duration {
+                font-size: 14px;
+                font-family: $jazeera_regular;
+                color: $black;
+                text-align: center;
+                @media (max-width: 736px) {
+                  font-size: 10px;
+                }
+              }
+
+              .departure-to-destination {
+                display: flex;
+                position: relative;
+                margin-top: -4px;
+
+                .flight-route-line-wrap {
+                  width: 100%;
+                  position: relative;
+                  border-top: 2px solid $fade;
+                  margin: 10px 10px 0px 30px;
+                  height: 2px;
+                  display: flex;
+
+                  &:after {
+                    content: "";
+                    display: block;
+                    height: 10px;
+                    width: 10px;
+                    position: absolute;
+                    right: 0px;
+                    margin-left: -5px;
+                    margin-top: -6px;
+                    @include border-radius(50%);
+                    background-color: $invalid;
+                  }
+
+                  .icon-wrap {
+                    position: absolute;
+                    left: -20px;
+                    color: $fade;
+                    font-size: 22px;
+                    top: -12px;
+                    @media(max-width: 768px) {
+                      color: $black;
+                      font-size: 16px;
+                      line-height: 22px;
+                      left: -16px;
+                    }
+                  }
+
+                  .stops-wrap {
+                    //display: none;
+                    width: 100%;
+                    display: flex;
+                    position: relative;
+                    justify-content: space-evenly;
+                    font-size: 12px;
+                    color: $tint2;
+                    @media (max-width: 736px) {
+                      font-size: 10px;
+                    }
+
+                    .stop {
+                      position: relative;
+                      margin-top: 10px;
+
+                      &:before {
+                        content: "";
+                        display: block;
+                        height: 10px;
+                        width: 10px;
+                        position: absolute;
+                        left: 50%;
+                        margin-left: -5px;
+                        margin-top: -16px;
+                        @include border-radius(50%);
+                        border: 1px solid $invalid;
+                        background: $white;
+                      }
+                    }
+                  }
+                }
+
+                .place-code {
+                  max-width: 60px;
+                  font-size: 18px;
+                  font-family: $jazeera_regular;
+                  text-transform: uppercase;
+                  @media (max-width: 736px) {
+                    font-size: 14px;
+                    color: $primary;
+                    font-family: $jazeera_medium;
+                    //position: absolute;
+                  }
+
+                  &.departure {
+                    margin-right: auto;
+                  }
+
+                  &.destination {
+                    margin-left: auto;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .expanded {
+          display: none;
+
+          &.active {
+            display: block;
+          }
+
+          .flight-detail-info-inner {
+            //display: flex;
+            margin-right: 20px;
+            position: relative;
+            @media (max-width: 991px) {
+              margin-right: 0px;
+            }
+
+            .flight-route-item-wrap {
+              display: flex;
+              align-items: center;
+
+              .flight-route-detail-info-wrap {
+                position: relative;
+
+                .flight-route-info-line {
+                  height: auto;
+                  width: 2px;
+                  display: block;
+                  position: absolute;
+                  bottom: 22px;
+                  top: 4px;
+                  left: 76px;
+                  border-right: 2px solid $fade;
+                  //position: relative;
+                  &:before,
+                  &:after {
+                    height: 10px;
+                    width: 10px;
+                    border: 1px solid $white;
+                    background: $fade;
+                    @include border-radius(50%);
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    left: -4px;
+                  }
+
+                  &:before {
+                    top: 0px;
+                  }
+
+                  &:after {
+                    bottom: 0px;
+                  }
+                }
+
+                .flight-route-info {
+                  display: flex;
+                  //min-height: 56px;
+                  & + .flight-route-info {
+                    margin-top: 20px;
+                  }
+
+                  .time-date {
+                    min-width: 90px;
+
+                    .time {
+                      font-family: $jazeera_regular;
+                      font-size: 20px;
+                      line-height: 20px;
+                      color: $primary;
+                      @media (max-width: 736px) {
+                        font-size: 16px;
+                        color: $secondary_dark;
+                      }
+                    }
+
+                    .date {
+                      color: $tint2;
+                      font-size: 12px;
+                      font-family: $jazeera_regular;
+                      @media (max-width: 736px) {
+                        font-size: 10px;
+                      }
+                    }
+                  }
+
+                  .place-info {
+                    font-size: 14px;
+                    color: $secondary_dark;
+                    font-family: $jazeera_regular;
+                    @media (max-width: 736px) {
+                      font-size: 12px;
+                    }
+
+                    strong {
+                      font-family: $jazeera_medium;
+                    }
+                  }
+                }
+              }
+
+              .flight-duration-detail-info-wrap {
+                display: flex;
+                margin-left: auto;
+                @media (max-width: 736px) {
+                  flex-wrap: wrap;
+                  justify-content: flex-end;
+                }
+
+                .flight-name {
+                  color: $tint2;
+                  font-size: 14px;
+                  //font-family: $jazeera_medium;
+                  @media (max-width: 736px) {
+                    font-size: 12px;
+                  }
+                  font-family: $jazeera_regular;
+
+                  strong {
+                    font-family: $jazeera_medium;
+                    color: $secondary_dark;
+                  }
+
+                  /*
+                  @media (max-width: 736px) {
+                    font-size: 12px;
+                    font-family: $jazeera_regular;
+                    strong {
+                      font-family: $jazeera_medium;
+                      color: $secondary_dark;
+                    }
+                  }
+                  */
+                }
+
+                .flight-duration {
+                  font-size: 14px;
+                  color: $black;
+                  margin-left: 30px;
+                  font-family: $jazeera_regular;
+                  @media (max-width: 736px) {
+                    font-size: 12px;
+                    margin-left: 0px;
+                  }
+                }
+              }
+            }
+
+            .flight-route-item-wrap-connection {
+              border-top: 1px dashed $fade;
+              border-bottom: 1px dashed $fade;
+              margin: 20px 0px 30px;
+              min-height: 45px;
+              display: flex;
+              align-items: center;
+
+              .icon-wrap {
+                min-width: 90px;
+                font-size: 34px;
+                color: $fade;
+                padding: 0px 0px 0px 10px;
+                @media (max-width: 736px) {
+                  min-width: 40px;
+                  padding-left: 0px;
+                  padding-right: 10px;
+                  color: $secondary_dark;
+                  font-size: 28px;
+                }
+              }
+
+              .place {
+                color: $tint2;
+                font-size: 14px;
+                line-height: 14px;
+                @media (max-width: 736px) {
+                  font-size: 12px;
+                  line-height: 12px;
+                }
+              }
+
+              .flight-duration {
+                font-size: 14px;
+                color: $black;
+                margin-left: auto;
+                font-family: $jazeera_regular;
+                @media (max-width: 736px) {
+                  font-size: 12px;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .flight-class-info-wrap {
+        display: flex;
+        max-width: 422px;
+        margin-top: -20px;
+        margin-bottom: -20px;
+        margin-right: -20px;
+        @media (max-width: 991px) {
+          max-width: none;
+          /*
+	    	    min-width: calc(100% + 40px);
+				    margin-left: -20px;
+				    margin-right: 30px;
+				    margin-top: 15px;
+				    */
+          margin: 0px;
+        }
+
+        .flight-class-item {
+          width: 100%;
+          display: flex;
+          position: relative;
+          justify-content: center;
+          align-items: center;
+          color: $white;
+          min-height: 140px;
+
+          .class-label,
+          .expand-arrow, .expand-arrow .icon {
+            position: absolute;
+          }
+
+          .class-label {
+            top: 8%;
+            font-size: 14px;
+            font-family: $jazeera_medium;
+          }
+
+          .expand-arrow {
+            bottom: 0px;
+            top: 0px;
+            left: 0px;
+            right: 0px;
+            cursor: pointer;
+
+            .icon {
+              bottom: 8%;
+              left: 50%;
+              margin-left: -8px;
+            }
+
+            @media (max-width: 991px) {
+              // display: none;
+            }
+
+            &.active {
+              .icon {
+                @include rotate(180);
+              }
+            }
+          }
+
+          .cost-wrap {
+            margin: 5px 0px 25px 0px;
+            text-align: center;
+            @media (max-width: 736px) {
+              margin-top: 15px;
+            }
+
+            .cost-label {
+              font-size: 12px;
+              font-family: $jazeera_regular;
+            }
+
+            h4 {
+              color: $white;
+              font-size: 20px;
+              margin: 5px 0px;
+              @media (max-width: 736px) {
+                font-size: 16px;
+              }
+
+              strong {
+                font-family: $jazeera_medium;
+              }
+            }
+
+            .seat-left {
+              font-size: 12px;
+              color: $primary_yellow;
+              margin: 15px 0px;
+              font-family: $jazeera_regular;
+              position: absolute;
+              left: 0px;
+              right: 0px;
+              @media (max-width: 736px) {
+                font-size: 10px;
+              }
+            }
+          }
+
+          &:before,
+          &:after {
+            height: 8px;
+            width: 8px;
+            background: $white;
+            position: absolute;
+            top: 50px;
+            content: "";
+            display: block;
+            @include border-radius(50%);
+          }
+
+          &:before {
+            left: -5px;
+          }
+
+          &:after {
+            right: -5px;
+          }
+
+          &.flight-class-economy {
+            background: $primary_light;
+            border-right: 2px solid $white;
+          }
+
+          &.flight-class-business {
+            background: $primary;
+          }
+        }
+      }
+    }
+
+    .view-detail-btn {
+      padding: 0px;
+      margin-top: 16px;
+      height: auto;
+      font-family: $jazeera_regular;
+      text-decoration: none;
+      font-size: 12px;
+      color: $primary;
+      @media(max-width: 736px) {
+        position: absolute;
+        top: 0px;
+        right: 15px;
+      }
+
+      .icon {
+        margin-left: 10px;
+        font-size: 15px;
+        @media(max-width: 736px) {
+          font-size: 12px;
+          height: 12px;
+        }
+      }
+
+      &.active {
+        .icon {
+          @include rotate(180);
+        }
+      }
+    }
+
+    .flight-class-add-info-wrap {
+      //display: none;
+      @media (max-width: 991px) {
+        display: none;
+      }
+
+      .flight-class-additional-wrap {
+        //visibility: hidden;
+        margin-top: 50px;
+        background: rgba(#f1f4f8, 0.7);
+        padding: 30px 20px;
+        display: none;
+
+        &.active {
+          display: block;
+        }
+
+        .flight-class-additional-wrap-inner {
+          display: flex;
+
+          .btn.btn-link {
+            text-decoration: none;
+            font-family: $jazeera_medium;
+          }
+
+          @media (max-width: 1199px) {
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            .features-list-wrap,
+            .experience-wrap {
+            }
+
+            .features-list-wrap {
+              max-width: 240px;
+              min-width: 240px;
+            }
+            .packages-list-wrap {
+              max-width: 600px;
+              min-width: 600px;
+              @media (max-width: 991px) {
+                min-width: 100%;
+                max-width: 100%;
+                width: 100%;
+              }
+            }
+            .experience-wrap {
+              width: 100%;
+            }
+          }
+        }
+
+        &.economy-class {
+          position: relative;
+
+          &:after {
+            bottom: 100%;
+            right: 280px;
+            border: solid transparent;
+            content: " ";
+            height: 0;
+            width: 0;
+            position: absolute;
+            pointer-events: none;
+            border-color: rgba(136, 183, 213, 0);
+            border-bottom-color: rgba(#f1f4f8, 0.7);
+            border-width: 15px;
+            margin-left: -15px;
+          }
+        }
+
+        &.business-class {
+          position: relative;
+
+          &:after {
+            bottom: 100%;
+            right: 70px;
+            border: solid transparent;
+            content: " ";
+            height: 0;
+            width: 0;
+            position: absolute;
+            pointer-events: none;
+            border-color: rgba(136, 183, 213, 0);
+            border-bottom-color: rgba(#f1f4f8, 0.7);
+            border-width: 15px;
+            margin-left: -15px;
+          }
+        }
+
+        .features-list-wrap {
+          min-width: 260px;
+          @media (max-width: 991px) {
+            display: none;
+          }
+
+          .title {
+            margin-top: 25px;
+
+            h4 {
+              color: $secondary_dark;
+            }
+          }
+
+          .features-list {
+            margin-top: 35px;
+            margin-bottom: 75px;
+
+            .features-list-item {
+              display: flex;
+              align-items: center;
+              justify-content: left;
+
+              .icon-wrap {
+                height: 30px;
+                width: 30px;
+                font-size: 24px;
+                color: $primary;
+                text-align: center;
+                line-height: 30px;
+                margin-right: 10px;
+              }
+
+              h5 {
+                font-size: 12px;
+                line-height: 16px;
+                padding-top: 6px;
+                font-family: $jazeera_regular;
+                color: $black;
+                margin: 0px;
+              }
+
+              & + .features-list-item {
+                margin-top: 16px;
+              }
+            }
+          }
+        }
+
+        .packages-list-wrap {
+          min-width: 630px;
+
+          .packages-list {
+            display: flex;
+            @media (max-width: 991px) {
+              flex-wrap: wrap;
+            }
+
+            .package-list-item {
+              max-width: 211px;
+              background: $white;
+              border: 1px solid $border1;
+              width: 100%;
+              @media (max-width: 991px) {
+                max-width: 100%;
+                & + .package-list-item {
+                  margin-top: 15px;
+                }
+              }
+
+              &.highlight {
+                //@include scale(1.1);
+                border: 1px solid $border1;
+                box-shadow: -4px 4px 20px 0 rgba(0, 0, 0, 0.06);
+                margin-top: -10px;
+                margin-bottom: -10px;
+                margin-right: -1px;
+                margin-left: -1px;
+                position: relative;
+                z-index: 1;
+                @media (max-width: 991px) {
+                  margin: 0px;
+                  box-shadow: none;
+                  margin-top: 15px;
+                }
+
+                .packages-footer {
+                  bottom: -10px;
+                  position: relative;
+                }
+
+                .packages-body {
+                  .offers-list {
+                    margin-top: 20px;
+                  }
+                }
+              }
+
+              .packages-header {
+                height: 56px;
+                line-height: 56px;
+                background: $primary_light;
+                text-align: center;
+
+                h3 {
+                  color: $white;
+                  font-size: 20px;
+                  font-family: $jazeera_medium;
+                  margin: 0px;
+                  padding: 10px;
+                }
+              }
+
+              .packages-body {
+                padding: 30px 15px;
+                min-height: 410px;
+                @media (max-width: 991px) {
+                  padding: 0px 15px;
+                }
+
+                .offers-list {
+                  list-style: none;
+                  //line-height: 45px;
+                  margin: 10px 0px 0px 0px;
+                  padding: 0px;
+                  @media (max-width: 991px) {
+                    display: flex;
+                    flex-wrap: wrap;
+                    margin: 0px;
+                  }
+
+                  .offer-list-label {
+                    display: none;
+
+                    .icon-wrap {
+                      display: block;
+                    }
+
+                    @media (max-width: 991px) {
+                      display: block;
+                    }
+                  }
+
+                  li {
+                    display: flex;
+                    color: $secondary_dark;
+                    font-size: 12px;
+                    min-height: 28px;
+                    @media (max-width: 991px) {
+                      display: block;
+                      text-align: center;
+                      min-height: 105px;
+                      border-bottom: 1px solid $border1;
+                      padding: 25px 0px;
+                      flex: 1 0 33%;
+                      .offer-list-label {
+                        width: 100%;
+
+                        .icon-wrap {
+                          height: 30px;
+                          width: 30px;
+                          margin: auto;
+                          font-size: 26px;
+                          line-height: 30px;
+                          color: $primary;
+                        }
+
+                        h5 {
+                          font-size: 10px;
+                          font-family: $jazeera_regular;
+                          color: $secondary_dark;
+                          max-width: 80px;
+                          margin: 8px auto;
+                          overflow: hidden;
+                          line-height: 12px;
+                          max-height: 24px;
+
+                          @media(max-width: 736px) {
+                            min-height: 24px;
+                            max-width: 75px;
+                          }
+
+                        }
+                      }
+                      span.txt {
+                        font-size: 10px;
+                        font-family: $jazeera_medium;
+                        color: $secondary_dark;
+                        width: 100%;
+                        text-align: center;
+                      }
+                    }
+
+                    small {
+                      font-size: 10px;
+                      color: #8a8a8d;
+                      display: block;
+                    }
+
+                    span.txt {
+                      line-height: 14px;
+                    }
+
+                    span.icon-wrap {
+                      margin-right: 10px;
+                      height: 14px;
+                      width: 14px;
+                      display: block;
+                      @media (max-width: 991px) {
+                        display: none;
+                      }
+
+                      .icon-correct {
+                        color: $success;
+                      }
+                    }
+
+                    &.inactive {
+                      color: #8a8a8d;
+
+                      span {
+                        color: #8a8a8d;
+                      }
+                    }
+
+                    & + li {
+                      margin-top: 18px;
+                      @media (max-width: 991px) {
+                        margin: 0px;
+                      }
+                    }
+                  }
+                }
+              }
+
+              .packages-footer {
+                padding: 15px;
+                text-align: center;
+                position: relative;
+                padding-top: 5px;
+                @media (max-width: 991px) {
+                  margin: 30px 0px 0px;
+                  padding: 15px;
+                }
+                @media (max-width: 768px) {
+                  margin-top: 0px;
+                }
+
+                .btn-secondary {
+                  &:hover,
+                  &:focus {
+                    color: $secondary_dark;
+                    border-color: $primary_yellow;
+                    background: $primary_yellow;
+                  }
+
+                  @media (max-width: 991px) {
+                    max-width: 360px;
+                    margin: 30px auto 15px;
+                    color: $secondary_dark;
+                    border-color: $primary_yellow;
+                    background: $primary_yellow;
+                  }
+                }
+
+                .seat-left {
+                  font-size: 12px;
+                  color: $danger;
+                  margin: 0px;
+                  font-family: $jazeera_regular;
+                  position: absolute;
+                  top: 0px;
+                  left: 0px;
+                  right: 0px;
+                  @media (max-width: 768px) {
+                    position: relative;
+                    margin-top: 15px;
+                  }
+                }
+
+                h4 {
+                  font-size: 16px;
+                  line-height: 16px;
+                  margin: 15px 0px;
+                  color: $secondary_dark;
+                  font-family: $jazeera_medium;
+                  @media (max-width: 991px) {
+                    font-size: 18px;
+                    font-family: $jazeera_regular;
+                    strong {
+                      font-family: $jazeera_medium;
+                    }
+                  }
+                }
+              }
+
+              &:nth-child(1) {
+                .packages-header {
+                  background: $primary_blue;
+                }
+              }
+
+              &:nth-child(2) {
+                .packages-header {
+                  background: $primary_blue1;
+                }
+              }
+
+              &:nth-child(3) {
+                .packages-header {
+                  background: $primary_blue2;
+                }
+              }
+            }
+          }
+        }
+
+        .experience-wrap {
+          text-align: center;
+          min-width: 164px;
+          margin-left: 30px;
+          @media (max-width: 1199px) {
+            margin: 30px 0px 0px 0px;
+          }
+          @media (max-width: 736px) {
+          }
+
+          .experience-header {
+            height: 56px;
+            @media (max-width: 991px) {
+              height: 50px;
+            }
+
+            .title {
+              h4 {
+                color: $secondary_dark;
+                font-size: 14px;
+                font-family: $jazeera_medium;
+                line-height: 20px;
+                width: 100%;
+                @media (max-width: 991px) {
+                  color: $primary;
+                  font-size: 20px;
+                  text-align: left;
+                  br {
+                    display: none;
+                  }
+                }
+              }
+            }
+          }
+
+          .experience-body {
+            min-height: 411px;
+            @media (max-width: 1199px) {
+              display: flex;
+              margin-bottom: 30px;
+              justify-content: space-between;
+              min-height: 170px;
+            }
+            @media (max-width: 768px) {
+              flex-wrap: wrap;
+              margin-bottom: 15px;
+            }
+
+            .experience-item {
+              @media (max-width: 1199px) {
+                min-width: 260px;
+              }
+              @media (max-width: 991px) {
+                min-width: 230px;
+                min-height: 70px;
+                height: 155px;
+              }
+              @media (max-width: 736px) {
+                min-width: auto;
+                min-height: auto;
+                height: auto;
+                flex-basis: calc(50% - 8px);
+                margin-bottom: 15px;
+              }
+
+              & + .experience-item {
+                margin-top: 20px;
+                @media (max-width: 1199px) {
+                  margin-top: 0px;
+                }
+              }
+            }
+          }
+
+          .experience-footer {
+            padding: 15px 0px;
+            text-align: center;
+            position: relative;
+            padding-top: 5px;
+
+            .cost-label {
+              font-size: 12px;
+              color: $light_grey;
+              margin: 0px;
+              font-family: $jazeera_regular;
+              position: absolute;
+              top: 0px;
+              left: 0px;
+              right: 0px;
+            }
+
+            .seat-left {
+              font-size: 12px;
+              color: $danger;
+              margin: 0px;
+              font-family: $jazeera_regular;
+              position: absolute;
+              top: 0px;
+              left: 0px;
+              right: 0px;
+            }
+
+            h4 {
+              font-size: 16px;
+              line-height: 16px;
+              margin: 15px 0px;
+              color: $secondary_dark;
+              font-family: $jazeera_medium;
+            }
+
+            @media (max-width: 1199px) {
+              .btn {
+                max-width: 360px;
+                margin: auto;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &.show-popup {
+      position: fixed;
+      top: 0px;
+      bottom: 0px;
+      left: 0px;
+      right: 0px;
+      overflow-y: auto;
+      z-index: 999;
+
+      .flight-journey-info {
+        @media (max-width: 991px) {
+          background: $tint4;
+          padding: 15px;
+          padding-bottom: 0px;
+        }
+
+        .form-file-label {
+          display: flex;
+        }
+
+        .flight-info-container {
+          display: none;
+        }
+
+        .flight-class-info-wrap {
+          max-height: 160px;
+          margin: 0px;
+        }
+      }
+
+      .flight-class-add-info-wrap {
+        @media (max-width: 991px) {
+          display: block;
+        }
+
+        .flight-class-additional-wrap {
+          @media (max-width: 991px) {
+            padding: 15px;
+            background: none;
+            margin-top: 0px;
+            &:after {
+              border-bottom-color: $tint4;
+              left: auto;
+              right: auto;
+              margin: 0px;
+            }
+            &.economy-class {
+              &:after {
+                left: 25%;
+                right: auto;
+              }
+            }
+            &.business-class {
+              &:after {
+                left: 75%;
+                right: auto;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.modify-search-wrap {
+  //display: none;
+  padding-top: 186px;
+  background: rgba($black, 0.42);
+  position: fixed;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out;
+  @media (max-width: 991px) {
+    padding-top: 123px;
+    max-height: 100%;
+    overflow-y: auto;
+    .tab-panel .panel-data-wrapper {
+      padding-top: 20px;
+    }
+  }
+  @media (max-width: 768px) {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+
+  .search-panel {
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    transition-delay: 0s;
+    background: $white;
+    min-height: 122px;
+    top: 0px;
+    opacity: 0;
+    padding: 40px 0px 60px;
+    @media (max-width: 768px) {
+      padding: 25px 0px 30px;
+      overflow: hidden;
+      /*
+            max-height: 100%;
+            overflow-x: hidden;
+            overflow-y: auto;
+            */
+    }
+
+    .container {
+      position: relative;
+
+      .close-search {
+        cursor: pointer;
+        position: absolute;
+        right: 15px;
+        top: 0px;
+      }
+    }
+
+    .tab-panel {
+      margin-top: 20px;
+      /* @media (max-width: 768px) {
+                max-height: 100%;
+                overflow-y: auto;
+            } */
+    }
+  }
+
+  &.active {
+    opacity: 1;
+    visibility: visible;
+
+    .search-panel {
+      opacity: 1;
+      top: 0px;
+      /*
+			.search-header{
+				opacity: 1;
+			}
+			.search-body{
+				opacity: 1;
+				visibility: visible;
+				top: 0px;
+			}
+			*/
+      .search-body {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.converter-wrap {
+  border: 1px solid $inactive;
+  display: flex;
+  height: 60px;
+  justify-content: space-between;
+  align-items: center;
+
+  .converter-label {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    padding: 0px 22px;
+    justify-content: space-between;
+
+    h3,
+    h4 {
+      margin: 0px;
+    }
+
+    .title {
+      h4 {
+      }
+    }
+
+    .cost-wrap {
+      margin-right: 40px;
+
+      h4 {
+        text-transform: uppercase;
+        font-family: $jazeera_regular;
+
+        strong {
+          font-family: $jazeera_medium;
+        }
+      }
+    }
+  }
+}
+
+.dropdown-wrap {
+  min-width: 240px;
+  border-left: 1px solid $inactive;
+  margin-left: auto;
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+
+  &:after {
+    top: 18px;
+  }
+}
+
+section.flight-info-wrap {
+  display: block;
+
+  &.hide {
+    display: none;
+  }
+}
+
+section.flight-summary-main-wrap {
+  padding-top: 30px;
+  display: none;
+  @media (max-width: 736px) {
+    // padding-top: 25px;
+  }
+
+  &.show {
+    display: block;
+
+    & + .collapse-section {
+      padding-top: 30px;
+    }
+  }
+}
+
+.flight-summary-main-wrap,
+.flight-summary-final-wrap {
+  .flight-journey-wrap {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .flight-summary-wrap {
+    .selected-flight-info,
+    .select-flight-messsage {
+      height: 50%;
+      width: 100%;
+      @media (max-width: 991px) {
+        height: auto;
+      }
+    }
+
+    & > .flight-journey-wrap .selected-flight-info {
+      .selected-flight-item {
+        padding: 10px 20px;
+        @media (max-width: 991px) {
+          padding: 0px;
+        }
+      }
+    }
+  }
+}
+
+.flight-summary-wrap {
+  border: 1px solid $inactive;
+  display: flex;
+  @media (max-width: 991px) {
+    flex-wrap: wrap;
+  }
+
+  & > .flight-journey-wrap {
+    width: 100%;
+    display: block;
+    @media (max-width: 991px) {
+      padding: 0px;
+    }
+
+    .selected-flight-info,
+    .select-flight-messsage {
+      width: 100%;
+    }
+
+    .select-flight-messsage,
+    .selected-flight-item {
+      min-height: 144px;
+      @media (max-width: 991px) {
+        min-height: auto;
+      }
+    }
+
+    .select-flight-messsage {
+      display: flex;
+      align-items: center;
+      padding: 10px 20px;
+      @media (max-width: 991px) {
+        padding: 15px 15px;
+        .btn.btn-link {
+          font-size: 12px;
+        }
+      }
+    }
+
+    .selected-flight-info {
+      //height: 100%;
+      @media (max-width: 991px) {
+        padding: 15px;
+      }
+
+      &:first-child {
+        border-bottom: 1px dashed $inactive;
+        @media (max-width: 991px) {
+          border-bottom: 1px solid $inactive;
+        }
+      }
+
+      .selected-flight-item {
+        padding: 0px 20px;
+
+        .selected-flight-base-info {
+          display: flex;
+          justify-content: space-between;
+          @media (max-width: 991px) {
+            flex-wrap: wrap;
+          }
+
+          .flight-info-left-panel {
+            @media (max-width: 991px) {
+              display: flex;
+              justify-content: space-between;
+              width: 100%;
+            }
+
+            h3 {
+              @media (max-width: 991px) {
+                font-size: 16px;
+                line-height: 16px;
+              }
+            }
+
+            .modify-flight {
+              display: flex;
+              align-items: center;
+
+              a {
+                font-size: 12px;
+              }
+            }
+          }
+
+          .flight-info-right-panel {
+            text-align: right;
+            @media (max-width: 991px) {
+              width: 100%;
+              text-align: left;
+              display: flex;
+              font-size: 12px;
+              padding: 6px 0px;
+              border-top: 1px solid $border1;
+              border-bottom: 1px solid $border1;
+              margin-top: 15px;
+            }
+
+            .flight-class-name {
+              display: block;
+              color: $secondary_dark;
+              font-size: 14px;
+              font-family: $jazeera_regular;
+              margin-top: 6px;
+              @media (max-width: 991px) {
+                font-size: 12px;
+                margin: 0px;
+              }
+            }
+
+            .flight-journey-total-time {
+              display: none;
+              @media (max-width: 991px) {
+                display: inline-block;
+                border-left: $secondary_dark 1px solid;
+                padding-left: 15px;
+                margin-left: 15px;
+              }
+            }
+
+            @media (max-width: 991px) {
+              .flight-class-name,
+              .flight-journey-total-time {
+                height: 16px;
+              }
+            }
+          }
+        }
+
+        .flight-journey-wrap {
+          display: flex;
+          flex-wrap: nowrap;
+          padding-top: 30px;
+          margin: 0px -20px;
+          @media (max-width: 991px) {
+            flex-wrap: wrap;
+            // padding: 0px;
+            margin: 0px;
+          }
+
+          .flight-journey-item {
+            display: flex;
+            position: relative;
+            justify-content: space-between;
+            padding: 0px 20px;
+            width: 100%;
+            height: 48px;
+            @media (max-width: 991px) {
+              padding: 0px;
+              padding-top: 25px;
+              flex-wrap: wrap;
+              height: auto;
+            }
+
+            &:first-child {
+              border-right: 1px dashed $inactive;
+              @media (max-width: 991px) {
+                border: 0px;
+              }
+              //margin-right: 25px;
+              //padding-right: 25px;
+            }
+
+            span.flight-journey-time {
+              display: none;
+              @media (max-width: 991px) {
+                display: block;
+                color: $secondary_dark;
+                font-size: 12px;
+                font-family: $jazeera_regular;
+                position: absolute;
+                right: 0px;
+                top: 0px;
+              }
+            }
+
+            span.flight-name {
+              color: $tint2;
+              font-size: 12px;
+              font-family: $jazeera_regular;
+              position: absolute;
+              top: -48px;
+              right: 20px;
+              @media (max-width: 991px) {
+                right: auto;
+                left: 0px;
+                top: 0px;
+              }
+
+              strong {
+                font-family: $jazeera_medium;
+                @media (max-width: 991px) {
+                  color: $secondary_dark;
+                }
+              }
+            }
+
+            .journey-item-info {
+              display: flex;
+              font-size: 12px;
+              padding-top: 2px;
+              @media (max-width: 991px) {
+                width: 100%;
+              }
+
+              &.from {
+                @media (max-width: 991px) {
+                  min-height: 80px;
+                }
+              }
+
+              &.to {
+              }
+
+              .date-time {
+                @media (max-width: 991px) {
+                  min-width: 50px;
+                }
+
+                .time,
+                .date {
+                  display: block;
+                }
+
+                .time {
+                  font-family: $jazeera_medium;
+                  @media (max-width: 991px) {
+                    font-family: $jazeera_regular;
+                    font-size: 16px;
+                  }
+                }
+
+                .date {
+                  color: $tint2;
+                  margin-top: 4px;
+                  @media (max-width: 991px) {
+                    margin-top: 0px;
+                    font-size: 10px;
+                    color: $secondary_grey;
+                  }
+                }
+              }
+
+              .place-wrap {
+                margin-left: 18px;
+                @media (max-width: 991px) {
+                  margin-left: 34px;
+                }
+
+                .place,
+                .place-code {
+                  display: block;
+                }
+
+                .place {
+                  font-family: $jazeera_medium;
+                  max-width: 70px;
+                  overflow: hidden;
+                  height: 18px;
+                }
+
+                .place-code {
+                  margin-top: 4px;
+                }
+              }
+            }
+
+            .journey-info-line-between {
+              position: absolute;
+              border-top: 2px solid $fade;
+              margin-left: -45px;
+              left: 50%;
+              top: 20px;
+              height: 1px;
+              width: 90px;
+              @media (max-width: 991px) {
+                margin-left: 20px;
+                left: 0px;
+                top: 90px;
+                height: 1px;
+                width: 90px;
+                @include rotate(90);
+              }
+
+              &:before,
+              &:after {
+                content: "";
+                display: block;
+                height: 10px;
+                width: 10px;
+                position: absolute;
+                background: $fade;
+                border-radius: 50%;
+                top: -6px;
+                border: 1px solid $white;
+              }
+
+              &:before {
+                left: 0px;
+              }
+
+              &:after {
+                right: 0px;
+              }
+            }
+          }
+
+          .flight-lagover {
+            display: none;
+            @media (max-width: 991px) {
+              display: block;
+              padding: 5px 0px;
+              margin: 15px 0px;
+              font-size: 12px;
+              font-family: $jazeera_regular;
+              color: $primary;
+              text-align: center;
+              width: 100%;
+              border-top: 1px dashed $secondary_dark;
+              border-bottom: 1px dashed $secondary_dark;
+            }
+          }
+        }
+      }
+    }
+
+    .select-flight-messsage {
+      @media (max-width: 991px) {
+        //padding: 0px;
+      }
+    }
+  }
+
+  .flight-cost-summary-wrap {
+    width: 100%;
+    background: $primary-yellow;
+    border: 1px solid rgba($secondary_dark, 0.2);
+    max-width: 295px;
+    min-height: 100%;
+    padding: 30px;
+    padding-top: 25px;
+    margin-top: -1px;
+    margin-right: -1px;
+    margin-bottom: -1px;
+    @media (max-width: 991px) {
+      padding: 15px;
+      max-width: 100%;
+    }
+
+    .title {
+      text-align: left;
+
+      h3,
+      h4 {
+        color: $secondary_dark;
+      }
+    }
+
+    .summary-table {
+      font-size: 12px;
+      margin-top: 14px;
+      flex-wrap: wrap;
+      flex-direction: column;
+      flex-grow: 1;
+      //height: calc(100% - 30px);
+      height: 100%;
+      //padding-bottom: 35px;
+      position: relative;
+
+      .sumamry-row {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        margin-bottom: auto;
+
+        & + .sumamry-row {
+          margin-top: 14px;
+          align-self: flex-end;
+        }
+
+        &.end {
+          font-size: 18px;
+          margin-top: auto;
+          position: relative;
+          padding-top: 70px;
+          //bottom: 0px;
+        }
+      }
+    }
+  }
+
+}

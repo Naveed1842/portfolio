@@ -1,0 +1,29 @@
+/*
+.float-label-wrapper label {
+	position: absolute;
+	top: 1em; left: 1em;
+	opacity: 0;
+}
+
+.float-label-wrapper.focused label,
+.float-label-wrapper.populated label {
+	opacity: 1
+}
+
+.float-label-wrapper.focused input,
+.float-label-wrapper.populated input,
+.float-label-wrapper.focused textarea,
+.float-label-wrapper.populated textarea {
+	padding-top: 2em;
+}
+
+.float-label-wrapper input,
+.float-label-wrapper textarea,
+.float-label-wrapper label {
+	-webkit-transition: 0.2s ease-in-out;
+	-moz-transition: 0.2s ease-in-out;
+	-ms-transition: 0.2s ease-in-out;
+	-o-transition: 0.2s ease-in-out;
+	transition: 0.2s ease-in-out;
+}
+*/

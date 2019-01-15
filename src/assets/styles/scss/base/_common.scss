@@ -1,0 +1,70 @@
+// Common Styles
+a, .btn, a:focus, .btn:focus {
+  outline: 0;
+}
+
+html, body {
+  font-size: 100%;
+  font-family: $jazeera_regular;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+ul, p {
+  color: $secondary_grey;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+a, button {
+  @include transition(all, .2s, ease-in-out);
+}
+
+a, a:hover, a:focus {
+  color: $primary;
+}
+
+b, label {
+}
+
+b, strong {
+  font-family: $jazeera_medium;
+  font-weight: normal;
+}
+
+textarea {
+  resize: vertical
+}
+
+@media(min-width: 1200px) {
+  .container {
+    //max-width: 1170px;
+    max-width: 1200px;
+  }
+}
+
+.col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
+  position: static;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+.jazeera_overlay, .jazeera_backdrop {
+  background: rgba($black, 0.42);
+  position: fixed;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: 3;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease-in-out;
+
+  &.active {
+    opacity: 1;
+    visibility: visible;
+  }
+}

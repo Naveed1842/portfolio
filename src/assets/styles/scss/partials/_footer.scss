@@ -1,0 +1,220 @@
+// Footer styles go here
+footer {
+  background: $tint6;
+
+  .footer-navigation {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    @media(max-width: 768px) {
+      padding: 20px 0px;
+      & > .row {
+        & > .col-md-3 {
+          max-width: 100%;
+
+          .footer-menu {
+            border-bottom: 1px solid $border;
+            margin-top: 8px;
+            padding-bottom: 8px;
+
+            li {
+              position: relative;
+
+              & + li {
+                display: none;
+              }
+            }
+
+            strong {
+              color: $primary;
+
+              &:after {
+                font-family: 'icomoon';
+                font-size: 12px;
+                content: "\e900";
+                text-align: center;
+                line-height: 30px;
+                display: inline-block;
+                height: 30px;
+                width: 30px;
+                position: absolute;
+                right: 0px;
+                top: 8px;
+              }
+            }
+
+            a, strong {
+              font-size: 14px;
+              width: 100%;
+              display: block;
+            }
+
+            &.active {
+              strong {
+                &:after {
+                  @include rotate(180);
+                }
+              }
+
+              li + li {
+                display: block;
+              }
+            }
+          }
+
+          & + .col-md-3 {
+            .footer-menu {
+              a {
+                text-decoration: none;
+              }
+            }
+          }
+
+          &:last-child {
+            .footer-menu {
+              display: flex;
+              flex-wrap: wrap;
+              border-bottom: 0px;
+
+              li {
+                width: 50%;
+
+                &:first-child {
+                  width: 100%;
+                }
+
+                strong:after {
+                  display: none;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  ul.footer-menu {
+    font-size: 14px;
+    list-style: none;
+    line-height: 44px;
+    margin: 0px;
+    padding: 0px;
+
+    li {
+      font-family: $jazeera_regular;
+
+      a {
+        color: $secondary_grey;
+
+        strong {
+          color: $primary;
+          font-family: $jazeera_medium;
+          font-size: 16px;
+        }
+
+        img {
+          margin: 10px 0px 15px 0px;
+        }
+      }
+    }
+  }
+
+  .footer-base {
+    background: $white;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.10);
+    padding: 30px 0px;
+
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      @media(max-width: 991px) {
+        display: block;
+      }
+      @media(max-width: 768px) {
+        text-align: center;
+      }
+
+      .brand {
+        @media(max-width: 768px) {
+          margin-bottom: 10px;
+        }
+
+        img {
+          max-width: 145px;
+          @media(max-width: 768px) {
+            max-width: 100px;
+          }
+        }
+      }
+
+      .single-line-menu, p {
+        margin-top: 8px;
+        @media(max-width: 991px) {
+          margin-top: 15px;
+        }
+        @media(max-width: 768px) {
+          margin-top: 0px;
+          display: inline-block;
+          width: 100%;
+        }
+      }
+
+      .single-line-menu {
+        display: inline-block;
+        list-style: none;
+        margin: 0px;
+        padding: 0px;
+        font-size: 0px;
+        @media(max-width: 736px) {
+          display: flex;
+          justify-content: space-between;
+        }
+
+        li {
+          display: inline-block;
+          margin: 0px 20px;
+          @media(max-width: 768px) {
+            margin: 0px 10px;
+          }
+          @media(max-width: 736px) {
+            margin: 0px;
+          }
+
+          a {
+            font-size: 14px;
+            font-family: $jazeera_regular;
+            color: $secondary_grey;
+          }
+        }
+      }
+
+      p {
+        margin: 0px;
+        font-size: 14px;
+        font-family: $jazeera_regular;
+        color: $secondary_grey;
+        @media(max-width: 991px) {
+          width: 100%;
+          text-align: center;
+          margin-top: 14px;
+        }
+        @media(max-width: 768px) {
+          margin-top: 10px;
+          font-size: 13px;
+          color: $tint3;
+        }
+      }
+
+      .single-line-menu {
+        @media(max-width: 991px) {
+          float: right;
+        }
+        @media(max-width: 768px) {
+          float: none;
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+}

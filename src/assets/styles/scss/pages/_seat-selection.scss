@@ -1,0 +1,864 @@
+section.seat-selection {
+  margin-bottom: 60px;
+
+  .accordion-wrapper .accordion-item {
+    .card-header h5.grp-label {
+      span.divider {
+        border-right: 1px solid $border1;
+        height: 15px;
+        width: 1px;
+        display: inline-block;
+        margin: 0px 5px -2px 5px;
+      }
+    }
+  }
+
+  .panel-seat-selection {
+
+    .panel-caption {
+      position: relative;
+
+      .panel-footer {
+        left: 0px;
+        right: 0px;
+        position: absolute;
+        bottom: 0px;
+        padding: 20px 22px;
+
+        .total {
+          //margin-bottom: 10px;
+          font-family: $jazeera_regular;
+          padding-top: 100px;
+          text-align: right;
+          font-size: 20px;
+
+          strong {
+            font-family: $jazeera_medium;
+          }
+
+          small {
+            font-size: 16px;
+            margin-right: 20px;
+          }
+        }
+
+        @media(max-width: 736px) {
+          position: relative;
+          padding: 25px 15px;
+          margin-left: -15px;
+          margin-right: -15px;
+          border-top: 1px solid $border;
+          margin-top: 30px;
+          .total {
+            padding: 0px;
+            font-size: 18px;
+
+            small {
+              position: absolute;
+              left: 15px;
+            }
+          }
+        }
+      }
+    }
+
+    .form-file-label {
+      display: none;
+    }
+
+    .selected-seat-info-wrap, .seat-selection-outer-wrap {
+      width: 100%;
+    }
+
+    .selected-seat-info-wrap {
+      padding-top: 50px;
+      font-size: 14px;
+      position: relative;
+      z-index: 1;
+
+      .label {
+
+      }
+
+      .selected-passengers {
+        position: relative;
+        margin-top: 18px;
+
+        .modify-seat, .seats-for-passenger {
+          color: $primary;
+        }
+
+        .modify-seat {
+          // text-decoration: underline;
+          position: absolute;
+          right: 0px;
+          top: 0px;
+        }
+
+        .seats-for-passenger {
+
+        }
+
+        .selected-seats {
+          color: $secondary_grey;
+          margin-top: 5px;
+
+          span.divider {
+            border-right: 1px solid $border1;
+            height: 15px;
+            width: 1px;
+            display: inline-block;
+            margin: 0px 5px -2px 5px;
+          }
+        }
+      }
+
+      .total-seat-cost {
+        display: flex;
+        justify-content: space-between;
+        color: $primary;
+        margin-top: 18px;
+        border-bottom: 2px solid $primary;
+        height: 28px;
+        @media(max-width: 736px) {
+          display: block;
+          height: auto
+        }
+
+        .seats-for-passenger {
+          font-family: $jazeera_medium;
+        }
+
+        .price {
+          @media(max-width: 736px) {
+            margin: 8px 0px 10px;
+          }
+
+          span.divider {
+            border-right: 1px solid $primary;
+            height: 13px;
+            width: 1px;
+            display: inline-block;
+            margin: 0px 5px -1px 5px;
+          }
+        }
+      }
+
+      .select-seat-msg {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 18px;
+
+        .title {
+          margin: 0px;
+        }
+
+        .btn {
+          //margin: 2px 0px;
+          line-height: 24px;
+          opacity: 0.5;
+        }
+      }
+    }
+
+    .seat-selection-outer-wrap {
+      padding-top: 22px;
+      padding-bottom: 22px;
+      //margin-top: -150px;
+      border-left: 1px solid rgba(#CAD8E6, 0.4);
+      display: flex;
+      position: relative;
+      justify-content: flex-end;
+      padding-top: 60px;
+      @media(max-width: 1200px) {
+        max-width: 565px;
+        padding-top: 30px;
+        flex-wrap: wrap;
+      }
+      @media(max-width: 991px) {
+        display: none;
+        max-width: 100%;
+        width: 100%;
+        &.show-popup {
+          display: block;
+        }
+      }
+      @media(max-width: 736px) {
+        padding: 30px 20px 0px;
+      }
+
+      .flight-seat-selection-info-label-wrap {
+        position: absolute;
+        left: 0px;
+        min-width: 300px;
+        padding-left: 25px;
+        z-index: 1;
+        @media(max-width: 1200px) {
+          min-width: 100%;
+          padding-left: 0px;
+          position: relative;
+        }
+
+        .seat-info-label-group {
+          @media(max-width: 1200px) {
+            display: flex;
+            flex-wrap: wrap;
+          }
+
+          & + .seat-info-label-group {
+            margin-top: 60px;
+
+            .seat-info-item + .seat-info-item {
+              margin-top: 30px;
+            }
+          }
+
+          .seat-info-item {
+            display: flex;
+            align-items: center;
+            height: 46px;
+            @media(max-width: 1200px) {
+              align-items: flex-start;
+              margin-bottom: 15px;
+              max-width: 50%;
+              width: 100%;
+            }
+            @media(max-width: 736px) {
+              min-height: 60px;
+            }
+
+            .seat-info-icon {
+              height: 32px;
+              width: 38px;
+              padding: 6px;
+              //margin-right: 12px;
+              //margin-top: 5px;
+              font-size: 12px;
+              color: $black;
+              position: relative;
+
+              &:after {
+                display: block;
+                font-family: 'icomoon';
+                content: "\e960";
+                line-height: 32px;
+                font-size: 38px;
+                position: absolute;
+                left: 0;
+                right: 0px;
+                top: 0;
+                bottom: 0px;
+              }
+            }
+
+            & + .seat-info-item {
+              margin-top: 10px;
+              @media(max-width: 1200px) {
+                margin-top: 0px;
+              }
+            }
+
+            &.priority {
+              .seat-info-icon {
+                color: $primary;
+              }
+            }
+
+            &.preffered {
+              .seat-info-icon {
+                color: $primary_blue2;
+              }
+            }
+
+            &.extra-leg-room {
+              .seat-info-icon {
+                color: $extralegroom;
+              }
+            }
+
+            &.standard {
+              .seat-info-icon {
+                color: $primary_blue;
+              }
+            }
+
+            &.inactive {
+              .seat-info-icon {
+                color: $invalid;
+                text-align: center;
+
+                .icon {
+                  color: $light_grey;
+                  position: relative;
+                  z-index: 1;
+                  font-size: 12px;
+                }
+              }
+            }
+
+            .seat-info-txt {
+              margin-left: 12px;
+
+              h5, .price, p {
+                font-size: 12px;
+                color: $secondary_dark;
+              }
+
+              h5 {
+                font-family: $jazeera_medium;
+              }
+
+              .price {
+                margin-top: 3px;
+                font-family: $jazeera_regular;
+                @media(max-width: 736px) {
+                  font-size: 10px;
+                }
+
+                .label {
+                  color: $tint2;
+                }
+              }
+
+              p {
+                margin: 0px;
+                font-size: 12px;
+              }
+
+              @media(max-width: 736px) {
+                max-width: 98px;
+                line-height: 16px;
+                p, h5 {
+                  line-height: 16px;
+                }
+              }
+            }
+          }
+        }
+
+        .seat-details-wrap {
+          margin-top: 30px;
+          @media(max-width: 1200px) {
+            margin: 0px 0px 15px 0px;
+          }
+
+          .title {
+            h3 {
+              font-size: 16px;
+              font-family: $jazeera_medium;
+              color: $secondary_dark;
+            }
+          }
+
+          .seat-details-inner-wrap {
+            font-size: 12px;
+            @media(max-width: 1200px) {
+              display: flex;
+              flex-wrap: wrap;
+            }
+
+            .seat-info-group {
+              @media(max-width: 1200px) {
+                width: 100%;
+                max-width: 50%;
+              }
+
+              & + .seat-info-group {
+                margin-top: 6px;
+              }
+
+              .seat-info-row {
+                margin-top: 2px;
+
+                strong {
+
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .flight-seat-selection-mockup-wrap {
+        width: 580px;
+        @media(max-width: 1200px) {
+          border: 3px solid $scrollbar;
+        }
+        @media(max-width: 991px) {
+          max-width: 100%;
+          width: 100%;
+        }
+        @media(max-width: 736px) {
+          max-width: none;
+          min-width: calc(100% + 40px);
+          margin: 0px;
+          left: 20px;
+          right: 0px;
+          position: relative;
+        }
+
+        .flight-mockup-wrap {
+          //width: 580px;
+          height: 3806px;
+          background: url(assets/images/flight.svg) top center no-repeat;
+          @media(max-width: 1200px) {
+            margin: 30px 0px;
+          }
+          @media(max-width: 736px) {
+            height: 3152px;
+            margin: 15px 0px;
+            background-position: top center;
+            background-size: 480px auto;
+          }
+          @media(max-width: 560px) {
+            overflow: hidden;
+          }
+
+          .flight-inside-wrap {
+            width: 392px;
+            margin: 0px auto 0px auto;
+            padding-top: 500px;
+            height: 3168px;
+            @media(max-width: 560px) {
+              padding-top: 412px;
+              width: 300px;
+            }
+
+            .flight-exit {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              padding: 30px 25px;
+
+              .exit-arrow {
+                font-size: 38px;
+                color: $secondary_grey;
+                height: 38px;
+                line-height: 38px;
+
+                i {
+                  line-height: 48px;
+                }
+              }
+
+              .exit-txt {
+                height: 38px;
+                line-height: 38px;
+                font-family: $jazeera_medium;
+                font-size: 14px;
+              }
+
+              .exit-txt, .exit-arrow {
+                color: $secondary_grey;
+              }
+            }
+
+            .flight-select-seat-wrap {
+              padding: 0px 20px;
+              @media(max-width: 560px) {
+                padding: 0px;
+              }
+              position: relative;
+
+              .disable-class {
+                position: absolute;
+                left: -20px;
+                right: -20px;
+                top: 0px;
+                bottom: 0px;
+                cursor: default;
+                pointer-events: none;
+                background-color: rgba($scrollbar, 0.8);
+                z-index: 999;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .title {
+                  h3 {
+                    font-size: 20px;
+                    color: $secondary_grey;
+                    font-family: $jazeera_medium;
+                  }
+                }
+              }
+
+              .seat-row {
+                display: flex;
+                justify-content: space-between;
+                position: relative;
+
+                .seat-col {
+                  width: 155px;
+                  display: flex;
+                  justify-content: space-between;
+                  @media(max-width: 560px) {
+                    width: 132px;
+                  }
+
+                  .label {
+                    //position: absolute;
+                    //top: 50%;
+                    //left: 50%;
+                    height: 36px;
+                    width: 42px;
+                    //margin-left: -15px;
+                    //margin-top: -15px;
+                    font-size: 14px;
+                    color: $secondary_grey;
+                    font-family: $jazeera_medium;
+                    text-align: center;
+                    line-height: 36px;
+                  }
+                }
+              }
+
+              .seat-row {
+                .seat-row-label {
+                  position: absolute;
+                  top: 50%;
+                  left: 50%;
+                  height: 30px;
+                  width: 30px;
+                  margin-left: -15px;
+                  margin-top: -15px;
+                  font-size: 14px;
+                  color: $secondary_grey;
+                  font-family: $jazeera_medium;
+                  text-align: center;
+                  line-height: 30px;
+
+                  .seat-col {
+                    justify-content: space-between;
+                  }
+                }
+
+                & + .seat-row {
+                  margin-top: 40px;
+                  @media(max-width: 560px) {
+                    margin-top: 20px;
+                  }
+                }
+
+                & + .seat-cols-label {
+                  margin-top: 15px;
+                }
+              }
+
+              .seat-cols-label + .seat-row {
+                margin-top: 15px;
+              }
+
+              &.priority-seat {
+                .checkbox-wrap {
+                  input {
+                    & + label {
+                      &:before {
+                        color: $primary;
+                      }
+                    }
+                  }
+                }
+              }
+
+              &.preffered-seat {
+                .checkbox-wrap {
+                  input {
+                    & + label {
+                      &:before {
+                        color: $primary_blue2;
+                      }
+                    }
+                  }
+                }
+              }
+
+              &.preffered-seat {
+                .checkbox-wrap {
+                  input {
+                    & + label {
+                      &:before {
+                        color: $primary_blue2;
+                      }
+                    }
+                  }
+                }
+              }
+
+              &.extra-leg-room {
+                .checkbox-wrap {
+                  input {
+                    & + label {
+                      &:before {
+                        color: $extralegroom;
+                      }
+                    }
+                  }
+                }
+              }
+
+              &.standard-seat {
+                .checkbox-wrap {
+                  input {
+                    & + label {
+                      &:before {
+                        color: $primary_blue;
+                      }
+                    }
+                  }
+                }
+
+                & + .flight-exit {
+                  margin-top: 105px;
+                }
+
+              }
+
+              &.business-class {
+                padding: 0px;
+                margin-left: 20px;
+                margin-right: 20px;
+                border-top: 2px solid $scrollbar;
+                border-bottom: 2px solid $scrollbar;
+                padding-top: 18px;
+                padding-bottom: 40px;
+                @media(max-width: 560px) {
+                  margin-left: 0px;
+                  margin-right: 0px;
+                }
+
+                .seat-row .seat-col {
+                  @media(max-width: 560px) {
+                    width: 130px;
+                  }
+
+                  .label {
+                    width: 62px;
+                  }
+                }
+
+                .checkbox-wrap {
+                  height: 52px;
+                  width: 62px;
+
+                  input {
+                    & + label {
+                      height: 52px;
+                      width: 62px;
+
+                      &:before {
+                        font-size: 62px;
+                        line-height: 52px;
+                        @media(max-width: 560px) {
+                          font-size: 52px;
+                        }
+                      }
+
+                      .seat-number {
+                        font-size: 14px;
+                        line-height: 44px;
+                      }
+                    }
+                  }
+                }
+
+                & + .flight-select-seat-wrap {
+                  margin-top: 20px;
+                }
+              }
+
+              .checkbox-wrap {
+                height: 36px;
+                width: 42px;
+
+                input {
+                  & + label {
+                    height: 36px;
+                    width: 42px;
+                    position: relative;
+
+                    &:before {
+                      position: absolute;
+                      left: 0px;
+                      right: 0px;
+                      top: 0px;
+                      bottom: 0px;
+                      border: 0px;
+                      margin: 0px;
+                      height: 100%;
+                      width: 100%;
+                      font-family: 'icomoon';
+                      content: "\e960";
+                      font-size: 42px;
+                      z-index: 0;
+                      line-height: 36px;
+                      background-size: 100% auto;
+                      color: $inactive;
+                      @media(max-width: 560px) {
+                        text-align: center;
+                        font-size: 34px;
+                      }
+                    }
+
+                    &:after {
+                      display: none;
+                    }
+
+                    .seat-number {
+                      opacity: 0;
+                      text-align: center;
+                      width: 100%;
+                      transition: opacity 0.1s ease-in-out;
+                      font-family: $jazeera_medium;
+                      color: $secondary_dark;
+                      font-size: 10px;
+                      line-height: 32px;
+                      position: relative;
+                      z-index: 1;
+                    }
+
+                    &:hover {
+                      &:before {
+                        // color: $primary_focus;
+                      }
+
+                      .seat-number {
+                        // opacity: 1;
+                      }
+                    }
+
+                    .seat-name, .seat-status {
+                      text-align: center;
+                      width: 100%;
+                      transition: opacity 0.1s ease-in-out;
+                      line-height: 32px;
+                      position: relative;
+                      z-index: 1;
+                    }
+
+                    .seat-name {
+                      color: $secondary_dark;
+                      font-family: $jazeera_medium;
+                      font-size: 10px;
+                    }
+
+                    .seat-status {
+                      color: $light_grey;
+                      font-size: 12px;
+                    }
+                  }
+
+                  &:checked + label {
+                    &:before {
+                      color: $primary_focus;
+                    }
+
+                    .seat-number {
+                      opacity: 1;
+                    }
+                  }
+
+                  &:disabled {
+                    & + label {
+                      cursor: default;
+                      pointer-events: none;
+
+                      &:before {
+                        color: $invalid;
+                      }
+                    }
+                  }
+                }
+              }
+
+              & + .flight-select-seat-wrap {
+                margin-top: 40px;
+              }
+
+              & + .flight-exit {
+                padding: 15px 25px;
+              }
+
+            }
+
+          }
+
+        }
+
+        .scroll-panel > .scroll-element .scroll-bar {
+          opacity: 1;
+          cursor: grab;
+          cursor: -moz-grab;
+          cursor: -webkit-grab;
+
+          &:active {
+            cursor: grabbing;
+            cursor: -moz-grabbing;
+            cursor: -webkit-grabbing;
+          }
+        }
+
+        .scroll-panel > .scroll-element.scroll-y .scroll-bar {
+          left: -12px;
+          min-height: 10px;
+          width: 8px;
+          background: $tint4;
+        }
+      }
+
+      .scroll-panel {
+        max-height: 640px;
+        //overflow-y: auto;
+        //overflow-x: hidden;
+      }
+    }
+
+  }
+
+  .section-panel-wrap {
+    .accordion-wrapper .accordion-item + .accordion-item {
+      margin-top: 22px;
+      @media(max-width: 768px) {
+        margin-top: 15px;
+      }
+    }
+  }
+
+}
+
+
+@media(max-width: 991px) {
+  .seat-section-wrap {
+    .accordion-item {
+      .seat-selection-outer-wrap {
+        display: none;
+      }
+
+      .collapse {
+        &.show {
+          .card-header {
+            display: none;
+          }
+        }
+      }
+
+      &.show-active {
+        .form-file-label {
+          display: flex;
+        }
+
+        .card-header, .panel-caption {
+          display: none;
+        }
+
+        .panel-body {
+          margin-top: 0px;
+        }
+
+        .seat-selection-outer-wrap {
+          display: flex;
+        }
+      }
+    }
+  }
+}

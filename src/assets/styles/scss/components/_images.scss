@@ -1,0 +1,112 @@
+.image-box {
+  position: relative;
+
+  .overlay {
+    position: absolute;
+    background: rgba($black, 0.24);
+    padding: 25px;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+
+    &.primary {
+      background: rgba($primary, 0.8);
+    }
+
+    &.primary-yellow {
+      background: rgba($primary_yellow, 0.88);
+    }
+
+    .txt {
+      position: absolute;
+      text-align: right;
+
+      h3 {
+        font-size: 24px;
+        font-family: $jazeera_medium;
+        color: $white;
+        margin: 0px;
+
+        strong {
+          font-size: 30px;
+          font-family: $jazeera_bold;
+          color: $primary_yellow;
+        }
+      }
+
+      img {
+        margin-top: 15px;
+      }
+
+      &.bottom {
+        bottom: 25px;
+      }
+
+      &.left {
+        left: 25px;
+      }
+
+      &.right {
+        right: 25px;
+      }
+
+      &.top {
+        top: 25px;
+      }
+    }
+
+    .card-body {
+      padding: 0px;
+      width: auto;
+      position: absolute;
+      bottom: 20px;
+      left: 25px;
+      right: 25px;
+
+      h5.card-title {
+        font-size: 14px;
+        color: $secondary_grey;
+        font-family: $jazeera_bold;
+      }
+
+      h3 {
+        color: $primary;
+        font-family: $jazeera_medium;
+        line-height: 26px;
+        margin-bottom: 0px;
+        font-size: 18px;
+
+        strong {
+          font-family: $jazeera_bold;
+        }
+
+        small {
+          display: block;
+          font-family: $jazeera_regular;
+          color: $secondary_grey;
+          font-size: 14px;
+          line-height: 20px;
+        }
+      }
+    }
+
+    & + img {
+      width: 100%;
+    }
+  }
+
+  &.img-grid-6 {
+
+  }
+
+  &.img-grid-3 {
+
+  }
+}
+
+.image-grid-wrap {
+  .col-md-12 {
+    margin-bottom: 30px;
+  }
+}

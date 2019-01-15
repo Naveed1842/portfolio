@@ -1,0 +1,472 @@
+.range-picker-wrap {
+  background: $white;
+  border: 1px solid $border;
+  z-index: 999;
+
+  &:after, &:before {
+    bottom: 100%;
+    left: 14%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    z-index: 9999;
+  }
+
+  &:after {
+    border-color: rgba(136, 183, 213, 0);
+    border-bottom-color: $white;
+    border-width: 10px;
+    margin-left: -10px;
+  }
+
+  &:before {
+    border-color: rgba(194, 225, 245, 0);
+    border-bottom-color: $white;
+    border-width: 11px;
+    margin-left: -11px;
+  }
+
+  .header {
+    display: flex;
+    //justify-content: space-arrownd;
+    background: $white;
+    border-bottom: 1px solid #E9E8E7;
+    padding: 20px 20px;
+    @media(max-width: 768px) {
+      display: block;
+      .checkbox-wrap label {
+        font-size: 12px;
+      }
+    }
+    @media(max-width: 768px) {
+      padding: 15px;
+    }
+
+    h5 {
+      color: $secondary_grey;
+      font-size: 16px;
+      font-family: $jazeera_medium;
+      margin-bottom: 0px;
+      margin-right: 50px;
+      @media(max-width: 768px) {
+        margin: 0px 0px 10px 0px;
+      }
+      @media(max-width: 768px) {
+        font-size: 15px;
+      }
+    }
+  }
+
+  .month-wrapper table.month2 {
+    width: 100% !important;
+    max-width: 448px;
+  }
+
+  .month-wrapper table tr {
+    td {
+      &:first-child .day {
+        -webkit-border-top-left-radius: 10px;
+        -webkit-border-bottom-left-radius: 10px;
+        -moz-border-radius-topleft: 10px;
+        -moz-border-radius-bottomleft: 10px;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        overflow: hidden;
+      }
+
+      &:last-child .day {
+        -webkit-border-top-right-radius: 10px;
+        -webkit-border-bottom-right-radius: 10px;
+        -moz-border-radius-topright: 10px;
+        -moz-border-radius-bottomright: 10px;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        overflow: hidden;
+      }
+    }
+  }
+
+}
+
+.date-picker-wrapper {
+  border: 0px;
+  padding: 40px 80px;
+
+  background: $white;
+  box-shadow: none;
+
+  margin-top: 16px;
+  border: 1px solid $border;
+  z-index: 999;
+
+  &:after, &:before {
+    bottom: 100%;
+    left: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+  }
+
+  &:after {
+    border-color: rgba(136, 183, 213, 0);
+    border-bottom-color: $white;
+    border-width: 10px;
+    margin-left: -10px;
+  }
+
+  &:before {
+    border-color: rgba(194, 225, 245, 0);
+    border-bottom-color: $border;
+    border-width: 11px;
+    margin-left: -11px;
+  }
+
+  @media(max-width: 1199px) {
+    padding: 25px 60px;
+  }
+  @media(max-width: 768px) {
+    padding: 15px;
+  }
+  //background: none;
+  &.inline-wrapper {
+    margin-top: 0px;
+    background: none;
+    border: 0px;
+    z-index: 0;
+
+    &:after, &:before {
+      display: none;
+    }
+  }
+
+  width: 100%;
+  box-sizing: border-box;
+
+  .footer {
+    display: none;
+  }
+
+  .month-wrapper {
+    border: 0px;
+    width: 100% !important;
+    padding: 0px;
+    display: flex;
+
+    .time {
+      display: none;
+    }
+
+    @media(max-width: 991px) {
+      display: block;
+      padding: 0px;
+      max-width: 100%;
+      .gap {
+        display: none;
+      }
+      .gap, .month2 {
+        //display: none;
+      }
+    }
+    @media(max-width: 768px) {
+      max-width: 100%;
+    }
+
+    table {
+      width: 440px;
+      @media(max-width: 1199px) {
+        width: 354px;
+      }
+      @media(max-width: 991px) {
+        width: 100%;
+        margin: 30px 0px;
+      }
+      @media(max-width: 768px) {
+        margin: 0px;
+      }
+    }
+
+    .gap {
+      width: 33px;
+    }
+  }
+
+  .month-wrapper table .day {
+    font-size: 14px;
+    font-family: $jazeera_regular;
+    color: $secondary_dark;
+    line-height: 32px;
+    margin: 3px auto;
+    padding: 3px 0px;
+    height: 36px;
+    width: 64px;
+    @media(max-width: 1199px) {
+      width: 53px;
+    }
+    @media(max-width: 991px) {
+      width: 73px;
+    }
+    @media(max-width: 768px) {
+      width: 36px;
+      min-width: 100%;
+      margin: 3px 0px;
+      font-size: 12px;
+    }
+
+    &.valid {
+      color: $primary;
+    }
+
+    &.invalid {
+      //opacity: 0.2;
+      color: $invalid;
+    }
+  }
+
+  .month-wrapper table tr.week-name {
+    padding: 0px;
+    height: 60px;
+    @media(max-width: 768px) {
+      height: 30px;
+    }
+  }
+
+  .month-wrapper table th {
+    font-size: 14px;
+    font-family: $jazeera_medium;
+    font-weight: normal;
+    text-transform: capitalize;
+    color: $secondary_grey;
+    @media(max-width: 768px) {
+      font-size: 12px;
+    }
+  }
+
+  table .caption span, .date-picker-wrapper table .caption span {
+    position: absolute;
+    font-family: 'icomoon';
+    @include rotate(90);
+    font-size: 20px;
+    color: $primary;
+    position: absolute;
+    z-index: 9999;
+    font-weight: normal;
+    display: block;
+    top: 50%;
+    @media(max-width: 768px) {
+      font-size: 16px;
+    }
+
+    &.prev {
+      right: auto;
+      left: -50px;
+      content: "\e900";
+      @media(max-width: 991px) {
+        left: 50%;
+        top: 0px;
+        margin-left: -20px;
+        @include rotate(180);
+      }
+      @media(max-width: 768px) {
+        position: relative;
+        left: auto;
+        top: auto;
+        margin-left: auto;
+        @include rotate(90);
+      }
+    }
+
+    &.next {
+      left: auto;
+      right: -50px;
+      content: "\e903";
+      @media(max-width: 991px) {
+        left: 50%;
+        right: auto;
+        bottom: 0px;
+        top: auto;
+        margin-left: -20px;
+        @include rotate(-180);
+      }
+      @media(max-width: 768px) {
+        position: relative;
+        left: auto;
+        right: auto;
+        top: auto;
+        margin-left: auto;
+        @include rotate(90);
+      }
+    }
+
+    &.next:hover, &.next:focus {
+      background: none;
+      background-color: transparent;
+      color: $primary;
+    }
+  }
+
+  .month-wrapper {
+    min-height: 362px;
+    @media(max-width: 991px) {
+      min-height: 0px;
+    }
+  }
+
+  .month-wrapper table th {
+    @media(max-width: 768px) {
+      // text-align: left;
+    }
+
+    .month-element {
+      font-size: 18px;
+      color: $primary;
+      font-family: $jazeera_medium;
+      text-transform: capitalize;
+      font-weight: normal;
+      @media(max-width: 768px) {
+        font-size: 16px;
+      }
+      @media(max-width: 768px) {
+        font-size: 14px;
+      }
+    }
+  }
+
+  .month-wrapper table .day.real-today {
+    background: $white;
+    color: $secondary_grey;
+    font-family: $jazeera_medium;
+    border: 1px solid $border;
+    border-radius: 50% !important;
+    width: 36px;
+  }
+
+  .month-wrapper table .day.toMonth.hovering {
+    background: #f5f5f5;
+  }
+
+  .month-wrapper table .day.checked {
+    background: #f5f5f5;
+    position: relative;
+
+    &.real-today {
+      border-radius: 0px;
+      border: 0px;
+      width: 100%;
+      background: #f5f5f5;
+      z-index: 1;
+    }
+
+    &.first-date-selected, &.last-date-selected {
+      border-radius: 50%;
+      background: $primary !important;
+      padding: 3px 0px;
+      margin: 0px 14px;
+      width: 36px;
+      position: relative;
+      z-index: 2;
+      /*
+            &:after{
+                content: "";
+                display: block;
+                height: 36px;
+                width: 35px;
+                background: #f5f5f5;
+                position: absolute;
+                top: 3px;
+                right: 0px;
+                z-index: 0;
+            }
+            &:before{
+                content: "";
+                display: block;
+                height: 36px;
+                width: 35px;
+                background: #f5f5f5;
+                position: absolute;
+                top: 3px;
+                left: 0px;
+                z-index: 0;
+            }
+            */
+      @media(max-width: 768px) {
+        max-width: 36px;
+        min-width: 36px;
+      }
+
+      &.lastMonth, &.nextMonth {
+        &:after {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .month-wrapper table td {
+    &.first-date-selected-td, &.last-date-selected-td {
+      position: relative;
+
+      &.first-date-selected-td-lastMonth {
+        &:after, &:before {
+          display: none;
+        }
+      }
+    }
+
+    &.first-date-selected-td {
+      &:after {
+        content: "";
+        display: block;
+        height: 36px;
+        width: 35px;
+        background: #f5f5f5;
+        position: absolute;
+        top: 3px;
+        right: 0px;
+        z-index: 0;
+      }
+    }
+
+    &.last-date-selected-td {
+      &:before {
+        content: "";
+        display: block;
+        height: 36px;
+        width: 35px;
+        background: #f5f5f5;
+        position: absolute;
+        top: 3px;
+        left: 0px;
+        z-index: 0;
+      }
+    }
+
+    &.invalid-date-td {
+      &:before, &:after {
+        display: none !important;
+      }
+    }
+  }
+}
+
+.show-popup {
+  .range-picker-wrap .month-wrapper table.month2 {
+    max-width: 440px;
+    @media(max-width: 991px) {
+      max-width: 100%;
+    }
+  }
+}
+
+@media(max-width: 991px) {
+  .range-picker-wrap {
+    &:before, &:after {
+      display: none;
+    }
+  }
+}

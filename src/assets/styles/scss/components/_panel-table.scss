@@ -1,0 +1,138 @@
+.panel-table-wrap {
+  margin-bottom: -20px;
+
+  .panel-label, .panel-table, .panel-end {
+    width: 100%;
+  }
+
+  .panel-label {
+    //width: 260px;
+    //margin-right: auto;
+    //padding-right: 15px;
+    .title {
+      p {
+        margin: 0px;
+      }
+    }
+  }
+
+  .panel-table {
+    margin-top: 30px;
+
+    .panel-table-data {
+      padding: 15px;
+    }
+
+    .panel-table-row {
+      border-bottom: 1px solid $border1;
+    }
+
+    thead {
+      //border-right: 1px solid $border1;
+      min-width: 320px;
+
+      td {
+        &:first-child {
+          border-right: 1px solid $border1;
+          width: 365px;
+          max-width: 365px;
+          position: relative;
+
+          .panel-table-data {
+            width: 365px;
+          }
+
+          &:after {
+            content: "";
+            display: block;
+            height: auto;
+            width: 1px;
+            border-right: 1px solid $border1;
+            position: absolute;
+            right: -1px;
+            bottom: 56px;
+            top: -166px;
+          }
+
+          .panel-table-data {
+            padding-left: 0px;
+          }
+        }
+
+        &:last-child {
+          // border-right: 1px solid $border1;
+          .panel-table-data {
+            padding-right: 0px;
+          }
+        }
+      }
+
+      .panel-table-data {
+        display: flex;
+        justify-content: space-between;
+
+        .checkbox-wrap {
+          margin-left: auto;
+        }
+      }
+    }
+
+    tbody {
+      //display: flex;
+      //width: 100%;
+      //justify-content: space-between;
+      td {
+        border-right: 1px solid $border1;
+
+        &:last-child {
+          border-right: 0px;
+        }
+
+        &:first-child {
+          min-width: 300px;
+
+          .panel-table-data {
+            padding-left: 0px;
+          }
+        }
+      }
+
+      .panel-table-data {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+
+        &.panel-input {
+          padding: 0px;
+        }
+      }
+    }
+
+    tfoot {
+      td {
+        border-right: 1px solid $border1;
+
+        .panel-table-data {
+
+        }
+      }
+
+      .total {
+        //margin-bottom: 10px;
+        font-family: $jazeera_regular;
+        padding-top: 100px;
+        text-align: right;
+        font-size: 20px;
+
+        strong {
+          font-family: $jazeera_medium;
+        }
+
+        small {
+          font-size: 16px;
+          margin-right: 20px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+section.search-landing {
+  margin-top: 30px;
+  @media(max-width: 768px) {
+    margin-top: 15px;
+  }
+}
+
+section.search-flights-wrapper {
+  // overflow: hidden;
+}
+
+@media(max-width: 768px) {
+  .account-header {
+    & > .container {
+      & > .title {
+        margin: 15px 15px 0px 15px;
+      }
+    }
+  }
+}

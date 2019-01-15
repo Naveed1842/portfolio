@@ -1,0 +1,794 @@
+.flight-reservation-info-wrap {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+  @media(max-width: 1199px) {
+    padding: 20px;
+  }
+  @media(max-width: 768px) {
+    display: block;
+    padding: 0px;
+  }
+  width: 100%;
+
+  .title {
+
+  }
+
+  .reservation-details-wrap, .contact-details-wrap {
+    width: 100%;
+
+    .title {
+      margin-bottom: 30px;
+      @media(max-width: 736px) {
+        margin-top: 10px;
+        h4 {
+          font-size: 16px;
+          line-height: 20px;
+        }
+      }
+    }
+  }
+
+  .reservation-details-wrap {
+    @media(max-width: 736px) {
+
+    }
+
+    .info-item-wrap {
+      display: flex;
+      padding-right: 30px;
+      @media(max-width: 736px) {
+        flex-wrap: wrap;
+        padding-right: 0px;
+      }
+
+      .split-cols {
+        width: 100%;
+        @media(max-width: 736px) {
+          & + .split-cols {
+            padding-top: 20px;
+          }
+        }
+      }
+    }
+  }
+
+  .contact-details-wrap {
+    max-width: 260px;
+    @media(max-width: 768px) {
+      //margin-top: 30px;
+      max-width: 100%;
+      border-top: 1px dotted $border;
+    }
+
+    .title {
+      h3, h4 {
+        color: $secondary_dark;
+      }
+    }
+  }
+
+  @media(max-width: 768px) {
+    .reservation-details-wrap, .contact-details-wrap {
+      padding: 30px 20px;
+      @media(max-width: 736px) {
+        padding: 20px 15px;
+      }
+    }
+
+  }
+
+  .info-item-wrap {
+    .info-item {
+
+      & + .info-item {
+        padding-top: 35px;
+        @media(max-width: 736px) {
+          padding-top: 20px;
+        }
+      }
+
+      .label {
+        font-size: 12px;
+      }
+
+      .data {
+        font-size: 14px;
+        margin: 4px 0px;
+
+        .success {
+          color: $success;
+        }
+
+        .error {
+          color: $danger;
+        }
+      }
+    }
+  }
+}
+
+section.booking-info-wrap {
+  margin-top: 50px;
+  margin-bottom: 25px;
+  @media(max-width: 768px) {
+    margin-top: 30px;
+    margin-bottom: 15px;
+  }
+
+  .title {
+    margin-bottom: 0px;
+
+    h3 {
+      margin: 0px;
+      font-size: 22px;
+      @media(max-width: 736px) {
+        font-size: 18px;
+        line-height: 22px;
+      }
+    }
+  }
+
+  .flight-summary-wrap {
+    margin-top: 22px;
+    border-color: $border;
+  }
+
+  .flight-summary-wrap .flight-cost-summary-wrap .summary-table .sumamry-row.end {
+    padding-top: 30px;
+  }
+
+  .flight-summary-wrap .flight-cost-summary-wrap {
+    @media(max-width: 1199px) {
+      padding: 20px;
+    }
+  }
+
+  @media(max-width: 768px) {
+    .btn-wrap {
+      display: flex;
+      justify-content: space-between;
+      @media(max-width: 736px) {
+        justify-content: flex-start;
+      }
+
+      .btn {
+        margin-right: auto;
+        margin-left: 0px;
+        @media(max-width: 736px) {
+          font-size: 12px;
+          margin-left: 0px;
+          margin-right: 0px;
+          .icon {
+            font-size: 18px;
+            bottom: -4px;
+            position: relative;
+          }
+        }
+
+        & + .btn {
+          margin-right: 0px;
+          margin-left: auto;
+          @media(max-width: 736px) {
+            margin-left: 30px;
+            margin-right: auto;
+          }
+        }
+      }
+    }
+  }
+}
+
+section.confirm-booking-flight-info {
+  margin-bottom: 25px;
+  @media(max-width: 736px) {
+    margin-bottom: 15px;
+  }
+
+  .flight-summary-wrap {
+    display: block;
+    padding: 20px 30px;
+    border-color: $border;
+    @media(max-width: 1199px) {
+      padding: 20px;
+    }
+    @media(max-width: 768px) {
+      padding: 15px;
+      padding-bottom: 0px;
+    }
+
+    .journey-info-wrap {
+      @media(max-width: 991px) {
+        display: flex;
+      }
+    }
+
+    & > .flight-journey-wrap .selected-flight-info {
+      .selected-flight-item {
+        min-height: 50px;
+        padding: 0px;
+      }
+
+      &:first-child {
+        border: 0px;
+      }
+
+      .flight-journey-wrap {
+        padding-top: 15px;
+
+        .flight-journey-item {
+          .journey-info-line-between {
+            width: 40%;
+            margin-left: -20%;
+            @media(max-width: 1199px) {
+              width: 30%;
+              margin-left: -15%;
+            }
+            @media(max-width: 991px) {
+              width: 90px;
+              margin-left: 20px;
+            }
+          }
+        }
+
+        .flight-info-left-panel {
+          h3 {
+            display: inline-block;
+          }
+        }
+      }
+    }
+
+    .table-data-label {
+      display: none;
+    }
+
+    .add-ons-status-info-panel {
+      margin-top: 25px;
+      background: $primary;
+      border: 0px;
+      color: $white;
+      padding: 0px;
+
+      & > .cols {
+        padding: 15px 20px;
+        @media(max-width: 768px) {
+          padding: 15px;
+        }
+      }
+
+      @media(max-width: 768px) {
+        margin-left: -16px;
+        margin-right: -16px;
+        margin-top: 15px;
+        & + .add-ons-status-info-panel {
+          margin-top: 15px;
+        }
+      }
+
+      .dropdown-wrap-parent {
+        border: 0px;
+        @media(max-width: 576px) {
+          .summary-dropdown-wrap {
+            min-width: 100px;
+          }
+        }
+
+        .drop-label, .summary-dropdown-wrap a {
+          @media(max-width: 768px) {
+            display: none;
+          }
+        }
+
+        .summary-dropdown-wrap:after, .summary-dropdown-wrap a, .drop-label {
+          color: $white;
+        }
+
+        .drop-label, .dropdown {
+          font-size: 12px;
+        }
+      }
+
+      .journey-info-item, .dropdown-wrap-parent {
+        height: 48px;
+        margin-bottom: 0px;
+      }
+
+      .journey-info-wrap {
+        .journey-info-item {
+          &:first-child {
+            padding-left: 0px;
+          }
+
+          border: 0px;
+
+          .place {
+            color: $white;
+          }
+        }
+      }
+
+      .expand-summary-info-wrap {
+        border: 1px solid $border1;
+        @media(max-width: 576px) {
+          margin-top: 0px;
+        }
+
+        .addons-info-table {
+          width: 100%;
+          font-size: 14px;
+
+          .table-data {
+            display: flex;
+            align-items: center;
+            min-width: 60px;
+            @media(max-width: 768px) {
+              //min-height: auto;
+            }
+          }
+
+          th, td {
+            padding: 20px 30px;
+            @media(max-width: 1199px) {
+              padding: 20px;
+            }
+
+            & + th, & + td {
+              border-left: 1px solid $border1;
+            }
+          }
+
+          tr {
+            & + tr {
+              border-top: 1px solid $border1;
+            }
+          }
+
+          thead {
+            tr {
+              border-bottom: 1px solid $border1;
+            }
+
+            th {
+              color: $primary;
+
+              .icon {
+                font-size: 24px;
+                margin-right: 12px;
+                min-width: 24px;
+                min-height: 24px;
+                position: relative;
+
+                &:before {
+                  position: absolute;
+                  top: 0px;
+                  left: 0px;
+                }
+              }
+            }
+          }
+
+          tbody {
+            td {
+              color: $secondary_dark;
+              @media(max-width: 768px) {
+                display: flex;
+                align-items: center;
+              }
+
+              small {
+                font-size: 12px;
+                display: block;
+              }
+
+              .table-data {
+                min-height: 40px;
+                display: flex;
+                align-items: flex-start;
+                justify-content: flex-end;
+                flex-direction: column;
+                flex-wrap: wrap;
+                @media(max-width: 768px) {
+                  min-height: auto;
+                }
+              }
+            }
+          }
+
+          @media(max-width: 768px) {
+            thead, tbody {
+              .table-data {
+                .icon {
+                  display: none;
+                }
+
+                .table-data-label {
+                  margin-bottom: 5px;
+                  font-family: $jazeera_medium;
+                  display: block;
+                  color: $primary;
+
+                  & + strong {
+                    font-family: $jazeera_regular;
+
+                  }
+                }
+
+                strong {
+
+                }
+              }
+
+              tr {
+                display: flex;
+                flex-wrap: wrap;
+
+                th:nth-child(2), th:nth-child(3), th:nth-child(4) {
+                  display: none;
+                }
+
+                td:nth-child(2), th:nth-child(2) {
+                  order: 3;
+                }
+
+                td:nth-child(3), th:nth-child(3) {
+                  order: 4;
+                }
+
+                td:nth-child(4), th:nth-child(4) {
+                  order: 5;
+                }
+
+                td:last-child, th:last-child {
+                  order: 2;
+                }
+
+                td:nth-child(2), th:nth-child(2), td:nth-child(3), th:nth-child(3), td:nth-child(4), th:nth-child(4) {
+                  width: 100%;
+                  border-left: 0px;
+                  border-top: 1px solid $border1;
+                }
+
+                td:nth-child(2), th:nth-child(2) {
+                  max-width: 30%;
+                }
+
+                td:nth-child(3), th:nth-child(3) {
+                  max-width: 30%;
+                }
+
+                td:nth-child(4), th:nth-child(4) {
+                  max-width: 40%;
+                }
+
+                td:first-child, th:first-child, td:last-child, th:last-child {
+                  width: 100%;
+                }
+
+                td:first-child, th:first-child {
+                  max-width: 56%;
+                }
+
+                td:last-child, th:last-child {
+                  max-width: 44%;
+
+                  .table-data {
+                    strong {
+                      font-family: $jazeera_regular;
+                    }
+                  }
+                }
+
+                td {
+                  .table-data {
+                    font-size: 14px;
+
+                    strong {
+
+                    }
+                  }
+                }
+              }
+            }
+          }
+          @media(max-width: 736px) {
+            thead, tbody {
+              tr {
+                th, td {
+                  padding: 15px;
+                }
+
+                td {
+                  .table-data {
+                    font-size: 12px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media(max-width: 991px) {
+    .flight-summary-wrap > .flight-journey-wrap .selected-flight-info {
+      padding: 0px;
+    }
+  }
+}
+
+section.insurance-wrap {
+  margin-bottom: 25px;
+
+  .card-panel {
+    align-items: flex-start;
+    border: 1px solid $border;
+    padding: 20px 30px;
+    @media(max-width: 1199px) {
+      padding: 20px;
+    }
+
+    .icon-wrap {
+      font-size: 50px;
+      color: $primary;
+      min-width: 50px;
+      padding: 0px;
+      text-align: center;
+      height: 50px;
+      width: 5px;
+      position: relative;
+
+      i::before {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+      }
+    }
+
+    .card-panel-info-wrap {
+      margin-left: 30px;
+      width: 100%;
+
+      .content {
+        max-width: 75%;
+        color: $secondary_dark;
+
+        p {
+          color: $secondary_dark;
+
+          &:last-child {
+            margin-bottom: 0px;
+          }
+        }
+      }
+    }
+  }
+
+  @media(max-width: 768px) {
+    .card-panel {
+      padding-bottom: 80px;
+    }
+    .title .btn-wrap {
+      position: absolute;
+      bottom: 30px;
+      left: 100px;
+    }
+  }
+  @media(max-width: 736px) {
+    .card-panel {
+      padding: 15px;
+      padding-bottom: 60px;
+      padding-top: 20px;
+
+      .card-panel-info-wrap {
+        margin-left: 15px;
+
+        .content {
+          max-width: 100%;
+        }
+      }
+
+      .icon-wrap {
+        font-size: 32px;
+      }
+
+      .info-data-wrap {
+        h3, p {
+          line-height: 20px;
+        }
+
+        h3 {
+          font-size: 16px;
+          margin-bottom: 8px;
+        }
+
+        p {
+          font-size: 12px;
+        }
+      }
+    }
+    .title .btn-wrap {
+      position: absolute;
+      bottom: 30px;
+      left: 77px;
+
+      .btn {
+        font-size: 12px;
+
+        .icon {
+          font-size: 18px;
+          position: relative;
+          bottom: -4px;
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+}
+
+section.hotels-list-wrap {
+  margin-top: 60px;
+  margin-bottom: 60px;
+  @media(max-width: 768px) {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+
+  .cards-wrap {
+    display: flex;
+    justify-content: space-between;
+    @media(max-width: 768px) {
+      overflow: auto;
+    }
+  }
+
+  .btn-wrap {
+    @media(max-width: 768px) {
+      margin-top: 15px;
+    }
+  }
+}
+
+section.cars-list-wrap {
+  margin-top: 60px;
+  margin-bottom: 60px;
+  @media(max-width: 768px) {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    .title {
+
+      //margin-top: 50px;
+    }
+    .container {
+      //padding-top: 50px;
+      &:before {
+        content: "";
+        display: block;
+        width: 100%;
+        border-top: 1px solid $border;
+        //margin-bottom: 50px;
+        height: 40px;
+      }
+    }
+  }
+
+  .cards-wrap {
+    display: flex;
+    justify-content: space-between;
+    @media(max-width: 768px) {
+      overflow: auto;
+    }
+  }
+
+  .btn-wrap {
+    @media(max-width: 768px) {
+      margin-top: 15px;
+    }
+  }
+}
+
+section.footer-links-holder {
+  padding: 40px 0px;
+  @media(max-width: 768px) {
+    padding: 30px 0px;
+  }
+
+  &.terms-and-conditions {
+    padding: 30px 0px;
+  }
+
+  .title {
+    h3 {
+      color: $secondary_dark;
+      @media(max-width: 736px) {
+        font-size: 16px;
+        line-height: 26px;
+      }
+    }
+  }
+
+  .btn-wrap {
+    margin-top: 20px;
+    @media(max-width: 768px) {
+      margin-top: 15px;
+    }
+
+    .btn + .btn {
+      margin-left: 60px;
+      @media(max-width: 768px) {
+        margin-left: 15px;
+      }
+    }
+
+    .btn-secondary {
+      min-width: 250px;
+      background: transparent;
+      @media(max-width: 768px) {
+        min-width: 150px;
+      }
+      @media(max-width: 576px) {
+        min-width: 100px;
+      }
+
+      &:hover {
+        background: $primary;
+      }
+    }
+  }
+
+  .single-line {
+    display: flex;
+    align-items: center;
+    @media(max-width: 768px) {
+      display: block;
+
+    }
+
+    .btn-wrap {
+      margin-top: 0px;
+      margin-left: 60px;
+      align-items: center;
+      display: flex;
+      @media(max-width: 768px) {
+        justify-content: flex-start;
+        margin-left: 0px;
+        flex-wrap: wrap;
+        .btn {
+          width: 100%;
+          justify-content: flex-start;
+          margin-top: 10px;
+
+          & + .btn {
+            margin-left: 0px;
+          }
+
+          @media(max-width: 736px) {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media(max-width: 991px) {
+  .hotels-list-wrap, .cars-list-wrap {
+    .title.block-title {
+      h2, p {
+        max-width: 400px;
+      }
+
+      h2 {
+
+      }
+
+      p {
+        font-size: 14px;
+        line-height: 20px;
+      }
+    }
+  }
+}

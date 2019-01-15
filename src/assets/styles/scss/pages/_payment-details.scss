@@ -1,0 +1,602 @@
+section.payment-wrap {
+  margin-bottom: 60px;
+
+  & + section.btn-wrap {
+    .msg-note {
+      p {
+        margin-bottom: 40px;
+      }
+    }
+  }
+
+  .payment-methods-tabs {
+    margin-top: 30px;
+  }
+
+  form {
+    display: none;
+
+    &.show {
+      display: block;
+    }
+  }
+}
+
+.payment-methods-tabs {
+  .tab-panel {
+    display: flex;
+    border: 1px solid $tint5;
+    margin-bottom: -1px;
+
+    .panel-switch {
+      width: 100%;
+      text-align: center;
+      justify-content: center;
+
+      & + .panel-switch {
+        border-left: 1px solid $tint5;
+      }
+
+      .radio-wrap {
+        width: 100%;
+
+        label {
+          padding: 30px;
+          height: 90px;
+          align-items: center;
+          justify-content: center;
+          font-size: 16px;
+        }
+
+        input:checked {
+          & + label {
+            background: $tint6;
+            color: $primary;
+          }
+        }
+      }
+    }
+  }
+}
+
+.payment-methods-wrap {
+  padding: 60px 0px;
+
+  & + .btn-wrap {
+    margin-top: 40px;
+
+    .btn {
+      margin-top: 30px;
+    }
+  }
+
+  .converter-wrap {
+    border: 0px;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
+    background: $white;
+
+    .dropdown-menu {
+      border-color: $border1;
+      margin: 0px -1px;
+      width: calc(100% + 2px);
+
+      .dropdown-option {
+        h5 {
+          color: $primary;
+        }
+      }
+    }
+  }
+
+  .payment-summary-wrap {
+    margin-top: 40px;
+    margin-bottom: 0px;
+
+    .panel-label {
+      padding-top: 5px;
+    }
+
+    .panel-form {
+      margin-bottom: 5px;
+    }
+
+    .panel-end {
+
+    }
+  }
+
+  .summary-wrap {
+    margin-top: 8px;
+
+    .summary-row {
+      display: flex;
+      justify-content: space-between;
+
+      .summary-data {
+        font-size: 14px;
+        font-family: $jazeera_regular;
+        padding: 8px 0px;
+        color: $secondary_grey;
+      }
+
+      &.end {
+        .summary-data {
+          font-size: 18px;
+          font-family: $jazeera_medium;
+          color: $secondary_dark;
+          padding-bottom: 0px;
+        }
+      }
+    }
+  }
+
+  .creditcards-imgs {
+    display: flex;
+    justify-content: flex-end;
+
+    .creditcard {
+      height: 30px;
+      width: 90px;
+      justify-content: center;
+      align-items: center;
+      background-repeat: no-repeat;
+      background-position: center center;
+
+      &.visa {
+        background-image: url(assets/images/master.svg);
+      }
+
+      &.master {
+        background-image: url(assets/images/visa.svg);
+      }
+    }
+  }
+
+  .add-voucher {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    h5 {
+      font-size: 14px;
+    }
+
+    .icon-wrap {
+      margin-right: 12px;
+      color: $primary;
+      font-size: 24px;
+    }
+  }
+
+  .panel-items-wrap {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+
+    .panel-item {
+      width: 100%;
+      text-align: center;
+      justify-content: center;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+
+      & + .panel-item {
+        position: relative;
+
+        &:after {
+          display: block;
+          position: absolute;
+          left: 0px;
+          top: 50%;
+          margin-top: -10px;
+          font-family: 'icomoon';
+          content: "\e927";
+          color: $border;
+          font-size: 20px;
+        }
+      }
+
+      .icon-wrap {
+        margin: auto;
+        margin-bottom: 20px;
+
+        i {
+          height: 80px;
+          width: 80px;
+          text-align: center;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          display: block;
+          background-position: center center;
+          background-repeat: no-repeat;
+        }
+      }
+
+      .icon-alarm-blue {
+        background-image: url(assets/images/alarm-blue.svg);
+      }
+
+      .icon-swipe-blue {
+        background-image: url(assets/images/swipe-blue.svg);
+      }
+
+      .icon-inbox-blue {
+        background-image: url(assets/images/inbox-blue.svg);
+      }
+
+      p {
+        color: $secondary_dark;
+        max-width: 220px;
+        margin: auto;
+      }
+    }
+  }
+
+}
+
+#VoucherForm {
+  .total-holder {
+    margin-top: 20px;
+    font-size: 18px;
+    display: flex;
+    justify-content: flex-end;
+
+    .total-label {
+
+    }
+
+    .total-cost {
+      margin-left: 50px;
+    }
+  }
+
+  .validate {
+    position: absolute;
+    height: 24px;
+    width: 24px;
+    display: block;
+    color: $white;
+    background: $tint2;
+    border-radius: 50%;
+    z-index: 999;
+    top: 20px;
+    right: 18px;
+    left: auto;
+
+    .icon {
+      font-size: 12px;
+      line-height: 24px;
+      display: block;
+      text-align: center;
+      height: 24px;
+      width: 24px;
+    }
+
+    &.success {
+      background: $success;
+
+      .icon {
+        color: $white;
+      }
+    }
+
+    &.danger {
+      background: $danger;
+
+      .icon {
+        color: $white;
+      }
+    }
+  }
+}
+
+.mobile-panel-switch {
+  display: none;
+}
+
+@media(max-width: 1199px) {
+  .panel-end {
+    // position: absolute;
+    // right: 15px;
+  }
+  #CreditCardForm {
+    .payment-method {
+      .accordion-wrapper {
+        .accordion-item {
+          .panel-end {
+            position: absolute;
+            right: 15px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media(max-width: 991px) {
+  section.payment-wrap {
+    .panel-form-wrap {
+      .panel-form {
+        margin: 15px 0px;
+      }
+    }
+
+    .title.block-title {
+      margin-bottom: 30px;
+    }
+
+    .payment-methods-wrap {
+      & + .btn-wrap {
+        margin: 30px 0px;
+      }
+
+      .add-voucher {
+        margin-top: 15px;
+      }
+
+      .panel-items-wrap {
+        .panel-item {
+          max-width: 180px;
+
+          & + .panel-item:after {
+            margin-left: -40px;
+          }
+        }
+      }
+    }
+
+    .payment-methods-tabs {
+      display: none;
+    }
+
+    .mobile-panel-switch {
+      display: block;
+      padding: 0px 15px;
+
+      .panel-switch {
+        max-width: 690px;
+        margin: auto;
+
+        .radio-wrap {
+          label {
+            padding: 25px 15px;
+            background: $white;
+            border: $scrollbar 1px solid;
+            margin-top: 15px;
+            margin-bottom: 15px;
+          }
+
+          input:checked {
+            & + label {
+              background: $tint6;
+              border: 0px;
+              margin: 0px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media(max-width: 768px) {
+  section.payment-wrap {
+    .mobile-panel-switch .panel-switch {
+      max-width: 510px;
+    }
+
+    .payment-methods-wrap {
+      .panel-items-wrap {
+        flex-wrap: wrap;
+
+        .panel-item {
+          width: 100%;
+          max-width: 100%;
+
+          & + .panel-item {
+            margin-top: 80px;
+
+            &:after {
+              @include rotate(90);
+              margin: 0px;
+              left: 50%;
+              margin-left: -10px;
+              top: -50px;
+              color: $secondary_dark;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media(max-width: 768px) {
+  .converter-wrap {
+    .converter-label {
+      display: none;
+    }
+
+    .dropdown-wrap {
+      min-width: 100%;
+    }
+  }
+}
+
+@media(max-width: 736px) {
+  section.payment-wrap {
+    margin-bottom: 30px;
+
+    .accordion-wrapper .accordion-item {
+      .collapse.open-always .card-body {
+        padding-top: 20px;
+      }
+    }
+
+    .title {
+      &.block-title {
+        margin: 30px 0px;
+        font-size: 18px;
+      }
+
+      p.title-info-icon {
+        font-size: 14px;
+      }
+    }
+
+    .payment-methods-wrap {
+      padding: 15px 0px 30px;
+
+      .payment-summary-wrap {
+        margin-top: 15px;
+      }
+
+      & + .btn-wrap {
+        .msg-note {
+          p {
+            margin-bottom: 0px;
+            font-size: 12px;
+            line-height: 20px;
+          }
+        }
+      }
+
+      .creditcards-imgs {
+        @include scale(0.6);
+        transform-origin: right;
+      }
+    }
+
+    .panel-form-wrap {
+      .panel-label {
+        min-height: 40px;
+
+        .title {
+          margin: 0px;
+
+          h3 {
+            display: block;
+            font-size: 14px;
+          }
+        }
+      }
+
+      .panel-form {
+        margin: 0px;
+
+        .summary-wrap {
+          margin: 0px 0px 10px;
+
+          .summary-row .summary-data {
+            font-size: 12px;
+          }
+        }
+
+        .form-row.row {
+          & > div.check-group-wrap {
+            margin: 15px 0px;
+          }
+
+          .note {
+            font-size: 12px;
+            margin-top: 12px;
+          }
+        }
+      }
+    }
+
+    .mobile-panel-switch .panel-switch .radio-wrap {
+      label {
+        padding: 15px;
+
+        strong {
+          color: $secondary_dark;
+        }
+      }
+
+      input:checked + label {
+        padding: 25px 15px;
+      }
+    }
+
+    #CreditCardForm {
+      .payment-methods-wrap {
+        .summary-wrap {
+          .summary-row {
+            &.end {
+              flex-wrap: wrap;
+
+              .summary-data {
+                width: 100%;
+                font-size: 18px;
+
+                &:first-child {
+                  font-size: 16px;
+                  font-family: $jazeera_regular;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    #VoucherForm {
+      .panel-form-wrap .panel-label {
+        display: none;
+      }
+    }
+
+    .payment-methods-wrap .add-voucher {
+      margin-top: 30px;
+      margin-bottom: 15px;
+
+      .icon-wrap {
+        font-size: 22px;
+      }
+
+      h5 {
+        color: $secondary_dark;
+        font-size: 12px;
+      }
+    }
+  }
+  #PayLaterForm {
+    .panel-items-wrap {
+      .panel-item .icon-wrap {
+        height: 60px;
+        width: 60px;
+
+        i {
+          height: 60px;
+          width: 60px;
+          background-size: auto 50px;
+        }
+      }
+    }
+
+    .panel-items-wrap .panel-item + .panel-item:after {
+      font-size: 24px;
+      height: 26px;
+      width: 26px;
+      margin-left: -15px;
+    }
+  }
+  #VoucherForm {
+    .total-holder {
+      font-size: 16px;
+
+      .total-label {
+        position: absolute;
+        left: 0px;
+      }
+    }
+  }
+}
+
+@media(max-width: 580px) {
+
+}

@@ -1,0 +1,462 @@
+section.flexible-dates-wrap {
+  margin-top: 30px;
+  margin-bottom: 60px;
+  @media(max-width: 768px) {
+    margin-top: 15px;
+    margin-bottom: 30px;
+  }
+
+  .flexible-dates-picker-wrap {
+    display: flex;
+    border: 1px solid $border1;
+    padding: 15px;
+    position: relative;
+    padding-bottom: 60px;
+    justify-content: space-between;
+    @media(max-width: 1200px) {
+      flex-wrap: wrap;
+    }
+
+    .flexible-dates-picker {
+      width: 100%;
+      padding: 25px 0px;
+      max-width: 554px;
+      @media(max-width: 1200px) {
+        max-width: 100%;
+      }
+      @media(max-width: 991px) {
+        .title {
+          h2 {
+            margin-bottom: 0px;
+          }
+        }
+      }
+      @media(max-width: 768px) {
+        padding: 15px 0px;
+      }
+
+      .flight-root {
+        margin-bottom: 0px;
+      }
+    }
+
+    .total-holder {
+      position: absolute;
+      bottom: 30px;
+      right: 15px;
+      font-size: 18px;
+
+      .total-label {
+        margin-right: 35px;
+      }
+
+      @media(max-width: 736px) {
+        text-align: right;
+        position: relative;
+        bottom: 0px;
+        right: 0px;
+        left: 0px;
+        width: 100%;
+        .total-label {
+          position: absolute;
+          left: 0px;
+        }
+      }
+    }
+  }
+
+  .fc-day-grid-container {
+    //height: auto !important;
+    font-size: 14px;
+
+    .fc-content-skeleton {
+      display: none;
+    }
+  }
+
+  .fc-head-container {
+    border: 0px;
+
+    .fc-day-header {
+      border: 0px;
+      color: $primary;
+      font-size: 14px;
+      font-family: $jazeera_medium;
+      font-weight: normal;
+      @media(max-width: 736px) {
+        font-size: 12px;
+        color: $secondary_grey;
+      }
+    }
+  }
+
+  .fc-head {
+    .fc-widget-header {
+      height: 35px;
+      @media(max-width: 736px) {
+        height: 15px;
+        margin-top: 15px;
+      }
+    }
+  }
+
+  .fc-body {
+
+    td.fc-widget-content {
+      border: 0px;
+      //min-height: 94px;
+      //margin-bottom: -1px;
+      &.fc-today {
+        background: $primary_yellow;
+
+        &.fc-other-month, &.inactive {
+          background: $white;
+        }
+      }
+
+      &.fc-cell-selected, &.fc-today.fc-cell-selected {
+        .date-cell-wrap {
+          background: $primary;
+
+          .date, .price, .price strong {
+            color: $white;
+          }
+
+          .date {
+            padding-top: 14px;
+            @media(max-width: 736px) {
+              padding-top: 4px;
+            }
+          }
+
+          .hightlight, .price {
+            @media(max-width: 736px) {
+              opacity: 1;
+              display: block;
+            }
+          }
+        }
+      }
+
+      td.fc-widget-content {
+        padding: 0px;
+        overflow: hidden;
+        //border:1px solid $scrollbar;
+        .date-cell-wrap {
+          cursor: pointer;
+          border: 1px solid $scrollbar;
+          margin-left: -1px;
+          position: relative;
+          z-index: 999;
+        }
+
+        //&:nth-last-child(1 of :not(.fc-other-month)){
+        //&:not(.fc-other-month):last{
+        /*
+                &.fc-other-month ~ *{
+                    .date-cell-wrap{
+                        margin-right: 0px;
+                    }
+                }
+                */
+        &:first-child, &.fc-other-month + .fc-widget-content {
+          .date-cell-wrap {
+            margin-left: 0px;
+          }
+        }
+
+        &.inactive {
+          opacity: 0.2;
+          cursor: default;
+          background: $white;
+          pointer-events: none;
+          position: relative;
+          z-index: -9999;
+
+          .date-cell-wrap {
+            position: relative;
+            cursor: default;
+            pointer-events: none;
+            z-index: -9999;
+            // display: none;
+          }
+
+          & + .fc-day {
+            .date-cell-wrap {
+              margin-left: 0px;
+            }
+          }
+
+          &.fc-cell-selected {
+            .date-cell-wrap {
+              background: $white;
+
+              .date, .price, .price strong {
+                color: $secondary_grey;
+              }
+            }
+          }
+        }
+
+        &.fc-past {
+          opacity: 0.2;
+          cursor: default;
+          pointer-events: none;
+
+          &.fc-cell-selected {
+            .date-cell-wrap {
+              background: $white;
+
+              .date, .price, .price strong {
+                color: $secondary_grey;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    td.fc-widget-content {
+      // border: 0px;
+      &.fc-other-month {
+        // display: none;
+        pointer-events: none;
+        cursor: default;
+        //display: none;
+        .date-cell-wrap {
+          opacity: 0.8;
+          visibility: hidden;
+          display: none;
+          pointer-events: none;
+          cursor: default;
+        }
+      }
+
+    }
+  }
+
+  .date-cell-wrap {
+    text-align: center;
+    min-height: 92px;
+
+    .hightlight {
+      font-size: 9px;
+      box-sizing: border-box;
+      position: relative;
+      top: -2px;
+      font-family: $jazeera_medium;
+      max-width: 100%;
+      width: 100%;
+      min-width: 72px;
+      padding: 0px 2px;
+
+      & + .date {
+        padding-top: 4px;
+        height: 20px;
+        @media(max-width: 736px) {
+          padding-top: 24px;
+        }
+      }
+    }
+
+    .date {
+      font-size: 10px;
+      color: $secondary_grey;
+      font-family: $jazeera_medium;
+      height: 30px;
+      padding-top: 15px;
+      @media(max-width: 736px) {
+        padding-top: 24px;
+        padding-bottom: 5px;
+        height: 15px;
+      }
+    }
+
+    .price {
+      font-family: $jazeera_regular;
+      font-size: 12px;
+
+      strong {
+        display: block;
+        color: $secondary_grey;
+        font-family: $jazeera_medium;
+        @media(max-width: 736px) {
+          font-size: 8px;
+        }
+      }
+    }
+
+    .hightlight, .price {
+      @media(max-width: 736px) {
+        display: none;
+        font-size: 10px;
+        opacity: 0;
+      }
+    }
+
+    @media(max-width: 736px) {
+      .date {
+        font-size: 10px;
+        font-family: $jazeera_regular;
+      }
+    }
+  }
+
+  .fc-highlight {
+    background: transparent;
+    opacity: 1;
+    z-index: 0;
+    position: relative;
+  }
+
+  .fc-basic-view .fc-body .fc-row {
+    min-height: 94px;
+    margin-bottom: -1px;
+
+    &:last-child {
+      margin-bottom: 0px;
+    }
+  }
+
+  .fc-row .fc-bg {
+    z-index: 4;
+  }
+
+  .fc-toolbar {
+    display: none;
+  }
+
+  .date-picker-wrap {
+    margin-top: 30px;
+    @media(max-width: 736px) {
+      margin-top: 15px;
+    }
+
+    .calender-switcher {
+      display: flex;
+      justify-content: space-between;
+      padding: 0px 15px;
+      @media(max-width: 1200px) {
+        border-top: 1px solid $border;
+        border-bottom: 1px solid $border;
+        padding: 15px 0px;
+      }
+
+      .calender-switch-btn {
+        font-size: 12px;
+        color: $secondary_grey;
+        text-decoration: none;
+        position: relative;
+        height: 50px;
+        padding-top: 2px;
+        padding-bottom: 2px;
+        margin-top: 0px;
+
+        &:after {
+          content: "\e927";
+          font-family: "icomoon";
+          position: absolute;
+          height: 50px;
+          width: 30px;
+          top: 0px;
+          font-size: 20px;
+          line-height: 50px;
+          color: $primary;
+          text-align: right;
+        }
+
+        &.left {
+          text-align: left;
+          padding-left: 35px;
+
+          &:after {
+            left: 0px;
+            @include rotate(180);
+            //text-align: right;
+          }
+        }
+
+        &.right {
+          text-align: right;
+          padding-right: 35px;
+
+          &:after {
+            right: 0px;
+            //text-align: right;
+          }
+        }
+
+        .label {
+          line-height: 26px;
+        }
+
+        .dates-btwn {
+          font-size: 10px;
+
+          strong {
+            color: $primary;
+          }
+        }
+
+        &:hover {
+          .label {
+            //border-bottom: 1px solid $primary
+          }
+        }
+      }
+    }
+  }
+}
+
+.fc-view-container {
+  margin-top: 30px;
+  @media(max-width: 736px) {
+    padding-bottom: 30px;
+  }
+}
+
+
+@media(max-width: 736px) {
+  section.flexible-dates-wrap {
+    .flexible-dates-picker-wrap {
+      padding: 0px;
+      border: 0px;
+    }
+
+    .fc-basic-view .fc-body .fc-row {
+      min-height: 64px;
+    }
+
+    .fc-body td.fc-widget-content td.fc-widget-content .date-cell-wrap {
+      min-height: 62px;
+      display: flex;
+      align-content: center;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+  }
+  .fc-view-container {
+    margin-bottom: 0px;
+  }
+  .flexible-dates-picker {
+    &.return {
+      margin-bottom: 20px;
+
+      .fc-view-container {
+        border-bottom: 1px solid $border;
+      }
+    }
+
+    &.departure {
+      .fc-view-container {
+        border-bottom: 1px solid $border1;
+      }
+    }
+  }
+}
+
+@media(max-width: 540px) {
+  .fc-view-container {
+    margin: 15px -15px 0px;
+  }
+}

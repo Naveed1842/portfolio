@@ -1,0 +1,81 @@
+.panel-wrap {
+  .panel-caption, .panel-body {
+    width: 100%;
+  }
+
+  .panel-caption {
+    max-width: 365px;
+    padding-right: 22px;
+    padding-left: 22px;
+    min-height: 400px;
+    @media(max-width: 991px) {
+      max-width: 100%;
+    }
+    @media(max-width: 736px) {
+      padding-left: 15px;
+      padding-right: 15px;
+      min-height: auto;
+    }
+
+    .panel-label {
+      //width: 260px;
+      //margin-right: auto;
+      //padding-right: 15px;
+      .title {
+        @media(max-width: 736px) {
+          h3 {
+            display: none;
+          }
+        }
+
+        p {
+          margin: 0px;
+        }
+      }
+    }
+  }
+
+  .panel-body {
+    padding-right: 22px;
+    padding-left: 22px;
+    margin-top: -78px;
+    @media(max-width: 991px) {
+      display: none;
+      &.show-popup {
+        display: block;
+        position: fixed;
+        margin: 0px;
+        top: 0px;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+        z-index: 999;
+        background: $white;
+        max-height: 100%;
+        overflow-y: auto;
+
+        .form-file-label {
+          position: fixed;
+          left: 0px;
+          right: 0px;
+
+          .title {
+            h5 {
+              font-size: 16px;
+              font-family: $jazeera_medium;
+              color: $primary;
+            }
+          }
+
+          & + .scroll-wrapper {
+            margin-top: 60px;
+          }
+        }
+      }
+    }
+    @media(max-width: 736px) {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+}

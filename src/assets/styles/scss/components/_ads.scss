@@ -1,0 +1,56 @@
+.ads-wrap {
+  @media(max-width: 736px) {
+    flex-wrap: wrap;
+    h5 {
+      width: 100%;
+    }
+    h5, a {
+      text-align: center;
+    }
+  }
+
+  &.horizontal-wide {
+    padding: 25px;
+    display: flex;
+    width: 100%;
+    max-width: 580px;
+    min-height: 110px;
+    @media(max-width: 736px) {
+      justify-content: center;
+      text-align: center;
+    }
+
+    a.btn {
+      min-width: 240px;
+      @media(max-width: 736px) {
+        margin-top: 12px;
+      }
+    }
+  }
+
+  &.primary-fill {
+    color: $white;
+
+    h5 {
+      color: $white;
+      max-width: 240px;
+      font-family: $jazeera_regular;
+      line-height: 30px;
+      @media(max-width: 736px) {
+        font-size: 14px;
+        line-height: 24px;
+      }
+
+      large {
+        font-size: 20px;
+        @media(max-width: 736px) {
+          font-size: 18px;
+        }
+      }
+
+      strong {
+        font-family: $jazeera_medium;
+      }
+    }
+  }
+}

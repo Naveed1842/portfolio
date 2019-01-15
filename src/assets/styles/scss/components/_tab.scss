@@ -1,0 +1,293 @@
+.tab-panel {
+  position: relative;
+  z-index: 999;
+  @media(max-width: 991px) {
+    background: $primary;
+  }
+
+  .panel-switch {
+    display: flex;
+    overflow-x: auto;
+    @media(max-width: 991px) {
+      display: none;
+    }
+
+    .btn-switch {
+      height: 52px;
+      min-width: 210px;
+      color: $white;
+      font-size: 16px;
+      font-family: $jazeera_regular;
+      line-height: 36px;
+      background: $primary_light;
+      position: relative;
+      margin-right: 2px;
+
+      &.active {
+        background: $primary;
+        font-family: $jazeera_medium;
+        z-index: 2;
+      }
+    }
+  }
+
+  & > .btn-switch {
+    display: none;
+    color: $white;
+    font-size: 16px;
+    font-family: $jazeera_regular;
+    line-height: 35px;
+    background: $primary_light;
+    text-align: left;
+    padding: 12px 20px;
+    position: relative;
+    height: 60px;
+    @media(max-width: 768px) {
+      padding: 12px 15px;
+    }
+
+    &:after {
+      content: "\e900";
+      font-family: 'icomoon';
+      @include rotate(0);
+      position: absolute;
+      //margin-left: 15px;
+      right: 15px;
+      @media(max-width: 768px) {
+        font-size: 14px;
+      }
+    }
+
+    &.active {
+      //box-shadow: 0 5px 8px 0 rgba(0,0,0,0.20);
+      background: $primary;
+      font-family: $jazeera_medium;
+      z-index: 1;
+      /*
+            &:hover, &:focus{
+                box-shadow: 0 5px 8px 0 rgba(0,0,0,0.20) !important;
+            }
+            */
+      &:after {
+        @include rotate(180);
+      }
+    }
+
+    &:hover, &:focus {
+      box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.20);
+    }
+
+    @media(max-width: 991px) {
+      border-bottom: 1px solid rgba($primary, 0.4);
+      display: block;
+      &:last-child {
+        border-bottom: 0px;
+      }
+    }
+  }
+
+  .panel-data-wrapper {
+    position: relative;
+    display: none;
+    box-shadow: 0 -3px 7px 0 rgba(0, 0, 0, 0.14);
+    background: $primary;
+    padding: 30px;
+    color: $white;
+    z-index: 1;
+
+    .form-field {
+      .help-block {
+        background: $primary;
+        color: $white;
+
+        &:before {
+          color: $white;
+        }
+      }
+    }
+
+    @media(max-width: 991px) {
+      padding: 20px;
+      padding-top: 0px;
+      box-shadow: none;
+    }
+    @media(max-width: 768px) {
+      padding: 15px;
+      padding-top: 0px;
+    }
+
+    &.active {
+      display: block;
+    }
+
+    .switch-sub-panel {
+      display: flex;
+
+      .btn-switch {
+        padding: 0px 0px 5px 0px;
+        border: 0px;
+        font-size: 12px;
+        color: $white;
+        height: 22px;
+        border-bottom: 2px solid transparent;
+        text-decoration: none;
+        margin-right: 40px;
+        @media(max-width: 768px) {
+          // min-width: 100px;
+          // margin-right: 0px;
+        }
+
+        &.active {
+          font-family: $jazeera_medium;
+          border-bottom-color: $primary_yellow;
+          //line-height: 15px;
+        }
+      }
+    }
+
+    .sub-panel-data {
+      padding: 20px 0px 0px;
+      display: none;
+
+      &.active {
+        display: block;
+      }
+
+      .switch-btn {
+        position: absolute;
+        //right: 0px;
+        width: 58px;
+        height: 44px;
+        display: block;
+        left: 50%;
+        margin-left: -30px;
+        background: url('assets/images/toggle-ico.svg') transparent center center no-repeat;
+        padding: 0px;
+        z-index: 5;
+        top: 12px;
+        border: 0px;
+        visibility: hidden;
+        @media(max-width: 991px) {
+          // @include rotate(90);
+          background-image: url('assets/images/switch-icon-mobile.svg');
+          height: 36px;
+          width: 36px;
+          right: 6px;
+          left: auto;
+          top: 53px;
+        }
+        @media(max-width: 768px) {
+          top: 50px;
+        }
+
+        &.active {
+          visibility: visible;
+        }
+      }
+    }
+  }
+}
+
+.tab-holder {
+  background: $primary;
+  overflow: hidden;
+  max-height: 64px;
+
+  .container {
+    @media(max-width: 736px) {
+      padding: 0px;
+    }
+  }
+
+  .tab-item-wrap {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: calc(100% + 1px);
+
+    .tab-item {
+      width: 100%;
+      display: flex;
+      text-decoration: none;
+      justify-content: center;
+      align-items: center;
+      padding: 12px 20px;
+      height: 64px;
+      margin-left: -1px;
+      border-left: 1px solid rgba($black, 0.3);
+      border-right: 1px solid rgba($black, 0.3);
+      @media(max-width: 736px) {
+        padding: 10px;
+        //max-width: 50px;
+        //min-width: 50px;
+      }
+
+      .count {
+        height: 20px;
+        width: 20px;
+        background: $white;
+        font-size: 10px;
+        font-family: $jazeera_bold;
+        margin-right: 12px;
+        @include border-radius(50%);
+        text-align: center;
+        line-height: 22px;
+        margin-top: -2px;
+        @media(max-width: 736px) {
+          margin-right: 0px;
+          min-width: 20px;
+        }
+      }
+
+      h5 {
+        margin: 0px;
+        color: $white;
+        font-size: 14px;
+        line-height: 14px;
+        @media(max-width: 991px) {
+          display: none;
+        }
+      }
+
+      &.active {
+        background: $primary_dark;
+        @media(max-width: 991px) {
+          min-width: 180px;
+          @media(max-width: 736px) {
+            padding: 15px;
+            min-width: 160px;
+            justify-content: left;
+          }
+        }
+
+        h5 {
+          color: $primary_yellow;
+          @media(max-width: 991px) {
+            display: block;
+          }
+          @media(max-width: 736px) {
+            font-size: 12px;
+            margin-left: 10px;
+          }
+        }
+
+        span {
+          background-color: $primary_yellow;
+        }
+      }
+
+      &.inactive {
+        span, h5 {
+          opacity: 0.5;
+        }
+      }
+    }
+  }
+}
+
+/*
+.range-picker, .date-picker-wrapper{
+	position: relative !important;
+	z-index: 999 !important;
+}
+*/

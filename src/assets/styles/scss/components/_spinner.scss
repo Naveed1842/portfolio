@@ -1,0 +1,36 @@
+.spinner-wrap {
+  .spinner-input {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 85px;
+  }
+
+  button {
+    border: 1px solid $secondary_grey;
+    height: 22px;
+    width: 22px;
+    display: inline-block;
+    line-height: 20px;
+    text-align: center;
+    padding: 0px;
+    outline: 0;
+    @include border-radius(50%);
+  }
+
+  input {
+    border: 0px;
+    font-family: $jazeera_medium;
+    font-size: 14px;
+    color: $secondary_grey;
+    text-align: center;
+    height: 24px;
+    padding: 5px 0px;
+    line-height: 30px;
+    width: 30px;
+
+    &.active {
+      color: $primary;
+    }
+  }
+}

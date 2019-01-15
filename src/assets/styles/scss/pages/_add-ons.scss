@@ -1,0 +1,801 @@
+section.add-ons-section-wrap {
+  margin-bottom: 60px;
+  @media(max-width: 768px) {
+    margin-bottom: 30px;
+  }
+}
+
+.add-ons-listing-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  //margin-top: 35px;
+
+  & + .title {
+    margin-top: 50px;
+  }
+
+  .add-ons-listing-item {
+    border: 0px;
+    margin-bottom: 15px;
+    position: relative;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
+    padding: 15px 15px 20px 15px;
+    max-width: 580px;
+    @media(max-width: 1199px) {
+      max-width: 100%;
+      width: 100%;
+    }
+    @media(max-width: 736px) {
+      padding: 10px 15px;
+    }
+    border-bottom: 4px solid transparent;
+
+    &.active {
+      border-bottom-color: $primary;
+    }
+
+    &.card.horizontal-card {
+      align-items: flex-start;
+    }
+
+    .info-data-wrap {
+      min-height: 170px;
+
+      .title {
+        margin: 4px 0px;
+        min-height: auto;
+        @media(max-width: 768px) {
+          text-align: left;
+        }
+        @media(max-width: 736px) {
+          display: inline-flex;
+          h3 {
+            font-size: 15px;
+          }
+        }
+
+        small {
+          color: $secondary_dark;
+          font-family: $jazeera_regular;
+          font-size: 13px;
+          display: none;
+          @media(max-width: 736px) {
+            display: inline-block;
+            font-size: 12px;
+          }
+        }
+
+        .icon {
+          height: 24px;
+          width: 24px;
+          @include border-radius(50%);
+          background: $success;
+          color: $white;
+          font-size: 14px;
+          line-height: 30px;
+          text-align: center;
+          margin-left: 15px;
+          @media(max-width: 736px) {
+            line-height: 22px;
+            font-size: 10px;
+            margin-left: 10px;
+            height: 18px;
+            width: 18px;
+          }
+        }
+      }
+
+      p {
+        color: $secondary_dark;
+        @media(max-width: 736px) {
+          font-size: 12px;
+          line-height: 20px;
+        }
+      }
+    }
+
+    .icon-wrap {
+      font-size: 50px;
+      color: $primary;
+      min-width: 110px;
+      padding: 10px 15px 0px 0px;
+      text-align: center;
+      @media(max-width: 736px) {
+        padding-right: 10px;
+        min-width: 50px;
+        font-size: 30px;
+      }
+    }
+
+    .add-ons-listing-info-wrap {
+      display: flex;
+      flex-wrap: wrap;
+
+      a.btn-link {
+        margin: 15px 0px;
+        font-size: 12px;
+      }
+    }
+
+    .card-msg {
+      position: absolute;
+      right: 20px;
+      top: 22px;
+      @media(max-width: 736px) {
+        display: none;
+      }
+
+      h4 {
+        font-size: 16px;
+        color: $secondary_dark;
+        font-family: $jazeera_medium;
+      }
+    }
+
+    .card-price {
+      position: absolute;
+      right: 20px;
+      top: 22px;
+
+      h4 {
+        font-size: 16px;
+        color: $secondary_dark;
+        font-family: $jazeera_regular;
+        @media(max-width: 736px) {
+          font-size: 12px;
+        }
+
+        strong, b {
+          font-family: $jazeera_medium;
+        }
+      }
+    }
+  }
+
+  .baggage-detail-info {
+    display: flex;
+    margin-bottom: 15px;
+
+    .detail-info-item {
+      font-size: 14px;
+      border-right: 1px solid $border1;
+      height: 38px;
+      padding-right: 30px;
+      margin-right: 30px;
+      @media(max-width: 736px) {
+        padding-right: 10px;
+        margin-right: 10px;
+      }
+
+      .places {
+        min-width: 110px;
+        display: flex;
+        position: relative;
+
+        .place-code {
+
+
+          &.form {
+            margin-right: auto;
+          }
+
+          &.to {
+            margin-left: auto;
+          }
+        }
+
+        .journey-info-line-between {
+          position: absolute;
+          border-top: 2px solid $fade;
+          margin-left: -16px;
+          left: 50%;
+          top: 7px;
+          height: 1px;
+          width: 38px;
+
+          &:before, &:after {
+            content: "";
+            display: block;
+            height: 10px;
+            width: 10px;
+            position: absolute;
+            background: $fade;
+            border-radius: 50%;
+            top: -6px;
+            border: 1px solid $white;
+          }
+
+          &:before {
+            left: 0px;
+          }
+
+          &:after {
+            right: 0px;
+          }
+        }
+      }
+
+      &:last-child {
+        margin-right: 0px;
+        padding-right: 0px;
+        border-right: 0px;
+      }
+
+      .total-kg {
+        //margin-top: 2px;
+        line-height: 26px;
+        @media(max-width: 736px) {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+
+  &.more-add-ons {
+    .add-ons-listing-item {
+      max-width: 382px;
+      max-height: 200px;
+      margin: 0px;
+      @media(max-width: 1199px) {
+        max-width: 100%;
+        margin-bottom: 15px;
+        &:last-child {
+          margin-bottom: 0px;
+        }
+      }
+
+      .icon-wrap, .title h3 {
+        color: $secondary_dark;
+      }
+
+      .info-data-wrap {
+        min-height: 120px;
+        @media(max-width: 1199px) {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+
+section.add-ons-status-holder {
+  margin: 60px 0px;
+  @media(max-width: 991px) {
+    margin: 30px 0px;
+  }
+  @media(max-width: 768px) {
+    margin: 15px 0px;
+  }
+  @media(max-width: 576px) {
+    margin: 0px;
+    .container {
+      padding: 0px;
+    }
+  }
+
+  .flight-summary-wrap {
+    border-color: $border1;
+    @media(max-width: 1199px) {
+      flex-wrap: wrap;
+    }
+
+    .flight-cost-summary-wrap {
+      //border: 0px;
+      //border-left:1px solid $border1;
+      border-color: $border1;
+      background: $white;
+      max-width: 284px;
+      @media(max-width: 768px) {
+
+      }
+      @media(max-width: 1199px) {
+        max-width: 100%;
+        width: 100%;
+        margin-left: 0px;
+        margin-right: 0px;
+        border-left: 0px;
+        border-right: 0px;
+      }
+    }
+  }
+}
+
+
+.add-ons-status-info-panel {
+  transition: all 0.1s ease;
+  background: $primary_yellow;
+  border: 1px solid $border1;
+  padding: 15px 20px;
+  @media(max-width: 768px) {
+    border: 0px;
+    padding: 15px;
+  }
+
+  .journey-flights {
+    display: none;
+    @media(max-width: 991px) {
+      display: flex;
+    }
+  }
+
+  .journey-info-wrap {
+    @media(max-width: 991px) {
+      display: none;
+    }
+
+    .journey-info-item {
+      height: 60px;
+      border-right: 1px dotted rgba($secondary_dark, 0.2);
+      padding: 0px 20px;
+
+      .place {
+        font-size: 16px;
+        color: $secondary_dark;
+        font-family: $jazeera_medium;
+        text-transform: uppercase;
+
+        &.form {
+
+        }
+
+        &.to {
+
+        }
+      }
+
+      .icon {
+        text-align: center;
+        min-width: 80px;
+        font-size: 20px;
+        height: 26px;
+        @media(max-width: 1199px) {
+          min-width: 60px;
+        }
+      }
+    }
+  }
+
+  .addons-selected-list {
+    @media(max-width: 991px) {
+      display: none;
+    }
+
+    .addons-selected-item {
+      height: 30px;
+      width: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 25px;
+      margin-left: 30px;
+      @media(max-width: 1199px) {
+        margin-left: 20px;
+      }
+    }
+  }
+
+  .dropdown-wrap-parent {
+    display: flex;
+    margin-left: auto;
+    border-left: 1px dotted rgba($secondary_dark, 0.2);
+    padding-left: 40px;
+    align-items: center;
+    @media(max-width: 576px) {
+      border: 0px;
+      padding-left: 15px;
+    }
+
+    .drop-label {
+      font-size: 16px;
+      color: $secondary_dark;
+      font-family: $jazeera_regular;
+      margin-right: 22px;
+      @media(max-width: 576px) {
+        display: none;
+      }
+    }
+
+    .summary-dropdown-wrap {
+      border: 0px;
+      min-width: 180px;
+      margin-left: auto;
+      min-height: 60px;
+      display: flex;
+      align-items: center;
+      padding: 15px;
+      position: relative;
+      cursor: pointer;
+      @media(max-width: 576px) {
+        font-size: 14px;
+        min-width: 160px;
+      }
+
+      &:after {
+        content: "\e900";
+        font-family: 'icomoon';
+        text-decoration: none;
+        margin: 0px 15px;
+        position: absolute;
+        right: -10px;
+        top: 18px;
+      }
+
+      a, &:after {
+        color: $secondary_dark;
+      }
+
+      .dropdown {
+        width: 100%;
+        text-decoration: none;
+        padding: 0px;
+      }
+    }
+  }
+
+  .journey-info-wrap .journey-info-item, .addons-selected-list, .dropdown-wrap-parent, .journey-flights {
+    height: 60px;
+    transition: all 0.1s ease;
+    @media(max-width: 576px) {
+      height: 40px;
+    }
+  }
+
+  .expand-summary-info-wrap {
+    display: none;
+    background: $white;
+
+    .flight-journey-wrap {
+      @media(max-width: 991px) {
+
+        padding: 0px;
+        & > div {
+          padding: 15px;
+
+          &:first-child {
+            border-bottom: 1px solid $border;
+          }
+        }
+
+        .flight-journey-wrap {
+          padding: 0px;
+        }
+        .selected-flight-info {
+          padding: 0px;
+          @media(max-width: 991px) {
+            &:first-child {
+              border-bottom: 0px;
+            }
+            & + .addons-selected-list {
+              margin: 15px 0px 10px;
+              border-top: 1px solid $inactive;
+              border-bottom: 1px solid $inactive;
+            }
+          }
+
+        }
+      }
+
+      .addons-selected-list {
+        border-bottom: 1px dashed rgba($secondary_dark, 0.2);
+        margin-bottom: 0px;
+        height: auto;
+
+        &:last-child {
+          //border-bottom: 0px;
+        }
+
+        @media(max-width: 991px) {
+          display: flex;
+          border-bottom: 0px;
+        }
+
+        .addons-selected-item {
+          margin: 0px;
+          height: 55px;
+          width: 100%;
+          padding: 15px 20px;
+          text-align: left;
+          justify-content: left;
+          @media(max-width: 991px) {
+            padding: 10px 0px;
+            min-width: 40px;
+            height: auto;
+          }
+
+          & + .addons-selected-item {
+            border-left: 1px dashed rgba($secondary_dark, 0.2);
+            @media(max-width: 991px) {
+              border: 0px;
+            }
+          }
+
+          .icon {
+            font-size: 24px;
+          }
+
+          .count {
+            margin-left: 12px;
+            font-size: 12px;
+          }
+        }
+      }
+
+      .flight-journey-return {
+        .addons-selected-list {
+          &:last-child {
+            border-bottom: 0px;
+          }
+        }
+      }
+    }
+
+    .flight-cost-summary-wrap {
+      @media(max-width: 1199px) {
+        padding: 30px 20px;
+      }
+    }
+  }
+
+  &.show {
+    // display: block;
+    .journey-info-wrap .journey-info-item {
+      &:first-child {
+        padding-left: 0px;
+      }
+    }
+
+    .journey-info-wrap .journey-info-item, .addons-selected-list, .dropdown-wrap-parent, .journey-flights {
+      height: 40px;
+      margin-bottom: 15px;
+      @media(max-width: 576px) {
+        margin-bottom: 0px;
+      }
+    }
+
+    .dropdown-wrap-parent .summary-dropdown-wrap:after {
+      @include rotate(-180);
+    }
+
+    .expand-summary-info-wrap {
+      display: block;
+      @media(max-width: 576px) {
+        margin-top: 15px;
+      }
+
+      .flight-summary-wrap > .flight-journey-wrap .selected-flight-info .selected-flight-item {
+        padding-top: 10px;
+        @media(max-width: 991px) {
+          padding: 0px;
+        }
+
+        .flight-journey-wrap .flight-journey-item {
+          height: 58px;
+          @media(max-width: 1199px) {
+            height: auto;
+          }
+        }
+      }
+    }
+  }
+}
+
+.add-ons-status-info-panel {
+  @media(min-width: 992px) {
+    .flight-summary-wrap {
+      & > .flight-journey-wrap {
+        .selected-flight-info {
+          background: $tint6;
+
+          .selected-flight-base-info {
+            .flight-info-left-panel, .flight-info-right-panel {
+              display: flex;
+              align-items: center;
+            }
+
+            .flight-info-left-panel {
+              h3 {
+                font-size: 16px;
+                display: flex;
+                align-items: center;
+
+                .icon {
+                  margin: 0px 12px;
+                  font-size: 22px;
+                }
+              }
+
+              .modify-flight {
+                a {
+                  font-size: 14px;
+                }
+              }
+            }
+
+            .flight-info-right-panel {
+              .flight-class-name {
+                margin-top: 0px;
+                border-right: 1px solid $secondary_grey;
+                height: 16px;
+                margin-right: 10px;
+                padding-right: 10px;
+              }
+
+              .flight-journey-total-time {
+                display: block;
+              }
+
+              .flight-class-name, .flight-journey-total-time {
+                font-size: 14px;
+                line-height: 16px;
+              }
+            }
+          }
+
+          .selected-flight-item {
+            .flight-journey-wrap {
+              padding-top: 60px;
+              padding-bottom: 60px;
+              position: relative;
+
+              .flight-journey-item {
+                min-height: 65px;
+
+                &:first-child {
+                  border: 0px;
+                }
+
+                .flight-journey-time {
+                  display: block;
+                }
+
+                .flight-name, .flight-journey-time {
+                  color: $secondary_dark;
+                  position: absolute;
+                  font-size: 12px;
+                  top: -40px;
+                }
+
+                .flight-name {
+                  right: auto;
+                  left: 20px;
+                }
+
+                .flight-journey-time {
+                  left: auto;
+                  right: 20px;
+                }
+
+                .journey-item-info {
+                  .date-time {
+                    .time {
+                      font-size: 16px;
+                      font-family: $jazeera_regular;
+                    }
+
+                    .date, .day {
+                      font-size: 12px;
+                      color: $secondary_grey;
+                    }
+                  }
+
+                  .place-wrap {
+                    .place-code {
+                      font-size: 18px;
+                      color: $primary;
+                      font-family: $jazeera_medium;
+                    }
+
+                    .place {
+                      font-size: 12px;
+                      color: $secondary_dark;
+                      font-family: $jazeera_regular;
+                    }
+                  }
+
+                  &.to {
+                    flex-direction: row-reverse;
+
+                    .place-wrap {
+                      margin-left: 0px;
+                    }
+
+                    .date-time {
+                      margin-left: 18px;
+                    }
+                  }
+                }
+
+                .journey-info-line-between {
+                  width: 64px;
+                  margin-left: -32px;
+                }
+              }
+
+              .flight-lagover {
+                display: block;
+                position: absolute;
+                width: 120px;
+                left: 50%;
+                bottom: 15px;
+                margin-left: -60px;
+                font-size: 14px;
+                color: $primary;
+                text-align: center;
+                background-color: $tint6;
+
+                &:before, &:after {
+                  width: 1px;
+                  position: absolute;
+                  margin-left: -1px;
+                  border-left: 1px dashed $secondary_dark;
+                  content: "";
+                  display: block;
+                  left: 50%;
+                }
+
+                &:before {
+                  height: 120px;
+                  bottom: 25px;
+                }
+
+                &:after {
+                  height: 65px;
+                  top: 25px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  @media(max-width: 991px) {
+    .flight-summary-wrap > .flight-journey-wrap {
+      .selected-flight-info {
+        .selected-flight-item .flight-journey-wrap {
+          padding-top: 15px;
+
+          .flight-journey-item {
+            .journey-item-info {
+              .date-time {
+                min-width: 70px;
+
+                .day {
+                  font-size: 10px;
+                  color: $secondary_grey;
+                }
+              }
+
+              .place-wrap {
+                display: flex;
+                flex-direction: column-reverse;
+                max-height: 40px;
+
+                .place-code {
+                  //font-family: $jazeera_medium;
+                  &:before {
+                    content: "(";
+                  }
+
+                  &:after {
+                    content: ")";
+                  }
+                }
+
+                .place {
+                  //font-family: $jazeera_regular;
+                }
+              }
+            }
+
+            .journey-info-line-between {
+              margin-left: 38px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

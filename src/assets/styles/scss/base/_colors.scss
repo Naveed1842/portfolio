@@ -1,0 +1,79 @@
+// Color Variables
+$primary: #004A97;
+$primary_dark: #003369;
+$primary_light: #0D84C7;
+$primary_blue: #40B4E5;
+$primary_yellow: #FFCE00;
+
+$primary_blue1: #00A0DF;
+$primary_blue2: #0C84C6;
+
+$secondary_dark: #071C2C;
+$secondary_grey: #55565A;
+
+$tint1: #6A7780;
+$tint2: #838D95;
+$tint3: #B4BABF;
+$tint4: #DCE0E3;
+$tint5: #EFF3F7;
+$tint6: #F3F8FB;
+
+$danger: #E24F4F;
+$success: #64AF2E;
+$warning: #EAAE2D;
+
+
+$white: #ffffff;
+$black: #000000;
+
+$primary_hover: #FFE166;
+$primary_focus: #FFCE00;
+
+$grey: #E1E0E0;
+
+$border: #CDD2D5;
+$border1: #EAE9E8;
+$placeholder: #B4BABF;
+
+$label: #DEDBD9;
+$invalid: #D4D2CF;
+$inactive: #E0E4E6;
+
+$light_grey: #8A8A8D;
+$fade: #D7DADD;
+$tint7: #B2C8DF;
+
+$dropoption_selected: #FCFAFA;
+$scrollbar: #EAEFF5;
+$extralegroom: #E67B49;
+
+$overlayBanner: #4A4A4A;
+
+.primary-fill {
+  background: $primary;
+}
+
+.primary-yellow-fill {
+  background: $primary_yellow;
+}
+
+.tint-fill {
+  background: $tint6;
+}
+
+
+.bg-success {
+  background: $success !important;
+}
+
+.bg-danger {
+  background: $danger !important;
+}
+
+.bg-warning {
+  background: $warning !important;
+}
+
+.bg-yellow {
+  background: $primary_yellow !important;
+}

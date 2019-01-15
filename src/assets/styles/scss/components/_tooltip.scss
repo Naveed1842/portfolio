@@ -1,0 +1,71 @@
+.tooltip {
+  margin: 0px;
+
+  .tooltip-inner {
+    max-width: 300px;
+    padding: 3px 8px;
+    color: #fff;
+    text-align: center;
+    background-color: $secondary_grey;
+    border-radius: .25rem;
+
+    p {
+      color: $white;
+      font-size: 12px;
+      line-height: 16px;
+      margin: 12px;
+    }
+  }
+
+  &.bs-tooltip-right .arrow:before {
+    border-right-color: $secondary_grey !important;
+  }
+
+  &.bs-tooltip-left .arrow:before {
+    border-left-color: $secondary_grey !important;
+  }
+
+  &.bs-tooltip-bottom .arrow:before {
+    border-bottom-color: $secondary_grey !important;
+  }
+
+  &.bs-tooltip-top .arrow:before {
+    border-top-color: $secondary_grey !important;
+  }
+}
+
+.tooltip-flight-seat {
+  margin: 0px;
+
+  .tooltip-inner {
+    max-width: 300px;
+    padding: 8px 10px 5px;
+    color: #fff;
+    text-align: center;
+    background-color: $secondary_dark;
+    border-radius: 0px;
+
+    .seat-num, .price {
+      display: block;
+      color: $white;
+      font-size: 12px;
+      line-height: 16px;
+    }
+  }
+
+  .arrow:before {
+    top: 100%;
+    left: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(0, 0, 0, 0);
+    border-top-color: #000;
+    border-width: 6px;
+    margin-left: -6px;
+    margin-top: -7px;
+  }
+}

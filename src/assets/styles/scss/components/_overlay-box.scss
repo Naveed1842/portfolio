@@ -1,0 +1,46 @@
+.overlay-box {
+  position: relative;
+
+  &:after {
+    opacity: 0.6;
+    @include transition(all, 0.3s, ease-in-out);
+    background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.67) 47%, #000000 100%);
+    background-image: -o-linear-gradient(rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.67) 47%, #000000 100%);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.67) 47%, #000000 100%);
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    height: 38px;
+    z-index: 1;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  h5 {
+    position: absolute;
+    z-index: 2;
+    color: $white;
+    font-size: 12px;
+    font-family: $jazeera_medium;
+    left: 0px;
+    right: 0px;
+    @include transition(all, 0.3s, ease-in-out);
+    text-align: center;
+    bottom: 8px;
+  }
+
+  &:hover {
+    &:after {
+      height: 50px;
+    }
+
+    h5 {
+      bottom: 5px;
+    }
+  }
+}

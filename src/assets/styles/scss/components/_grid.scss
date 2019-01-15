@@ -1,0 +1,28 @@
+.cols {
+  display: flex;
+
+  &__alignv-center {
+    align-content: center;
+    align-items: center;
+  }
+
+  &__alignh-center {
+    justify-content: center;
+  }
+
+  &__alignh-start {
+    justify-content: start;
+  }
+
+  &__space-around {
+    justify-content: space-around;
+  }
+
+  &__space-between {
+    justify-content: space-between;
+  }
+
+  &__space-evenly {
+    justify-content: space-evenly;
+  }
+}
