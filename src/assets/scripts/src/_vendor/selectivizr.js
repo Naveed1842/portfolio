@@ -127,15 +127,13 @@ References:
       }
       return prefix + selectorGroups.join(",");
     });
-  };
-
+  }
   // --[ patchAttribute() ]-----------------------------------------------
   // returns a patch for an attribute selector.
   function patchAttribute(attr) {
     return (!BROKEN_ATTR_IMPLEMENTATIONS || BROKEN_ATTR_IMPLEMENTATIONS.test(attr)) ?
       {className: createClassName(attr), applyClass: true} : null;
-  };
-
+  }
   // --[ patchPseudoClass() ]---------------------------------------------
   // returns a patch for a pseudo-class
   function patchPseudoClass(pseudo) {
@@ -152,7 +150,7 @@ References:
     }
 
     // bracket contents are irrelevant - remove them
-    var bracketIndex = pseudo.indexOf("(")
+    var bracketIndex = pseudo.indexOf("(");
     if (bracketIndex > -1) {
       pseudo = pseudo.substring(0, bracketIndex);
     }
@@ -164,7 +162,7 @@ References:
         case "root":
           applyClass = function (e) {
             return isNegated ? e != root : e == root;
-          }
+          };
           break;
 
         case "target":
@@ -178,9 +176,9 @@ References:
               };
               addEvent(win, "hashchange", function () {
                 toggleElementClass(e, className, handler());
-              })
+              });
               return handler();
-            }
+            };
             break;
           }
           return false;
@@ -195,7 +193,7 @@ References:
               })
             }
             return e.checked !== isNegated;
-          }
+          };
           break;
 
         case "disabled":
@@ -214,7 +212,7 @@ References:
               return e.disabled === isNegated;
             }
             return pseudo == ":enabled" ? isNegated : !isNegated;
-          }
+          };
           break;
 
         case "focus":
@@ -229,12 +227,12 @@ References:
           applyClass = function (e) {
             addEvent(e, isNegated ? deactivateEventName : activateEventName, function () {
               toggleElementClass(e, className, true);
-            })
+            });
             addEvent(e, isNegated ? activateEventName : deactivateEventName, function () {
               toggleElementClass(e, className, false);
-            })
+            });
             return isNegated;
-          }
+          };
           break;
 
         // everything else
@@ -248,8 +246,7 @@ References:
       }
     }
     return {className: className, applyClass: applyClass};
-  };
-
+  }
   // --[ applyPatches() ]-------------------------------------------------
   // uses the passed selector text to find DOM nodes and patch them
   function applyPatches(selectorText, patches) {
@@ -292,15 +289,12 @@ References:
         elm.className = cssClasses;
       }
     }
-  };
-
+  }
   // --[ hasPatch() ]-----------------------------------------------------
   // checks for the exsistence of a patch on an element
   function hasPatch(elm, patch) {
     return new RegExp("(^|\\s)" + patch.className + "(\\s|$)").test(elm.className);
-  };
-
-
+  }
   // =========================== Utility =================================
 
   function createClassName(className) {
@@ -310,36 +304,32 @@ References:
       className.replace(RE_PATCH_CLASS_NAME_REPLACE, function (a) {
         return a.charCodeAt(0)
       }));
-  };
-
+  }
   // --[ log() ]----------------------------------------------------------
   // #DEBUG_START
   function log(message) {
     if (win.console) {
       win.console.log(message);
     }
-  };
+  }
   // #DEBUG_END
 
   // --[ trim() ]---------------------------------------------------------
   // removes leading, trailing whitespace from a string
   function trim(text) {
     return text.replace(RE_TIDY_TRIM_WHITESPACE, PLACEHOLDER_STRING);
-  };
-
+  }
   // --[ normalizeWhitespace() ]------------------------------------------
   // removes leading, trailing and consecutive whitespace from a string
   function normalizeWhitespace(text) {
     return trim(text).replace(RE_TIDY_CONSECUTIVE_WHITESPACE, SPACE_STRING);
-  };
-
+  }
   // --[ normalizeSelectorWhitespace() ]----------------------------------
   // tidies whitespace around selector brackets and combinators
   function normalizeSelectorWhitespace(selectorText) {
     return normalizeWhitespace(selectorText.replace(RE_TIDY_TRAILING_WHITESPACE, PLACEHOLDER_STRING).replace(RE_TIDY_LEADING_WHITESPACE, PLACEHOLDER_STRING)
     );
-  };
-
+  }
   // --[ toggleElementClass() ]-------------------------------------------
   // toggles a single className on an element
   function toggleElementClass(elm, className, on) {
@@ -349,8 +339,7 @@ References:
       elm.className = newClassName;
       elm.parentNode.className += EMPTY_STRING;
     }
-  };
-
+  }
   // --[ toggleClass() ]--------------------------------------------------
   // adds / removes a className from a string of classNames. Used to
   // manage multiple class changes without forcing a DOM redraw
@@ -362,13 +351,11 @@ References:
     } else {
       return classExists ? trim(classList.replace(re, PLACEHOLDER_STRING)) : classList;
     }
-  };
-
+  }
   // --[ addEvent() ]-----------------------------------------------------
   function addEvent(elm, eventName, eventHandler) {
     elm.attachEvent("on" + eventName, eventHandler);
-  };
-
+  }
   // --[ getXHRObject() ]-------------------------------------------------
   function getXHRObject() {
     if (win.XMLHttpRequest) {
@@ -379,15 +366,13 @@ References:
     } catch (e) {
       return null;
     }
-  };
-
+  }
   // --[ loadStyleSheet() ]-----------------------------------------------
   function loadStyleSheet(url) {
     xhr.open("GET", url, false);
     xhr.send();
     return (xhr.status == 200) ? xhr.responseText : EMPTY_STRING;
-  };
-
+  }
   // --[ resolveUrl() ]---------------------------------------------------
   // Converts a URL fragment to a fully qualified URL using the specified
   // context URL. Returns null if same-origin policy is broken
@@ -395,8 +380,7 @@ References:
 
     function getProtocolAndHost(url) {
       return url.substring(0, url.indexOf("/", 8));
-    };
-
+    }
     // absolute path
     if (/^https?:\/\//i.test(url)) {
       return getProtocolAndHost(contextUrl) == getProtocolAndHost(url) ? url : null;
@@ -414,8 +398,7 @@ References:
     }
 
     return contextUrlPath + url;
-  };
-
+  }
   // --[ parseStyleSheet() ]----------------------------------------------
   // Downloads the stylesheet specified by the URL, removes it's comments
   // and recursivly replaces @import rules with their contents, ultimately
@@ -430,8 +413,7 @@ References:
       });
     }
     return EMPTY_STRING;
-  };
-
+  }
   // --[ init() ]---------------------------------------------------------
   function init() {
     // honour the <base> tag
@@ -465,7 +447,7 @@ References:
         */
 
     for (var c = 0; c < doc.styleSheets.length; c++) {
-      stylesheet = doc.styleSheets[c]
+      stylesheet = doc.styleSheets[c];
       if (stylesheet.href != EMPTY_STRING) {
         url = resolveUrl(stylesheet.href, baseUrl);
         if (url) {
@@ -492,8 +474,7 @@ References:
         }
       }, 250)
     }
-  };
-
+  }
   // Bind selectivizr to the ContentLoaded event.
   ContentLoaded(win, function () {
     // Determine the "best fit" selector engine
@@ -560,5 +541,5 @@ References:
       addEvent(doc, "readystatechange", init);
       addEvent(win, "load", init);
     }
-  };
+  }
 })(this);

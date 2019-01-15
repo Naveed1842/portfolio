@@ -1087,7 +1087,7 @@
     if (_.options.infinite === true) {
       if (_.slideCount > _.options.slidesToShow) {
         _.slideOffset = (_.slideWidth * _.options.slidesToShow) * -1;
-        coef = -1
+        coef = -1;
 
         if (_.options.vertical === true && _.options.centerMode === true) {
           if (_.options.slidesToShow === 2) {

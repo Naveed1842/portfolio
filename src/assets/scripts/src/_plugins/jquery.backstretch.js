@@ -390,7 +390,7 @@
           // Second - there are memory issues.
           // If there will be a requirement from users - I'll try to implement this.
 
-          continue;
+
 
         } else {
 

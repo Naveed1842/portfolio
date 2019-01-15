@@ -51,4 +51,4 @@ $.fn.pVal = function () {
     return '';
   else
     return val;
-}
+};

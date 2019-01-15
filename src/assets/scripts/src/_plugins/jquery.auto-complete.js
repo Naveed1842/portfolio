@@ -56,7 +56,7 @@
                 that.sc.scrollTop(selTop + scrTop);
             }
         }
-      }
+      };
       $(window).on('resize.autocomplete', that.updateSC);
 
       that.sc.appendTo('body');
@@ -181,7 +181,7 @@
         }
       });
     });
-  }
+  };
 
   $.fn.autoComplete.defaults = {
     source: 0,

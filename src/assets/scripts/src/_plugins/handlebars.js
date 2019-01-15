@@ -1672,7 +1672,7 @@ var Handlebars = (function () {
           }
 
 
-          var YYSTATE = YY_START
+          var YYSTATE = YY_START;
           switch ($avoiding_name_collisions) {
             case 0:
               if (yy_.yytext.slice(-2) === "\\\\") {
@@ -1801,7 +1801,7 @@ var Handlebars = (function () {
           "INITIAL": {"rules": [0, 1, 30], "inclusive": true}
         };
         return lexer;
-      })()
+      })();
       parser.lexer = lexer;
 
       function Parser() {
@@ -2898,7 +2898,7 @@ var Handlebars = (function () {
           depth = result.depths.list[i];
 
           if (depth < 2) {
-            continue;
+
           } else {
             this.addDepth(depth - 1);
           }

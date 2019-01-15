@@ -4,7 +4,7 @@ $('.flight-mockup-wrap input:checkbox').change(function (e) {
     var seatNumber = $(this).attr('id');
     selectedSeats.push(seatNumber)
   });
-  console.log(selectedSeats)
+  console.log(selectedSeats);
   e.preventDefault();
 });
 

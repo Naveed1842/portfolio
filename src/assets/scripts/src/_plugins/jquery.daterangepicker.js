@@ -2022,7 +2022,7 @@
         function (value) {
           return nameMonth(value);
         }
-      )
+      );
       return generateSelect('month', selectData);
     }
 
@@ -2057,7 +2057,7 @@
           maxVisible: maxVisibleYear,
         },
         currentYear
-      )
+      );
       return generateSelect('year', selectData);
     }
 

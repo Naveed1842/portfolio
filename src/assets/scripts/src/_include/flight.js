@@ -46,8 +46,8 @@ $('.selected-flight-item .modify-flight a').click(function (e) {
 $('.flight-search-result-item .view-detail-btn').click(function (e) {
   $(this).parents('.flight-search-result-item').siblings().find('.flight-info-container .expanded').removeClass('active');
   $(this).parents('.flight-search-result-item').siblings().find('.flight-info-container .collapsed').addClass('active');
-  $(this).parents('.flight-search-result-item').find('.flight-info-container .collapsed').toggleClass('active')
-  $(this).parents('.flight-search-result-item').find('.flight-info-container .expanded').toggleClass('active')
+  $(this).parents('.flight-search-result-item').find('.flight-info-container .collapsed').toggleClass('active');
+  $(this).parents('.flight-search-result-item').find('.flight-info-container .expanded').toggleClass('active');
   e.preventDefault();
 });
 
@@ -168,8 +168,6 @@ function prepareDate(lastWeek, nextWeek, load, isDesktop) {
       }
 
       out += '<div class="date"><strong>' + moment(datesArr[i - 1], 'DD-MM-YYYY').format("DD MMM") + ',</strong> ' + moment(datesArr[i - 1], 'DD-MM-YYYY').format("ddd") + '</div>';
-      ;
-
       if (item.cost != '') {
         out += item.cost;
       } else {
@@ -220,8 +218,6 @@ function prepareDate(lastWeek, nextWeek, load, isDesktop) {
       }
 
       out += '<div class="date"><strong>' + moment(datesArr[i - 1], 'DD-MM-YYYY').format("DD MMM") + ',</strong> ' + moment(datesArr[i - 1], 'DD-MM-YYYY').format("ddd") + '</div>';
-      ;
-
       if (item.cost != '') {
         out += item.cost;
       } else {
