@@ -1,14 +1,14 @@
 import { AuthActions, AuthActionTypes } from './auth.actions';
 
-export interface State {
+export interface AuthState {
   authenticated: boolean;
 }
 
-export const initialState: State = {
+export const initialState: AuthState = {
   authenticated: false,
 };
 
-export function reducer(state = initialState, action: AuthActions): State {
+export function reducer(state = initialState, action: AuthActions): AuthState {
   switch (action.type) {
     case AuthActionTypes.AUTHENTICATED:
       return {
@@ -23,4 +23,4 @@ export function reducer(state = initialState, action: AuthActions): State {
   }
 }
 
-export const isAuthenticated = (state: State) => state.authenticated;
+export const isAuthenticated = (state: AuthState) => state.authenticated;
