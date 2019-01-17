@@ -17,7 +17,6 @@ import {SharedModule} from './shared/shared.module';
     BrowserModule,
     CoreModule,
     HttpClientModule,
-    SharedModule,
     StoreModule.forRoot(reducers, {metaReducers}),
     !environment.production ? StoreDevtoolsModule.instrument() : []
   ],

@@ -5,7 +5,7 @@ import * as fromUI from '../ui.reducer';
 @Component({
   selector: 'app-uiloader',
   templateUrl: './uiloader.component.html',
-  styleUrls: ['./uiloader.component.css']
+  styleUrls: ['./uiloader.component.scss']
 })
 export class UiloaderComponent implements OnInit {
 

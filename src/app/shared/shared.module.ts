@@ -1,12 +1,13 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
+import {ClassActiveDirective} from './class-active.directive';
 
 @NgModule({
-  declarations: [],
+  declarations: [ClassActiveDirective],
   imports: [
     CommonModule,
   ],
-  exports: []
+  exports: [ClassActiveDirective]
 })
 export class SharedModule {
 }
