@@ -8,16 +8,17 @@ import {metaReducers, reducers} from './reducers';
 import {StoreDevtoolsModule} from '@ngrx/store-devtools';
 import {environment} from '../environments/environment';
 import {SharedModule} from './shared/shared.module';
+import { Error404Component } from './error404/error404.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    Error404Component,
   ],
   imports: [
     BrowserModule,
     CoreModule,
     HttpClientModule,
-    SharedModule,
     StoreModule.forRoot(reducers, {metaReducers}),
     !environment.production ? StoreDevtoolsModule.instrument() : []
   ],

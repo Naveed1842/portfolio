@@ -1,0 +1,218 @@
+<header>
+  <div class="container">
+    <div class="header-inner">
+      <a class="brand">
+        <img src="assets/images/jazeera-logo.svg" alt=""/>
+      </a>
+      <ul class="main-nav">
+        <li appClassActive>
+          <a href="#">Plan</a>
+          <div class="sub-menu">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-3">
+                  <ul>
+                    <li><a href="#"><strong>Before you Fly</strong></a></li>
+                    <li><a href="#">Travel Insurance</a></li>
+                  </ul>
+                </div>
+                <div class="col-md-3">
+                  <ul>
+                    <li><a href="#"><strong>Flight Information</strong></a></li>
+                    <li><a href="#">Flight Schedules</a></li>
+                    <li><a href="#">Baggage Information</a></li>
+                    <li><a href="#">Business Class</a></li>
+                    <li><a href="#">Economy Class</a></li>
+                  </ul>
+                </div>
+                <div class="col-md-3">
+                  <ul>
+                    <li><a href="#"><strong>Getting to the Airport</strong></a></li>
+                    <li><a href="#">Ride & Fly</a></li>
+                    <li><a href="#">Park & Fly</a></li>
+                    <li><a href="#">Parking</a></li>
+                    <li><a href="#">Jazeera Terminal 5</a></li>
+                  </ul>
+                </div>
+                <div class="col-md-3">
+                  <ul>
+                    <li><a href="#"><strong>Book</strong></a></li>
+                    <li><a href="#">Flight Booking</a></li>
+                    <li><a href="#">Jazeera Holidays</a></li>
+                    <li><a href="#">Car Rental</a></li>
+                    <li><a href="#">Hotel Booking</a></li>
+                    <li><a href="#">Destinations</a></li>
+                    <li><a href="#">Fare Options</a></li>
+                    <li><a href="#">Seat Selection</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li appClassActive>
+          <a href="#">On-Board</a>
+        </li>
+        <li appClassActive>
+          <a href="#">Destinations</a>
+        </li>
+        <li appClassActive>
+          <a href="#">Jazeera Holidays</a>
+        </li>
+      </ul>
+      <ul class="toggle-btns">
+        <li>
+          <a class="btn btn-link search" id="showSearchPanel" (click)="onClickSearch();"><i class="icon icon-zoom"></i></a>
+        </li>
+        <li>
+          <a href="#" class="btn btn-dropdown"> <span class="options country-code">UAE</span> <span
+            class="options active language-code">En</span>
+            <i class="icon icon-arrow-down"></i></a>
+          <div class="btn-dropdown-menu dropdown-language-switcher">
+            <div id="language-switcher"></div>
+          </div>
+        </li>
+        <li>
+          <a class="btn btn-dropdown"><span class="btn-icon"><i class="icon icon-avatar"></i></span> Login
+            <i class="icon icon-arrow-down"></i></a>
+          <app-login [hidden]="true"></app-login>
+        </li>
+      </ul>
+    </div>
+    <div class="mobile-header">
+      <div class="toggle-mobile-btns">
+        <a href="#" class="mobile-btns mobile-login-toggle"><i class="icon icon-avatar-filled"></i></a>
+        <a href="#" class="mobile-btns mobile-menu-toggle"><i class="icon icon-menu"></i></a>
+      </div>
+      <div class="mobile-menu-wrap">
+        <a href="#" class="close-mobile-header"><i class="icon icon-wrong"></i></a>
+        <div class="search-header">
+          <div class="form-row row">
+            <div class="form-field col-md-12 input-blank">
+                <span class="icon">
+                  <i class="icon-zoom"></i>
+                </span>
+              <input id="search_jazeera_mobile" type="text" class="form-control"
+                     placeholder="Find what you need on Jazeera"
+                     autocomplete="off">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="search-box-wrap" #searchBoxWrap>
+  <div class="search-panel">
+    <div class="container">
+      <div class="search-header">
+        <div id="closeSearch" class="close-search"><i class="icon icon-wrong" (click)="onCloseSearch()"></i></div>
+        <div class="form-row row">
+          <div class="form-field col-md-12 input-blank">
+              <span class="icon">
+                <i class="icon-zoom"></i>
+              </span>
+            <input id="search_jazeera" type="text" class="form-control" placeholder="Find what you need on Jazeera"
+                   autocomplete="off">
+          </div>
+        </div>
+      </div>
+      <div class="search-body">
+        <div class="title">
+          <h5>Top Countries in Europe</h5>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="listing-cards-wrapper">
+
+              <div class="card horizontal-card">
+                <a href="#">
+                  <div class="card-img-wrap">
+                    <img class="card-img-top" src="assets/contents/europe01.jpg" alt="">
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">Jeddah, KSA</h5>
+                    <h3>
+                      <small>From</small>
+                      KWD <strong>45</strong></h3>
+                  </div>
+                </a>
+              </div>
+              <div class="card horizontal-card">
+                <a href="#">
+                  <div class="card-img-wrap">
+                    <img class="card-img-top" src="assets/contents/europe02.jpg" alt="">
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">Jeddah, KSA</h5>
+                    <h3>
+                      <small>From</small>
+                      KWD <strong>45</strong></h3>
+                  </div>
+                </a>
+              </div>
+              <div class="card horizontal-card">
+                <a href="#">
+                  <div class="card-img-wrap">
+                    <img class="card-img-top" src="assets/contents/europe03.jpg" alt="">
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">Jeddah, KSA</h5>
+                    <h3>
+                      <small>From</small>
+                      KWD <strong>45</strong></h3>
+                  </div>
+                </a>
+              </div>
+
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="row image-grid-wrap">
+              <div class="col-md-12">
+                <div class="image-box img-grid-6">
+                  <a href="#">
+                      <span class="overlay">
+                        <div class="txt bottom right">
+                          <h3>Park & <strong>Fly</strong></h3>
+                        </div>
+                      </span>
+                    <img src="assets/contents/park-fly.jpg" alt=""/>
+                  </a>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="image-box img-grid-3">
+                  <a href="#">
+                      <span class="overlay primary">
+                        <div class="txt bottom right">
+                          <h3>Book your<br/><strong>Hotel</strong></h3>
+                          <img src="assets/contents/booking-white.svg" alt=""/>
+                        </div>
+                      </span>
+                    <img src="assets/contents/option01.jpg" alt=""/>
+                  </a>
+                </div>
+              </div>
+              <div class="col-md-6 img-grid-3">
+                <div class="image-box img-grid-3">
+                  <a href="#">
+                      <span class="overlay primary-yellow">
+                        <div class="card-body">
+                          <h5 class="card-title">Baku, Azerbaijan</h5>
+                          <h3><small>From</small>KWD <strong>45</strong></h3>
+                        </div>
+                      </span>
+                    <img src="assets/contents/option02.jpg" alt=""/>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a href="#" class="btn btn-link">More Top Countries in Europe <i class="icon icon-arrow-right"></i></a>
+      </div>
+    </div>
+  </div>
+</section>

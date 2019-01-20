@@ -17,9 +17,9 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     this.isLoading$ = this.store.select(fromRoot.isLoading);
-    this.store.dispatch(new UI.StartLoading());
-    setTimeout(() => {
-      this.store.dispatch(new UI.StopLoading());
-    }, 5000);
+    // this.store.dispatch(new UI.StartLoading());
+    // setTimeout(() => {
+    //   this.store.dispatch(new UI.StopLoading());
+    // }, 5000);
   }
 }
