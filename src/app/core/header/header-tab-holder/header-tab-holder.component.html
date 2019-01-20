@@ -1,0 +1,30 @@
+<section class="tab-holder">
+  <div class="container">
+    <div class="tab-item-wrap">
+      <a class="tab-item" href="#">
+        <span class="count">1</span>
+        <h5>Search Flight</h5>
+      </a>
+      <a class="tab-item" [routerLink]="['/select-flight']" [routerLinkActive]="['active']"
+         [routerLinkActiveOptions]="{exact:true}">
+        <span class="count">2</span>
+        <h5>Select Flight</h5>
+      </a>
+      <a class="tab-item" [routerLink]="['/passenger-details']" [routerLinkActive]="['active']"
+         [routerLinkActiveOptions]="{exact:true}">
+        <span class="count">3</span>
+        <h5>Passenger Details</h5>
+      </a>
+      <a class="tab-item" [routerLink]="['/select-addons']" [routerLinkActive]="['active']"
+         [routerLinkActiveOptions]="{exact:true}">
+        <span class="count">4</span>
+        <h5>Select Add-ons</h5>
+      </a>
+      <a class="tab-item" [routerLink]="['/payment-details']" [routerLinkActive]="['active']"
+         [routerLinkActiveOptions]="{exact:true}">
+        <span class="count">5</span>
+        <h5>Payment Details</h5>
+      </a>
+    </div>
+  </div>
+</section>

@@ -3,23 +3,23 @@ import {CommonModule} from '@angular/common';
 import {AppRoutingModule} from './app-routing.module';
 import {GraphQLModule} from './graphql.module';
 import {UiloaderComponent} from './uiloader/uiloader.component';
-import {HeaderComponent} from './header/header.component';
 import {FooterComponent} from './footer/footer.component';
-import {SharedModule} from '../shared/shared.module';
+import {HeaderModule} from './header/header.module';
 
 @NgModule({
-  declarations: [UiloaderComponent, HeaderComponent, FooterComponent],
+  declarations: [UiloaderComponent, FooterComponent],
   imports: [
     CommonModule,
     AppRoutingModule,
     GraphQLModule,
-    SharedModule,
+    HeaderModule,
   ],
   exports: [
     AppRoutingModule,
     GraphQLModule,
     UiloaderComponent,
-    HeaderComponent, FooterComponent
+    HeaderModule,
+    FooterComponent,
   ]
 })
 export class CoreModule {

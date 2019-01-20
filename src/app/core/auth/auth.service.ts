@@ -1,8 +1,8 @@
 import {Injectable} from '@angular/core';
 import {Router} from '@angular/router';
 import {Store} from '@ngrx/store';
-import * as fromRoot from '../reducers/';
-import * as UI from './ui.actions';
+import * as fromRoot from '../../reducers';
+import * as UI from '../ui.actions';
 import * as Auth from './auth.actions';
 
 interface AuthData {

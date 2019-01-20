@@ -1,7 +1,7 @@
 import {ActionReducer, ActionReducerMap, createFeatureSelector, createSelector, MetaReducer} from '@ngrx/store';
 import {environment} from '../../environments/environment';
 import * as fromUi from '../core/ui.reducer';
-import * as fromAuth from '../core/auth.reducer';
+import * as fromAuth from '../core/auth/auth.reducer';
 
 export interface State {
   ui: fromUi.UILoaderState;

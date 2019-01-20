@@ -1,15 +1,15 @@
 import {Component, ElementRef, OnInit, Renderer2, ViewChild} from '@angular/core';
-import {Store} from '@ngrx/store';
-import * as fromStore from '../../reducers';
-import * as fromRoot from '../../reducers';
 import {Observable} from 'rxjs';
+import {Store} from '@ngrx/store';
+import * as fromStore from '../../../reducers';
+import * as fromRoot from '../../../reducers';
 
 @Component({
-  selector: 'app-header',
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+  selector: 'app-header-top-holder',
+  templateUrl: './header-top-holder.component.html',
+  styleUrls: ['./header-top-holder.component.scss']
 })
-export class HeaderComponent implements OnInit {
+export class HeaderTopHolderComponent implements OnInit {
   @ViewChild('searchBoxWrap') searchBoxWrap: ElementRef;
   isAuthenticated$: Observable<boolean>;
 
